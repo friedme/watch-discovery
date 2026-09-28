@@ -5,6 +5,9 @@
       "reference": "126610LN-0001",
       "pages": [
         "https://www.rolex.com/en-us/watches/submariner/m126610ln-0001"
+      ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m126610ln-0001"
       ]
     },
     "rolex-gmt-master-pepsi": {
@@ -14,12 +17,18 @@
         "https://wristcheck.com/us/buy/rolex/gmt-master-ii-pepsi-jubilee-bracelet",
         "https://www.bernardwatch.com/Rolex/GMT-Master-II-'Pepsi'/RLX9475"
       ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m126710blro-0001"
+      ],
       "facts": "discontinued April 2026; black dial, blue/red bezel, Jubilee"
     },
     "rolex-submariner-green": {
       "reference": "126610LV-0002",
       "pages": [
         "https://www.rolex.com/en-us/watches/submariner/m126610lv-0002"
+      ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m126610lv-0002"
       ],
       "facts": "green bezel; dial colour per photo"
     },
@@ -42,6 +51,9 @@
       "reference": "M7941A1A0RU-0001",
       "pages": [
         "https://www.tudorwatch.com/en/watches/black-bay/m7941a1a0ru-0001"
+      ],
+      "images": [
+        "https://media.tudorwatch.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/0yi5ee8b69yh3/upright-cb-with-shadow/tudor-m7941a1a0ru-0001"
       ],
       "facts": "41 mm, burgundy bezel, steel bracelet"
     },
@@ -69,6 +81,9 @@
     "citizen-promaster-diver": {
       "reference": "BN0150-28E",
       "pages": [
+        "https://teddybaldassarre.com/products/promaster-diver-black-dial-rubber-strap",
+        "https://longislandwatch.com/products/citizen-eco-drive-promaster-dive-watch-with-black-dial-and-rubber-strap-bn0150-28e",
+        "https://shop.watchgang.com/products/promaster-dive-bn0150-28e",
         "https://www.citizenwatch.com/us/en/product/BN0150-28E"
       ]
     },
@@ -81,15 +96,19 @@
     "casio-duro": {
       "reference": "MDV106-1A",
       "pages": [
+        "https://www.jomashop.com/casio-quartz-black-dial-mens-watch-mdv-106-1av.html",
         "https://www.casio.com/us/watches/casio/product.MDV-106-1AV/"
       ]
     },
     "tag-heuer-aquaracer": {
       "reference": "WBP5110.BA0013",
       "pages": [
+        "https://www.watchmaxx.com/iwc-watch-wbp5110-ba0013",
+        "https://www.tourneau.com/watches/tag-heuer/aquaracer-professional-300-date-wbp5110.ba0013-HEU0170167.html",
+        "https://www.prestigetime.com/Tag-Heuer-Aquaracer-Professional-300-Date-42mm-WBP5110-BA0013.html",
         "https://www.tagheuer.com/us/en/timepieces/collections/tag-heuer-aquaracer/42-mm-th31-00-cosc/WBP5110.BA0013.html"
       ],
-      "facts": "42 mm, blue wave-pattern dial, steel bracelet"
+      "facts": "42 mm, black wave-pattern dial, black ceramic bezel, steel bracelet"
     },
     "omega-speedmaster-professional": {
       "reference": "310.30.42.50.01.001",
@@ -102,11 +121,17 @@
       "pages": [
         "https://www.rolex.com/en-us/watches/cosmograph-daytona/m126500ln-0001"
       ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m126500ln-0001"
+      ],
       "facts": "white dial, black counters, black ceramic bezel"
     },
     "tag-heuer-monaco": {
       "reference": "CBL2111.FC6453",
       "pages": [
+        "https://www.watchmaxx.com/tag-heuer-watch-cbl2111-fc6453",
+        "https://www.watchesofswitzerland.com/products/tag-heuer-monaco-cbl2111-fc6453-17381800",
+        "https://www.tourneau.com/watches/tag-heuer/monaco-chronograph-cbl2111.fc6453-HEU0170030.html",
         "https://www.tagheuer.com/us/en/timepieces/collections/tag-heuer-monaco/39-mm-th20-00/CBL2111.FC6453.html"
       ],
       "facts": "39 mm square, sunburst blue dial, blue alligator strap"
@@ -114,6 +139,8 @@
     "tag-heuer-carrera": {
       "reference": "CBN2010.BA0642",
       "pages": [
+        "https://www.watchmaxx.com/tag-heuer-watch-cbn2010-ba0642",
+        "https://grailzee.com/products/tag-heuer-carrera-cbn2010-ba0642",
         "https://www.tagheuer.com/us/en/timepieces/collections/tag-heuer-carrera/42-mm-th20-00/CBN2010.BA0642.html"
       ],
       "facts": "42 mm, black dial, three-row steel bracelet"
@@ -128,6 +155,9 @@
     "zenith-el-primero": {
       "reference": "03.3200.3600/69.M3200",
       "pages": [
+        "https://www.the1916company.com/watches/zenith/chronomaster/chronomaster-033200360069m3200/",
+        "https://www.watchmaxx.com/zenith-watch-03-3200-3600-69-m3200",
+        "https://www.prestigetime.com/Zenith-Chronomaster-Original-38mm-03-3200-3600-69-M3200.html",
         "https://www.zenith-watches.com/en_us/product/chronomaster-original-03-3200-3600-69-m3200"
       ],
       "facts": "38 mm, tri-colour counters, steel bracelet (confirm white dial)"
@@ -142,6 +172,9 @@
     "iwc-big-pilot": {
       "reference": "IW329301",
       "pages": [
+        "https://www.tourneau.com/watches/iwc-schaffhausen/big-pilots-watch-43-iw329301-IWC0143026.html",
+        "https://www.mayors.com/IWC-Big-Pilot-quote.s-43mm-Mens-Watch-IW329301/p/17810731",
+        "https://www.jomashop.com/iwc-big-pilot-43-automatic-black-dial-mens-watch-iw329301.html",
         "https://www.iwc.com/us-en/watches/pilot-watches/iw329301-big-pilots-watch-43"
       ],
       "facts": "43 mm, black dial, brown calf strap"
@@ -177,6 +210,8 @@
     "seiko-5-military": {
       "reference": "SNK809K2",
       "pages": [
+        "https://longislandwatch.com/products/seiko-snk809-snk809k2-watch-snk809k2",
+        "https://www.nywatchstore.com/seiko-watch-snk809k2.html",
         "https://longislandwatch.com/seiko-snk809-snk809k2-watch-snk809k2/",
         "https://www.jomashop.com/seiko-watch-snk809.html"
       ],
@@ -193,6 +228,9 @@
       "reference": "124270-0001",
       "pages": [
         "https://www.rolex.com/en-us/watches/explorer/m124270-0001"
+      ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m124270-0001"
       ],
       "facts": "36 mm, black dial, 3-6-9"
     },
@@ -215,6 +253,9 @@
       "reference": "15510ST.OO.1320ST.06",
       "pages": [
         "https://www.audemarspiguet.com/us/en/watch-collection/royal-oak/15510ST.OO.1320ST.06"
+      ],
+      "images": [
+        "https://dynamicmedia.audemarspiguet.com/is/image/audemarspiguet/watch-936?fmt=png-alpha&wid=1600"
       ],
       "facts": "41 mm, Bleu Nuit Grande Tapisserie dial"
     },
@@ -249,6 +290,8 @@
     "bulgari-octo-finissimo": {
       "reference": "102713",
       "pages": [
+        "https://wristcheck.com/us/buy/bulgari/octo-finissimo-titainium-grey-dial-40mm-102713",
+        "https://www.mayors.com/Bvlgari-Titanium-Octo-Finissimo-40mm-Grey-Dial-Automatic-Gents-Watch-102713/p/18970153",
         "https://www.bulgari.com/en-us/watches/mens/octo-finissimo-watch-titanium-grey-102713",
         "https://www.bulgari.com/en-int/watches/mens-2/octo-finissimo-watch-titanium-grey-102713"
       ],
@@ -266,7 +309,10 @@
       "pages": [
         "https://www.jaeger-lecoultre.com/us-en/watches/reverso/reverso-tribute/reverso-tribute-monoface-small-seconds-stainless-steel-q397848j"
       ],
-      "facts": "silvered opaline dial, small seconds, black bi-material strap"
+      "images": [
+        "https://img.jaeger-lecoultre.com/product-grid-hero-xl-4/o-dpr-2/404ae2a481f89f028d60b9791ad34f5cce71f41a.jpg"
+      ],
+      "facts": "Reverso Tribute Small Seconds, blue sunray dial, blue strap"
     },
     "cartier-tank": {
       "reference": "WSTA0138 / WSTA0108",
@@ -284,12 +330,12 @@
       "facts": "medium, steel, silvered opaline dial, steel bracelet"
     },
     "breguet-classique": {
-      "reference": "5177BB/29/9V6",
+      "reference": "5177BR/29/9V6",
       "pages": [
-        "https://www.breguet.com/en/watches/classique/classique-5177/5177bb299v6",
-        "https://www.breguet.com/en/watches/classique/classique-5177/5177br299v6"
+        "https://www.breguet.com/en/watches/classique/classique-5177/5177br299v6",
+        "https://www.breguet.com/en/watches/classique/classique-5177/5177bb299v6"
       ],
-      "facts": "guilloche dial, Breguet hands; confirm case metal from photo"
+      "facts": "rose gold, white Grand Feu enamel dial, Breguet numerals and hands, date at 3"
     },
     "lange-1": {
       "reference": "191.021",
@@ -311,6 +357,9 @@
       "pages": [
         "https://www.jaeger-lecoultre.com/us-en/watches/master-ultra-thin/master-ultra-thin-small-seconds-stainless-steel-q1218420"
       ],
+      "images": [
+        "https://img.jaeger-lecoultre.com/product-grid-hero-xl-4/o-dpr-2/fb3a9db90d1092936fd06c64cd43ac7d3cf21703.jpg"
+      ],
       "facts": "sunrayed silver dial, small seconds"
     },
     "omega-de-ville": {
@@ -318,7 +367,7 @@
       "pages": [
         "https://www.omegawatches.com/en-us/watch-omega-de-ville-prestige-co-axial-master-chronometer-40-mm-43413402010001"
       ],
-      "facts": "silvery dial, Roman numerals, brown leather, date at 6"
+      "facts": "green dial, Roman numerals, date at 6, green leather strap"
     },
     "omega-seamaster-vintage": {
       "reference": "Seamaster 18K Slimline (1964)",
@@ -354,6 +403,9 @@
       "pages": [
         "https://www.hermes.com/us/en/product/arceau-watch-40mm-W055378WW00/"
       ],
+      "images": [
+        "https://assets.hermes.com/is/image/hermesproduct/arceau-watch-40mm--055378WW00-front-1-300-0-1600-1600_g.jpg"
+      ],
       "facts": "40 mm steel, white lacquered dial, slanted numerals, date at 6"
     },
     "rolex-datejust": {
@@ -361,20 +413,29 @@
       "pages": [
         "https://www.rolex.com/watches/datejust/m126233-0015"
       ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m126233-0015"
+      ],
       "facts": "36 mm Rolesor, champagne dial, fluted bezel, Jubilee"
     },
     "rolex-day-date": {
-      "reference": "228238",
+      "reference": "228238-0003",
       "pages": [
         "https://www.rolex.com/en-us/watches/day-date/m228238-0003",
         "https://www.rolex.com/watches/day-date/m228238-0006"
       ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m228238-0003"
+      ],
       "facts": "check which suffix shows the champagne dial"
     },
     "rolex-oyster-perpetual": {
-      "reference": "126000",
+      "reference": "126000-0006",
       "pages": [
         "https://www.rolex.com/en-us/watches/oyster-perpetual/m126000-0006"
+      ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m126000-0006"
       ],
       "facts": "turquoise blue dial (confirm suffix from photo)"
     },
@@ -382,6 +443,9 @@
       "reference": "SBGA211",
       "pages": [
         "https://www.grand-seiko.com/us-en/collections/sbga211g"
+      ],
+      "images": [
+        "https://www.grand-seiko.com/us-en/-/media/Images/Product--Image/All/GrandSeiko/2022/02/19/21/47/SBGA211G/SBGA211G.png"
       ]
     },
     "timex-marlin": {
@@ -401,13 +465,19 @@
     "junghans-max-bill": {
       "reference": "027/4701.02",
       "pages": [
+        "https://www.exquisitetimepieces.com/products/junghans-max-bill-automatic-027-4701-02",
+        "https://www.thewatchcompany.com/junghans-027-4701-02.html",
+        "https://greenergrassdesign.com/products/max-bill-automatic-027-4701-02-by-junghans",
         "https://www.junghans.de/en/collection/watches/junghans-max-bill/max-bill-automatic/27470102"
       ],
-      "facts": "max bill Automatic; confirm dial/strap from photo"
+      "facts": "max bill Automatic, black dial with batons, date at 3, black leather"
     },
     "movado-museum": {
       "reference": "0607396",
       "pages": [
+        "https://www.danielsjewelers.com/products/movado-0607396-21801956",
+        "https://www.unicornjewelry.com/products/movado-museum-classic-0607396",
+        "https://monicajewelers.com/products/museum-classic-0607396",
         "https://www.movado.com/us/en/shop-watches/museum-classic-0607396.html"
       ],
       "facts": "40 mm yellow gold PVD, black dial, mesh bracelet (not leather)"
@@ -431,11 +501,17 @@
       "pages": [
         "https://www.skagen.com/en-us/products/signatur-silver-tone-steel-mesh-watch/SKW2785.html"
       ],
+      "images": [
+        "https://fossil.scene7.com/is/image/FossilPartners/SKW2785_main?wid=1600&hei=1600"
+      ],
       "facts": "38 mm, white-silver dial, steel mesh"
     },
     "swatch-originals": {
       "reference": "GS148 Blue Loop",
       "pages": [
+        "https://www.jomashop.com/swatch-blue-loop-quartz-red-dial-unisex-watch-gs148.html",
+        "https://gioielleriadepatto.com/en/products/orologio-uomo-swatch-blue-loop-gs148",
+        "https://www.swatch.com/en_th/watches/gs148-blue-loop/",
         "https://shop.swatch.com/en_gb/watches/originals/gent/blue-loop-gs148.html"
       ],
       "facts": "34 mm Gent, blue/red plastic (correct colours at accept)"
@@ -449,18 +525,23 @@
     "casio-g-shock": {
       "reference": "DW5600E-1V",
       "pages": [
+        "https://www.nywatchstore.com/cagmodw3.html",
         "https://www.casio.com/us/watches/gshock/product.DW-5600E-1V/"
       ]
     },
     "casio-a168-gold": {
       "reference": "A168WG-9",
       "pages": [
+        "https://www.jomashop.com/casio-vintage-gold-tone-dial-mens-watch-a168wg-9vt.html",
+        "https://www.nywatchstore.com/a168wg-9v.html",
         "https://www.casio.com/us/watches/casio/product.A168WG-9/"
       ]
     },
     "casio-databank": {
       "reference": "DBC-611-1",
       "pages": [
+        "https://www.jomashop.com/casio-quartz-digital-databank-calculator-watch-dbc-611-1.html",
+        "https://greenwichgalaxy.com/products/dbc-611-1d",
         "https://www.casio.com/intl/watches/casio/product.DBC-611-1/"
       ],
       "facts": "calculator keypad, steel band"
@@ -474,7 +555,12 @@
     "casio-baby-g": {
       "reference": "BGD-565SJ-2",
       "pages": [
+        "https://www.sakurawatches.com/casio-baby-g-bgd-565sj-2jf",
+        "https://us.firstclasswatches.com/casio-baby-g-summer-jelly-421mm-blue-digital-dial-blue-resin-strap-bgd-565sj-2er-p-142378/",
         "https://www.casio.com/us/watches/babyg/product.BGD-565SJ-2/"
+      ],
+      "images": [
+        "https://www.sakurawatches.com/image/catalog/BGD-565SJ-2JF.jpg"
       ],
       "facts": "square compact, blue colourway"
     },
@@ -486,8 +572,11 @@
       "facts": "shield case, black dial, leather"
     },
     "hublot-big-bang": {
-      "reference": "Big Bang Original Black Magic 44",
+      "reference": "301.CI.1770.RX",
       "pages": [
+        "https://www.mayors.com/Hublot-Big-Bang-Black-Magic-Chronograph-44mm-301.CI.1770.RX/p/17170177",
+        "https://www.prestigetime.com/Hublot-Big-Bang-Chronograph-44mm-301-ci-1770-rx-Black-Magic.html",
+        "https://www.exquisitetimepieces.com/hublot-big-bang-black-magic-44mm-301-ci-1770-rx.html",
         "https://www.hublot.com/en-us/watches/big-bang/big-bang-original-black-magic-44-mm"
       ],
       "facts": "black ceramic, rubber strap"
@@ -510,6 +599,8 @@
     "rado-ceramic": {
       "reference": "True Square R27080172 (Ceramica family)",
       "pages": [
+        "https://www.watchmaxx.com/rado-watch-r27080172",
+        "https://watchesofmayfair.com/brand/rado/true-collection/rado-true-square-women-high-tech-ceramic-quartz-29-2-mm-r27080172",
         "https://www.rado.com/en_us/true-square-r27080172.html"
       ],
       "facts": "black high-tech ceramic square; Ceramica page is a collection page"
@@ -517,7 +608,9 @@
     "cartier-crash": {
       "reference": "WGCH0006",
       "pages": [
-        "https://www.cartier.com/en-gb/crash-watch_cod44733502651447029.html"
+        "https://www.cartier.com/en-gb/crash-watch_cod44733502651447029.html",
+        "https://wristaficionado.com/products/cartier-crash-wgch0006-yellow-gold-silvered-dial",
+        "https://k2luxury.ch/watches/brand/cartier/crash/crash-yellow-gold/"
       ],
       "facts": "medium, yellow gold, leather, silvered opaline dial"
     },
@@ -551,17 +644,23 @@
       "facts": "yellow gold oval, black patent leather strap"
     },
     "rolex-lady-datejust": {
-      "reference": "279173",
+      "reference": "279173-0011",
       "pages": [
         "https://www.rolex.com/watches/lady-datejust/m279173-0011",
         "https://www.rolex.com/watches/lady-datejust/m279173-0007"
       ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m279173-0011"
+      ],
       "facts": "28 mm Rolesor, champagne diamond-set dial, fluted bezel, Jubilee (confirm suffix)"
     },
     "rolex-oyster-perpetual-pink": {
-      "reference": "277200",
+      "reference": "277200-0009",
       "pages": [
         "https://www.rolex.com/en-us/watches/oyster-perpetual/m277200-0009"
+      ],
+      "images": [
+        "https://media.rolex.com/image/upload/q_auto/f_auto/c_limit,w_1600/v1/catalogue/2025/upright-c/m277200-0009"
       ],
       "facts": "31 mm, candy pink dial (confirm suffix)"
     },
@@ -575,6 +674,9 @@
     "chanel-j12": {
       "reference": "H5698",
       "pages": [
+        "https://www.watchmaxx.com/chanel-watch-h5698",
+        "https://www.betteridge.com/CHANEL-J12-WATCH..-33-MM-H5698/p/17790280",
+        "https://hamiltonjewelers.com/products/chanel-j12-white-ceramic-33mm-quartz-watch-h5698",
         "https://www.chanel.com/us/watches/p/H5698/j12-watch-33-mm/",
         "https://www.chanel.com/us/watches/p/H5699/j12-caliber-12-2-33-mm-watch/"
       ],
@@ -583,6 +685,9 @@
     "chanel-premiere": {
       "reference": "H6951",
       "pages": [
+        "https://www.watchmaxx.com/chanel-watch-h6951",
+        "https://wristcheck.com/us/buy/chanel/premiere-edition-originale-steel-coated-with-yellow-gold-black-dial-20mm-h6951",
+        "https://www.the1916company.com/watches/chanel/premiere/premi%C3%A8re-h6951/",
         "https://www.chanel.com/us/watches/p/H6951/premiere-edition-originale-watch/"
       ],
       "facts": "gold-coated steel, black lacquer dial, chain and leather"
@@ -592,6 +697,9 @@
       "pages": [
         "https://www.hermes.com/us/en/product/cape-cod-watch-small-model-31mm-W040233WW00/"
       ],
+      "images": [
+        "https://assets.hermes.com/is/image/hermesproduct/cape-cod-watch-small-model-31mm--040233WW00-front-1-300-0-1600-1600_g.jpg"
+      ],
       "facts": "31 mm steel, opaline silvered dial, double tour strap"
     },
     "hermes-heure-h": {
@@ -599,7 +707,10 @@
       "pages": [
         "https://www.hermes.com/us/en/product/heure-h-watch-medium-model-30mm-W047213WW00/"
       ],
-      "facts": "H-shaped steel case, opaline silvered dial"
+      "images": [
+        "https://assets.hermes.com/is/image/hermesproduct/heure-h-watch-medium-model-30mm--047213WW00-front-1-300-0-1600-1600_g.jpg"
+      ],
+      "facts": "30 mm diamond-set steel H case, white mother-of-pearl dial, raspberry alligator strap"
     },
     "chopard-happy-diamonds": {
       "reference": "203957-1214",
@@ -612,6 +723,9 @@
     "bulgari-serpenti": {
       "reference": "103648",
       "pages": [
+        "https://www.pragnell.co.uk/bvlgari-serpenti-tubogas_103648-p",
+        "https://www.mayors.com/Bvlgari-18k-Yellow-Gold-and-Steel-Serpenti-Tubogas-35mm-Silver-Dial-Diamond-Ladies-Watch-103648/p/18970208",
+        "https://www.swissluxury.com/bulgari/103648.htm",
         "https://www.bulgari.com/en-us/watches/womens/serpenti-tubogas-watch-yellow-gold-and-steel-white-103648",
         "https://www.bulgari.com/en-us/watches/womens/serpenti-tubogas-watch-yellow-gold-yellow-101923"
       ],
@@ -636,6 +750,9 @@
       "pages": [
         "https://www.jaeger-lecoultre.com/us-en/watches/rendez-vous/rendez-vous-classic/rendez-vous-classic-nigth-and-day-pink-gold-diamonds-q3442430"
       ],
+      "images": [
+        "https://img.jaeger-lecoultre.com/product-grid-hero-xl-4/o-dpr-2/591a5e518ee2d732cb81a310414409ef4e2de662.jpg"
+      ],
       "facts": "pink gold, diamond bezel, floral numerals, day/night indicator"
     },
     "longines-dolcevita": {
@@ -655,6 +772,8 @@
     "michael-kors-glam": {
       "reference": "MK6056",
       "pages": [
+        "https://www.watchbazaar.com/womens-watches-c3/michael-kors-mk6056-ladies-gold-mini-parker-watch-p767",
+        "https://dorejewelry.com/products/michael-kors-womens-gold-tone-mini-parker-watch",
         "https://www.michaelkors.com/parker-pave-gold-tone-watch/MK6056.html"
       ],
       "facts": "Parker Pave, gold-tone, chronograph sub-dials"
@@ -669,6 +788,7 @@
     "cluse-la-boheme": {
       "reference": "CL18031",
       "pages": [
+        "https://www.mightywatches.com/cluse-cl18031-la-boheme-rose-gold-white-hazelnut.html",
         "https://cluse.com/products/la-boheme-leather-rose-gold-white-hazelnut",
         "https://cluse.com/model/cluse-laboheme-rosegold-white-hazelnut-CL18031"
       ],
@@ -677,6 +797,10 @@
     "olivia-burton-floral": {
       "reference": "OB16VM12",
       "pages": [
+        "https://www.thejewelhut.co.uk/olivia-burton-abstract-florals-blush-rose-gold-tone-watch-ob16vm12",
+        "https://www.davidchristopher.co.uk/olivia-burton-abstract-florals-blush-rose-gold-watch-ob16vm12/",
+        "https://us.firstclasswatches.com/olivia-burton-womens-abstract-florals-blush-leather-strap-ob16vm12-p-54122/",
+        "https://us.oliviaburton.com/us/shop-watches/abstract-florals-blush-and-rose-gold-watch--OB16VM12.html",
         "https://us.oliviaburton.com/us/shop-watches/30mm-rose-gold-and-blush-leather-strap-watch-OB16VM12.html"
       ],
       "facts": "30 mm, applied rose gold flowers on dial, blush leather"
@@ -686,11 +810,17 @@
       "pages": [
         "https://www.fossil.com/en-us/products/jacqueline-36mm-three-hand-blush-leather-watch/ES4603.html"
       ],
+      "images": [
+        "https://fossil.scene7.com/is/image/FossilPartners/ES4603_main?wid=1600&hei=1600"
+      ],
       "facts": "36 mm, mother-of-pearl novelty dial, blush leather (correct attributes at accept)"
     },
     "tag-heuer-aquaracer-lady": {
       "reference": "WBP1416.BA0622",
       "pages": [
+        "https://www.watchmaxx.com/tag-heuer-watch-wbp1416-ba0622",
+        "https://www.mayors.com/TAG-Heuer-Aquaracer-Professional-200-30mm-Ladies-Watch-WBP1416.BA0622/p/17382007",
+        "https://jrdunn.com/products/tag-heuer-aquaracer-wbp1416-ba0622",
         "https://www.tagheuer.com/us/en/timepieces/collections/tag-heuer-aquaracer/30-mm-quartz/WBP1416.BA0622.html"
       ],
       "facts": "30 mm, white MOP dial, diamond markers, steel bracelet"
@@ -698,27 +828,35 @@
     "tiffany-atlas": {
       "reference": "Atlas 2-Hand 29 mm (34875928)",
       "pages": [
+        "https://www.fashionphile.com/products/tiffany-stainless-steel-calfskin-29mm-atlas-2-hand-quartz-watch-tiffany-blue-1956640",
         "https://www.tiffany.com/watches/womens-watches/atlas-2-hand-29-mm-watch-34875928/"
       ],
-      "facts": "steel, Roman numeral bezel"
+      "facts": "29 mm steel, Tiffany Blue dial with Roman numerals, date, black calfskin strap"
     },
     "patek-twenty-4": {
       "reference": "4910/1200A-010",
       "pages": [
         "https://www.patek.com/en/collection/twenty4/4910-1200a-010"
       ],
-      "facts": "steel cuff, grey sunburst dial, two rows of diamonds"
+      "facts": "steel cuff, brown sunburst dial, two rows of diamonds"
     },
     "gucci-horsebit": {
-      "reference": "Horsebit bangle watch",
+      "reference": "YA139507",
       "pages": [
+        "https://www.watchmaxx.com/gucci-watch-ya139507",
+        "https://www.dcleake.com/Watches/Gucci/Gucci-Horsebit-Ladies-Sapphire-Black-Dial-Rose-Gold-PVD-Bangle-Watch-YA139507.html",
+        "https://www.harveystore.com/products/gucci-ladies-ya139507-horsebit-quartz-watch",
         "https://www.elitehnw.com/en-us/products/gucci-gold-floral-horsebit-bangle-watch"
       ],
-      "facts": "gold-tone bangle; official site not searchable here"
+      "facts": "Horsebit 28 mm, rose-gold PVD bangle, black sun-brushed dial"
     },
     "art-deco-cocktail": {
       "reference": "1920s platinum and diamond cocktail watch",
       "pages": [
+        "https://www.langantiques.com/platinum-diamond-art-deco-ladies-watch.html",
+        "https://www.langantiques.com/art-deco-ladies-diamond-and-platinum-watch.html",
+        "https://timerediscovered.com/en-us/products/ladies-1920s-art-deco-platinum-with-diamonds-vintage-cocktail-watch",
+        "https://www.stolenattic.com/products/vintage-art-deco-platinum-and-diamond-cocktail-watch-ladies-wristwatch",
         "https://www.etsy.com/listing/764234659/1920s-platinum-18k-art-deco-ladies",
         "https://www.chrono24.com/cartier/cartier-lady-art-deco-cocktail-watch-platinum-and-diamond-1920s--id26608090.htm"
       ],
@@ -727,6 +865,8 @@
     "vintage-gold-cocktail": {
       "reference": "1950s cocktail watch",
       "pages": [
+        "https://louismartin.com/products/vintage-1950s-longines-14kt-white-gold-diamond-ladies-cocktail-watch",
+        "https://www.mjewelry.com/products/vintage-lady-hamilton-watch-14k-gold-preownedsold-as-is-ladyhamilton-manual-365202",
         "https://shop.connoisseuroftime.com/products/1950s-jaeger-lecoultre-vintage-ladies-backwind-cocktail-watch-14k-white-gold-diamonds",
         "https://justintimesvintage.com/shop/27620299/watches"
       ],
@@ -735,6 +875,9 @@
     "swarovski-crystal": {
       "reference": "Crystalline Aura 5519462",
       "pages": [
+        "https://www.jomashop.com/swarovski-crystalline-aura-quartz-white-silver-tone-dial-ladies-watch-5519462.html",
+        "https://www.watchpilot.com/products/swarovski-watch-crystalline-aura-silver-5519462",
+        "https://us.firstclasswatches.com/swarovski-crystalline-aura-stainless-steel-metal-bracelet-silver-5519462-p-57565/",
         "https://www.swarovski.com/en-US/p-M5519456/Crystalline-aura-watch-Swiss-Made-Metal-bracelet-Silver-tone-Stainless-steel/?variantID=5519462"
       ],
       "facts": "crystal-set case, white silver-tone dial, steel bracelet"
@@ -751,12 +894,18 @@
       "pages": [
         "https://www.grand-seiko.com/us-en/collections/slgh005g",
         "https://store.grand-seiko.com/products/slgh005"
+      ],
+      "images": [
+        "https://www.grand-seiko.com/us-en/-/media/Images/Product--Image/All/GrandSeiko/2022/02/19/23/14/SLGH005G/SLGH005G.png"
       ]
     },
     "grand-seiko-moonlit-birch": {
       "reference": "SLGW007",
       "pages": [
         "https://www.grand-seiko.com/us-en/collections/slgw007g"
+      ],
+      "images": [
+        "https://www.grand-seiko.com/us-en/-/media/Images/Product--Image/All/GrandSeiko/2025/07/10/21/09/SLGW007G/SLGW007G.png"
       ],
       "facts": "textured navy birch dial, slim steel case, manual winding"
     },
@@ -765,11 +914,16 @@
       "pages": [
         "https://www.grand-seiko.com/us-en/collections/slgb015g"
       ],
+      "images": [
+        "https://www.grand-seiko.com/us-en/-/media/Images/Product--Image/All/GrandSeiko/2026/04/27/21/11/SLGB015G/SLGB015G.png"
+      ],
       "facts": "Lake Suwa texture, Ever-Brilliant Steel, tapered bracelet"
     },
     "grand-seiko-ufa-violet": {
       "reference": "SLGB005",
       "pages": [
+        "https://grandseikoboutique.us/products/watch-spring-drive-ufa-37mm-ice-forest-violet-dawn-slgb005",
+        "https://littletreasury.com/products/grand-seiko-evolution-9-ice-forest-violet-dawn-limited-edition-spring-drive-slgb005",
         "https://www.grand-seiko.com/my-en/collections/slgb005g",
         "https://store.grand-seiko.com/products/slgb005"
       ],
@@ -780,6 +934,9 @@
       "pages": [
         "https://www.grand-seiko.com/us-en/collections/sbga375g"
       ],
+      "images": [
+        "https://www.grand-seiko.com/us-en/-/media/Images/Product--Image/All/GrandSeiko/2022/02/19/21/48/SBGA375G/SBGA375G.png"
+      ],
       "facts": "midnight blue sunray dial, 44GS case, power reserve indicator"
     },
     "grand-seiko-elegance-gmt": {
@@ -788,11 +945,17 @@
         "https://www.grand-seiko.com/us-en/collections/sbgj249g",
         "https://www.grand-seiko.com/sg-en/collections/sbgj251g"
       ],
+      "images": [
+        "https://www.grand-seiko.com/us-en/-/media/Images/Product--Image/All/GrandSeiko/2022/02/19/22/07/SBGJ249G/SBGJ249G.png"
+      ],
       "facts": "wave-pattern dial, blue GMT hand, steel bracelet"
     },
     "iwc-ingenieur-40": {
       "reference": "IW328901",
       "pages": [
+        "https://www.betteridge.com/IWC-Ingenieur-Automatic-40mm-Mens-Watch-Black-IW328901/p/17810806",
+        "https://zadok.com/products/iwc-schaffhausen-ingenieur-automatic-watch-iw328901",
+        "https://burdeens.com/products/iwc-ingenieur-automatic-40-watch-40mm-black-dial-iw328901",
         "https://www.iwc.com/us-en/watches/ingenieur/iw328901-ingenieur-automatic-40"
       ],
       "facts": "black Grid dial, integrated steel bracelet"
@@ -844,6 +1007,9 @@
     "zenith-defy-skyline": {
       "reference": "03.9300.3620/51.I001",
       "pages": [
+        "https://www.watchmaxx.com/zenith-watch-03-9300-3620-51-i001",
+        "https://www.watchesofswitzerland.com/products/zenith-defy-03-9300-3620-51-i001-17640791",
+        "https://www.mayors.com/Zenith-Defy-Skyline-41mm-Mens-Watch-03.9300.3620/51.I001/p/17640791",
         "https://www.zenith-watches.com/en_us/product/defy-skyline-03-9300-3620-51-i001"
       ],
       "facts": "octagonal case with faceted bezel, blue star-pattern dial"

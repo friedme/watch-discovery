@@ -14,6 +14,18 @@ export function featureLabels(watch: Watch): string[] {
   return labels
 }
 
+/**
+ * The photo credit shown under a card while voting. Names stay hidden until
+ * the results, so private product photos (whose credit is the brand) only say
+ * what kind of photo it is; their source is on the credits page. Open-licence
+ * credits name the photographer, which reveals nothing about the watch.
+ */
+export function votingCredit(watch: Watch, demo: boolean): string {
+  if (demo) return 'Demo sketch — not a real watch'
+  if (watch.image.usage === 'personal-use-only') return 'Product photo · private use'
+  return `Photo: ${watch.image.source.credit}`
+}
+
 export async function copyText(text: string): Promise<boolean> {
   try {
     await navigator.clipboard.writeText(text)

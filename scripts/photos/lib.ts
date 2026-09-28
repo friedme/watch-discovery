@@ -16,7 +16,16 @@ export const PRIVATE_CANDIDATES_DIR = join(PRIVATE_DIR, 'candidates')
 export const PRODUCT_PAGES_FILE = join(ROOT, 'catalogue/product-pages.json')
 
 export interface ProductPages {
-  pages: Record<string, { reference?: string; pages: string[]; facts?: string }>
+  pages: Record<
+    string,
+    {
+      reference?: string
+      pages: string[]
+      /** Direct image URLs from the brand's own image server, for sites whose pages block automated visits. Credited to the first page. */
+      images?: string[]
+      facts?: string
+    }
+  >
 }
 
 /** One accepted private photo (same shape as WatchImage, file relative to the repo root). */
@@ -67,41 +76,80 @@ export function brandCredit(brand: string): { author: string; license: string; c
 }
 
 /**
- * Studio shots on a plain light background are trimmed and re-framed to the
- * card's 4:5 shape with even margins, so every watch appears at a similar
- * size. Anything else (lifestyle photos, dark backgrounds) is only resized.
+ * Studio shots on a light background (plain or a soft gradient) are re-framed
+ * to the card's 4:5 shape around the watch, so every watch appears at a
+ * similar size: the watch fills ~88% of the limiting dimension, the original
+ * backdrop is kept where the photo reaches, and missing margins are filled
+ * with the colour of the nearest corners. Anything else (lifestyle photos,
+ * dark backgrounds) is only resized.
  */
 export async function normalizePhoto(input: Buffer | string, outFile: string): Promise<{ width: number; height: number; reframed: boolean }> {
   mkdirSync(dirname(outFile), { recursive: true })
-  const base = sharp(input).rotate()
-  const { data, info } = await base.clone().resize(64, 64, { fit: 'fill' }).removeAlpha().raw().toBuffer({ resolveWithObject: true })
-  const px = (x: number, y: number) => {
-    const i = (y * info.width + x) * info.channels
-    return [data[i], data[i + 1], data[i + 2]]
-  }
-  const corners = [px(1, 1), px(62, 1), px(1, 62), px(62, 62)]
-  const bright = corners.every((c) => Math.min(...c) >= 225)
-  const even = corners.every((c) => c.every((v, k) => Math.abs(v - corners[0][k]) <= 12))
-  let pipeline = sharp(input).rotate().flatten({ background: '#ffffff' })
-  let reframed = false
-  if (bright && even) {
-    const [r, g, b] = corners[0]
-    const trimmed = await pipeline.trim({ background: { r, g, b }, threshold: 18 }).toBuffer({ resolveWithObject: true })
-    const w = trimmed.info.width
-    const h = trimmed.info.height
-    // Target 4:5 with the watch filling ~88% of the limiting dimension.
-    const targetH = Math.max(h / 0.88, (w / 0.88) * 1.25)
-    const targetW = targetH * 0.8
-    const padX = Math.max(0, Math.round((targetW - w) / 2))
-    const padY = Math.max(0, Math.round((targetH - h) / 2))
-    pipeline = sharp(trimmed.data).extend({ top: padY, bottom: padY, left: padX, right: padX, background: { r, g, b } })
-    reframed = true
+  const { data: full, info: size } = await sharp(input).rotate().flatten({ background: '#ffffff' }).toBuffer({ resolveWithObject: true })
+  const frame = await studioFrame(full, size.width, size.height)
+  let pipeline = sharp(full)
+  if (frame) {
+    const { box, top, bottom } = frame
+    const W = size.width
+    const H = size.height
+    const targetH = Math.round(Math.max(box.height / 0.88, (box.width / 0.88) * 1.25))
+    const targetW = Math.round(targetH * 0.8)
+    const x0 = Math.round(box.left + box.width / 2 - targetW / 2)
+    const y0 = Math.round(box.top + box.height / 2 - targetH / 2)
+    const ix0 = Math.max(0, x0)
+    const iy0 = Math.max(0, y0)
+    const ix1 = Math.min(W, x0 + targetW)
+    const iy1 = Math.min(H, y0 + targetH)
+    let buf = await sharp(full).extract({ left: ix0, top: iy0, width: ix1 - ix0, height: iy1 - iy0 }).toBuffer()
+    const pad = { top: iy0 - y0, bottom: y0 + targetH - iy1, left: ix0 - x0, right: x0 + targetW - ix1 }
+    // One side at a time, each with the backdrop colour on that side.
+    if (pad.top > 0) buf = await sharp(buf).extend({ top: pad.top, background: top }).toBuffer()
+    if (pad.bottom > 0) buf = await sharp(buf).extend({ bottom: pad.bottom, background: bottom }).toBuffer()
+    if (pad.left > 0 || pad.right > 0) buf = await sharp(buf).extend({ left: Math.max(0, pad.left), right: Math.max(0, pad.right), background: mix(top, bottom) }).toBuffer()
+    pipeline = sharp(buf)
   }
   const out = await pipeline
     .resize({ width: 1200, height: 1200, fit: 'inside', withoutEnlargement: true })
     .jpeg({ quality: 84, mozjpeg: true })
     .toFile(outFile)
-  return { width: out.width, height: out.height, reframed }
+  return { width: out.width, height: out.height, reframed: Boolean(frame) }
+}
+
+type Rgb = { r: number; g: number; b: number }
+
+/**
+ * For a studio shot (light, near-uniform corners), the watch's bounding box
+ * and the backdrop colours at the top and bottom. Null for anything else.
+ */
+export async function studioFrame(
+  image: Buffer,
+  width: number,
+  height: number,
+): Promise<{ box: { left: number; top: number; width: number; height: number }; top: Rgb; bottom: Rgb } | null> {
+  const { data, info } = await sharp(image).resize(64, 64, { fit: 'fill' }).removeAlpha().raw().toBuffer({ resolveWithObject: true })
+  const px = (x: number, y: number): Rgb => {
+    const i = (y * info.width + x) * info.channels
+    return { r: data[i], g: data[i + 1], b: data[i + 2] }
+  }
+  const corners = [px(1, 1), px(62, 1), px(1, 62), px(62, 62)]
+  const bright = corners.every((c) => Math.min(c.r, c.g, c.b) >= 215)
+  const spread = Math.max(...(['r', 'g', 'b'] as const).map((k) => Math.max(...corners.map((c) => c[k])) - Math.min(...corners.map((c) => c[k]))))
+  if (!bright || spread > 30) return null
+  const top = mix(corners[0], corners[1])
+  const bottom = mix(corners[2], corners[3])
+  const lightest = [...corners].sort((a, b) => b.r + b.g + b.b - (a.r + a.g + a.b))[0]
+  const trimmed = await sharp(image)
+    .trim({ background: lightest, threshold: Math.max(18, spread + 10) })
+    .toBuffer({ resolveWithObject: true })
+  const t = trimmed.info as typeof trimmed.info & { trimOffsetLeft?: number; trimOffsetTop?: number }
+  const box = { left: -(t.trimOffsetLeft ?? 0), top: -(t.trimOffsetTop ?? 0), width: t.width, height: t.height }
+  // Nothing found, or the "watch" is the whole photo: leave it alone.
+  if (box.width < width * 0.1 || box.height < height * 0.1) return null
+  return { box, top, bottom }
+}
+
+function mix(a: Rgb, b: Rgb): Rgb {
+  return { r: Math.round((a.r + b.r) / 2), g: Math.round((a.g + b.g) / 2), b: Math.round((a.b + b.b) / 2) }
 }
 
 export async function contactSheet(dir: string, files: Array<{ n: number; file: string; label?: string }>, caption: string) {

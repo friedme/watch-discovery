@@ -1,4 +1,4 @@
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { expect, test } from '@playwright/test'
 import type { Page } from '@playwright/test'
 
@@ -29,6 +29,26 @@ test('real mode without verified photos explains what is missing and shows no pl
   await expect(page.getByText('No verified watch photos yet.')).toBeVisible()
   await expect(page.getByRole('button', { name: 'Start' })).toHaveCount(0)
   await expect(page.locator('img')).toHaveCount(0)
+})
+
+test('real mode with private product photos keeps brand names hidden until the results', async ({ page }) => {
+  test.skip(!existsSync('private/photos.json'), 'needs private photos on this machine')
+  const photos = JSON.parse(readFileSync('private/photos.json', 'utf8')) as Record<string, { source: { credit: string } }>
+  const brands = [...new Set(Object.values(photos).map((p) => p.source.credit.replace(/^Product photo © /, '')))]
+  await page.goto('./#/')
+  await page.getByRole('button', { name: 'Start' }).click()
+  await page.getByText("Men's watches", { exact: true }).click()
+  await page.getByRole('button', { name: 'Show me the first watch' }).click()
+  for (let i = 0; i < 6; i++) {
+    await expect(photo(page)).toBeVisible()
+    const text = (await page.locator('body').textContent()) ?? ''
+    for (const brand of brands) expect(text, `card ${i + 1}`).not.toContain(brand)
+    await page.getByRole('button', { name: i % 2 ? /^Nay/ : /^Yay/ }).click()
+  }
+  await page.getByRole('button', { name: 'Results' }).click()
+  await expect(page.getByRole('heading', { name: 'Favourites' })).toBeVisible()
+  const results = (await page.locator('body').textContent()) ?? ''
+  expect(brands.some((b) => results.includes(b))).toBe(true)
 })
 
 test('swipe, buttons, pass and undo on a phone', async ({ page }) => {

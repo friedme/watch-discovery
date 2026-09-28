@@ -78,7 +78,7 @@
       "id": "rolex-submariner-green",
       "brand": "Rolex",
       "model": "Submariner",
-      "variant": "green ring, steel bracelet",
+      "variant": "green ring, black face, steel bracelet",
       "audiences": [
         "men"
       ],
@@ -87,7 +87,7 @@
         "style": "sport-ring",
         "caseShape": "round",
         "caseColour": "silver",
-        "dialColour": "green",
+        "dialColour": "black",
         "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
@@ -238,7 +238,9 @@
         "bezel": "numbered",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "commonsCategories": [
@@ -421,7 +423,7 @@
       "id": "tag-heuer-aquaracer",
       "brand": "TAG Heuer",
       "model": "Aquaracer",
-      "variant": "blue face, steel bracelet",
+      "variant": "black wave-pattern face, steel bracelet",
       "audiences": [
         "men"
       ],
@@ -430,7 +432,7 @@
         "style": "sport-ring",
         "caseShape": "round",
         "caseColour": "silver",
-        "dialColour": "blue",
+        "dialColour": "black",
         "dialTexture": "textured",
         "band": "bracelet",
         "heft": "bold",
@@ -787,7 +789,9 @@
         "bezel": "plain",
         "era": "modern",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -898,7 +902,7 @@
       "id": "timex-weekender",
       "brand": "Timex",
       "model": "Weekender",
-      "variant": "white face, fabric strap",
+      "variant": "black face, fabric strap",
       "audiences": [
         "men",
         "women"
@@ -908,7 +912,7 @@
         "style": "field",
         "caseShape": "round",
         "caseColour": "silver",
-        "dialColour": "white",
+        "dialColour": "black",
         "dialTexture": "plain",
         "band": "fabric",
         "heft": "balanced",
@@ -973,7 +977,7 @@
         "caseColour": "silver",
         "dialColour": "black",
         "dialTexture": "plain",
-        "band": "leather",
+        "band": "rubber",
         "heft": "bold",
         "busyness": "clean",
         "markers": "arabic",
@@ -994,7 +998,7 @@
     },
     {
       "id": "a11-field-watch",
-      "brand": "Bulova / Elgin / Waltham",
+      "brand": "Bulova",
       "model": "A-11 military watch (1940s)",
       "variant": "black face, fabric strap",
       "audiences": [
@@ -1143,7 +1147,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "blue",
-        "dialTexture": "plain",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
@@ -1215,7 +1219,9 @@
         "bezel": "decorative",
         "era": "modern",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "subdials"
+        ]
       },
       "search": {
         "queries": [
@@ -1263,7 +1269,7 @@
       "id": "jlc-reverso",
       "brand": "Jaeger-LeCoultre",
       "model": "Reverso",
-      "variant": "rectangular, silver face, leather strap",
+      "variant": "rectangular, blue face, small seconds, blue strap",
       "audiences": [
         "men",
         "women"
@@ -1273,12 +1279,12 @@
         "style": "dress",
         "caseShape": "rectangular",
         "caseColour": "silver",
-        "dialColour": "white",
+        "dialColour": "blue",
         "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "moderate",
-        "markers": "arabic",
+        "markers": "sticks",
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
@@ -1308,7 +1314,7 @@
       "attributes": {
         "style": "dress",
         "caseShape": "rectangular",
-        "caseColour": "gold",
+        "caseColour": "silver",
         "dialColour": "white",
         "dialTexture": "plain",
         "band": "leather",
@@ -1368,7 +1374,7 @@
       "id": "breguet-classique",
       "brand": "Breguet",
       "model": "Classique",
-      "variant": "engraved silver face, gold case",
+      "variant": "white enamel face, rose gold case",
       "audiences": [
         "men"
       ],
@@ -1376,17 +1382,19 @@
       "attributes": {
         "style": "dress",
         "caseShape": "round",
-        "caseColour": "gold",
+        "caseColour": "rose",
         "dialColour": "white",
-        "dialTexture": "textured",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
-        "markers": "roman",
+        "markers": "arabic",
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -1442,7 +1450,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
-        "dialTexture": "plain",
+        "dialTexture": "textured",
         "band": "leather",
         "heft": "balanced",
         "busyness": "busy",
@@ -1498,7 +1506,7 @@
       "id": "omega-de-ville",
       "brand": "Omega",
       "model": "De Ville Prestige",
-      "variant": "white face, Roman numerals",
+      "variant": "green face, Roman numerals, leather strap",
       "audiences": [
         "men"
       ],
@@ -1507,7 +1515,7 @@
         "style": "dress",
         "caseShape": "round",
         "caseColour": "silver",
-        "dialColour": "white",
+        "dialColour": "green",
         "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
@@ -1533,7 +1541,7 @@
       "id": "omega-seamaster-vintage",
       "brand": "Omega",
       "model": "Seamaster (1960s)",
-      "variant": "vintage dress watch, gold case",
+      "variant": "18K gold case, silvered face, date",
       "audiences": [
         "men"
       ],
@@ -1580,11 +1588,13 @@
         "band": "leather",
         "heft": "balanced",
         "busyness": "moderate",
-        "markers": "sticks",
+        "markers": "roman",
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -1596,7 +1606,7 @@
       "id": "seiko-presage-cocktail",
       "brand": "Seiko",
       "model": "Presage \"Cocktail Time\"",
-      "variant": "blue textured face",
+      "variant": "blue textured face, steel bracelet",
       "audiences": [
         "men"
       ],
@@ -1607,7 +1617,7 @@
         "caseColour": "silver",
         "dialColour": "blue",
         "dialTexture": "textured",
-        "band": "leather",
+        "band": "bracelet",
         "heft": "balanced",
         "busyness": "moderate",
         "markers": "sticks",
@@ -1629,7 +1639,7 @@
       "id": "hamilton-jazzmaster-skeleton",
       "brand": "Hamilton",
       "model": "Jazzmaster Skeleton",
-      "variant": "see-through face",
+      "variant": "black open-worked face, leather strap",
       "audiences": [
         "men"
       ],
@@ -1681,7 +1691,9 @@
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -1898,7 +1910,7 @@
       "id": "junghans-max-bill",
       "brand": "Junghans",
       "model": "max bill",
-      "variant": "white face, leather strap",
+      "variant": "black face, date, leather strap",
       "audiences": [
         "men",
         "women"
@@ -1908,16 +1920,18 @@
         "style": "minimalist",
         "caseShape": "round",
         "caseColour": "silver",
-        "dialColour": "white",
+        "dialColour": "black",
         "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
-        "markers": "arabic",
+        "markers": "sticks",
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -1992,7 +2006,7 @@
       "id": "braun-watch",
       "brand": "Braun",
       "model": "BN0021",
-      "variant": "black face, clean numbers",
+      "variant": "steel case, black face, leather strap",
       "audiences": [
         "men",
         "women"
@@ -2001,7 +2015,7 @@
       "attributes": {
         "style": "minimalist",
         "caseShape": "round",
-        "caseColour": "black",
+        "caseColour": "silver",
         "dialColour": "black",
         "dialTexture": "plain",
         "band": "leather",
@@ -2055,7 +2069,7 @@
       "id": "swatch-originals",
       "brand": "Swatch",
       "model": "Originals",
-      "variant": "colourful plastic",
+      "variant": "blue plastic case, red face, blue-and-red strap",
       "audiences": [
         "men",
         "women"
@@ -2095,7 +2109,7 @@
         "men",
         "women"
       ],
-      "status": "wanted",
+      "status": "verified",
       "attributes": {
         "style": "digital",
         "caseShape": "rectangular",
@@ -2118,6 +2132,29 @@
         "queries": [
           "Casio F-91W"
         ]
+      },
+      "image": {
+        "file": "watches/casio-f91w.jpg",
+        "width": 960,
+        "height": 1200,
+        "usage": "open-licence",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Casio_F-91W_5051.jpg",
+          "fileUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Casio_F-91W_5051.jpg/1280px-Casio_F-91W_5051.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "title": "File:Casio F-91W 5051.jpg",
+          "author": "Ashley Pomeroy",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "attributionRequired": true,
+          "credit": "Ashley Pomeroy, CC BY-SA 3.0, via Wikimedia Commons (cropped)",
+          "retrievedAt": "2026-09-28"
+        },
+        "verification": {
+          "identity": "model-family",
+          "checkedBy": "Claude (visual check)",
+          "checkedAt": "2026-09-28"
+        }
       }
     },
     {
@@ -2191,7 +2228,7 @@
       "id": "casio-databank",
       "brand": "Casio",
       "model": "Databank calculator watch",
-      "variant": "calculator keypad",
+      "variant": "calculator keypad, steel bracelet",
       "audiences": [
         "men"
       ],
@@ -2202,7 +2239,7 @@
         "caseColour": "silver",
         "dialColour": "screen",
         "dialTexture": "plain",
-        "band": "resin",
+        "band": "bracelet",
         "heft": "balanced",
         "busyness": "busy",
         "markers": "digital",
@@ -2222,16 +2259,16 @@
       "id": "apple-watch",
       "brand": "Apple",
       "model": "Watch",
-      "variant": "smartwatch with sport band",
+      "variant": "space grey aluminium case, black sport band (earlier model)",
       "audiences": [
         "men",
         "women"
       ],
-      "status": "wanted",
+      "status": "verified",
       "attributes": {
         "style": "smart",
         "caseShape": "rectangular",
-        "caseColour": "silver",
+        "caseColour": "black",
         "dialColour": "screen",
         "dialTexture": "plain",
         "band": "rubber",
@@ -2250,25 +2287,48 @@
         "queries": [
           "Apple Watch"
         ]
+      },
+      "image": {
+        "file": "watches/apple-watch.jpg",
+        "width": 960,
+        "height": 1200,
+        "usage": "open-licence",
+        "source": {
+          "provider": "wikimedia-commons",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Apple_Watch_(38811762052).jpg",
+          "fileUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Apple_Watch_%2838811762052%29.jpg/1280px-Apple_Watch_%2838811762052%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "title": "File:Apple Watch (38811762052).jpg",
+          "author": "Tim Reckmann from Hamm, Deutschland",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "attributionRequired": true,
+          "credit": "Tim Reckmann from Hamm, Deutschland, CC BY 2.0, via Wikimedia Commons (cropped)",
+          "retrievedAt": "2026-09-28"
+        },
+        "verification": {
+          "identity": "model-family",
+          "checkedBy": "Claude (visual check)",
+          "checkedAt": "2026-09-28"
+        }
       }
     },
     {
       "id": "casio-baby-g",
       "brand": "Casio",
       "model": "Baby-G",
-      "variant": "colourful digital",
+      "variant": "translucent light-blue square case",
       "audiences": [
         "women"
       ],
       "status": "wanted",
       "attributes": {
         "style": "digital",
-        "caseShape": "round",
+        "caseShape": "square",
         "caseColour": "colour",
         "dialColour": "screen",
         "dialTexture": "plain",
         "band": "resin",
-        "heft": "bold",
+        "heft": "balanced",
         "busyness": "busy",
         "markers": "digital",
         "bezel": "decorative",
@@ -2349,7 +2409,7 @@
       "id": "richard-mille",
       "brand": "Richard Mille",
       "model": "RM series",
-      "variant": "barrel-shaped, see-through face",
+      "variant": "white case, see-through face, blue rubber strap",
       "audiences": [
         "men"
       ],
@@ -2357,7 +2417,7 @@
       "attributes": {
         "style": "sculptural",
         "caseShape": "cushion",
-        "caseColour": "black",
+        "caseColour": "white",
         "dialColour": "skeleton",
         "dialTexture": "plain",
         "band": "rubber",
@@ -2392,7 +2452,7 @@
         "caseColour": "silver",
         "dialColour": "skeleton",
         "dialTexture": "plain",
-        "band": "bracelet",
+        "band": "leather",
         "heft": "balanced",
         "busyness": "busy",
         "markers": "sticks",
@@ -2425,15 +2485,17 @@
         "caseShape": "square",
         "caseColour": "black",
         "dialColour": "black",
-        "dialTexture": "plain",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
-        "markers": "minimal",
+        "markers": "sticks",
         "bezel": "plain",
         "era": "modern",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -2687,9 +2749,7 @@
         "bezel": "decorative",
         "era": "modern",
         "sparkle": "some",
-        "features": [
-          "date"
-        ]
+        "features": []
       },
       "search": {
         "commonsCategories": [
@@ -2722,9 +2782,7 @@
         "bezel": "numbered",
         "era": "modern",
         "sparkle": "none",
-        "features": [
-          "date"
-        ]
+        "features": []
       },
       "search": {
         "queries": [
@@ -2797,7 +2855,7 @@
       "id": "hermes-heure-h",
       "brand": "Hermès",
       "model": "Heure H",
-      "variant": "H-shaped case",
+      "variant": "diamond-set H case, mother-of-pearl face, raspberry strap",
       "audiences": [
         "women"
       ],
@@ -2806,15 +2864,15 @@
         "style": "sculptural",
         "caseShape": "unusual",
         "caseColour": "silver",
-        "dialColour": "white",
+        "dialColour": "pearl",
         "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
         "markers": "arabic",
-        "bezel": "plain",
+        "bezel": "gems",
         "era": "modern",
-        "sparkle": "none",
+        "sparkle": "lots",
         "features": []
       },
       "search": {
@@ -2837,11 +2895,11 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
-        "dialTexture": "plain",
+        "dialTexture": "textured",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
-        "markers": "roman",
+        "markers": "minimal",
         "bezel": "gems",
         "era": "classic",
         "sparkle": "lots",
@@ -2857,7 +2915,7 @@
       "id": "bulgari-serpenti",
       "brand": "Bulgari",
       "model": "Serpenti",
-      "variant": "snake-coil bracelet",
+      "variant": "gold-and-steel coil bracelet, white face, diamond rim",
       "audiences": [
         "women"
       ],
@@ -2865,14 +2923,14 @@
       "attributes": {
         "style": "jewellery",
         "caseShape": "unusual",
-        "caseColour": "gold",
-        "dialColour": "black",
+        "caseColour": "two-tone",
+        "dialColour": "white",
         "dialTexture": "plain",
-        "band": "chain",
+        "band": "bracelet",
         "heft": "delicate",
         "busyness": "clean",
-        "markers": "minimal",
-        "bezel": "plain",
+        "markers": "roman",
+        "bezel": "gems",
         "era": "modern",
         "sparkle": "some",
         "features": []
@@ -2888,7 +2946,7 @@
       "id": "van-cleef-alhambra",
       "brand": "Van Cleef & Arpels",
       "model": "Alhambra",
-      "variant": "four-leaf-clover shape, mother-of-pearl",
+      "variant": "gold quatrefoil, mother-of-pearl face, satin strap",
       "audiences": [
         "women"
       ],
@@ -2899,7 +2957,7 @@
         "caseColour": "gold",
         "dialColour": "pearl",
         "dialTexture": "plain",
-        "band": "chain",
+        "band": "fabric",
         "heft": "delicate",
         "busyness": "clean",
         "markers": "minimal",
@@ -2918,7 +2976,7 @@
       "id": "piaget-possession",
       "brand": "Piaget",
       "model": "Possession",
-      "variant": "diamond rim, rose gold",
+      "variant": "diamond rims, mother-of-pearl face, leather strap",
       "audiences": [
         "women"
       ],
@@ -2927,12 +2985,12 @@
         "style": "jewellery",
         "caseShape": "round",
         "caseColour": "rose",
-        "dialColour": "white",
+        "dialColour": "pearl",
         "dialTexture": "plain",
-        "band": "bracelet",
+        "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
-        "markers": "minimal",
+        "markers": "gems",
         "bezel": "gems",
         "era": "classic",
         "sparkle": "lots",
@@ -2989,15 +3047,17 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "white",
-        "dialTexture": "plain",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
-        "markers": "arabic",
+        "markers": "roman",
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "subdials"
+        ]
       },
       "search": {
         "queries": [
@@ -3023,11 +3083,13 @@
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
-        "markers": "roman",
-        "bezel": "gems",
+        "markers": "gems",
+        "bezel": "plain",
         "era": "classic",
         "sparkle": "some",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -3161,7 +3223,7 @@
       "id": "fossil-classic-rose",
       "brand": "Fossil",
       "model": "Jacqueline",
-      "variant": "rose-gold, leather strap",
+      "variant": "rose-gold, crystal rim, mother-of-pearl face, blush leather",
       "audiences": [
         "women"
       ],
@@ -3171,14 +3233,14 @@
         "caseShape": "round",
         "caseColour": "rose",
         "dialColour": "pearl",
-        "dialTexture": "plain",
+        "dialTexture": "textured",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
-        "markers": "roman",
-        "bezel": "plain",
+        "markers": "minimal",
+        "bezel": "gems",
         "era": "classic",
-        "sparkle": "none",
+        "sparkle": "some",
         "features": []
       },
       "search": {
@@ -3224,7 +3286,7 @@
       "id": "tiffany-atlas",
       "brand": "Tiffany & Co.",
       "model": "Atlas",
-      "variant": "Roman numerals on the rim",
+      "variant": "Tiffany Blue face, Roman numerals, black leather strap",
       "audiences": [
         "women"
       ],
@@ -3233,16 +3295,18 @@
         "style": "dress",
         "caseShape": "round",
         "caseColour": "silver",
-        "dialColour": "white",
+        "dialColour": "blue",
         "dialTexture": "plain",
-        "band": "bracelet",
+        "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
-        "markers": "minimal",
-        "bezel": "decorative",
+        "markers": "roman",
+        "bezel": "plain",
         "era": "modern",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -3254,7 +3318,7 @@
       "id": "patek-twenty-4",
       "brand": "Patek Philippe",
       "model": "Twenty~4",
-      "variant": "diamond-set rectangular case",
+      "variant": "steel cuff, brown sunburst face, two rows of diamonds",
       "audiences": [
         "women"
       ],
@@ -3263,12 +3327,12 @@
         "style": "jewellery",
         "caseShape": "rectangular",
         "caseColour": "silver",
-        "dialColour": "grey",
+        "dialColour": "brown",
         "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "clean",
-        "markers": "sticks",
+        "markers": "arabic",
         "bezel": "gems",
         "era": "modern",
         "sparkle": "lots",
@@ -3285,7 +3349,7 @@
       "id": "gucci-horsebit",
       "brand": "Gucci",
       "model": "Horsebit",
-      "variant": "bangle-style bracelet",
+      "variant": "rose-gold horsebit bangle, black face",
       "audiences": [
         "women"
       ],
@@ -3293,13 +3357,13 @@
       "attributes": {
         "style": "jewellery",
         "caseShape": "round",
-        "caseColour": "gold",
+        "caseColour": "rose",
         "dialColour": "black",
         "dialTexture": "plain",
-        "band": "chain",
+        "band": "bracelet",
         "heft": "delicate",
         "busyness": "clean",
-        "markers": "minimal",
+        "markers": "roman",
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
@@ -3327,7 +3391,7 @@
         "caseColour": "silver",
         "dialColour": "white",
         "dialTexture": "plain",
-        "band": "chain",
+        "band": "bracelet",
         "heft": "delicate",
         "busyness": "clean",
         "markers": "arabic",
@@ -3346,26 +3410,26 @@
     },
     {
       "id": "vintage-gold-cocktail",
-      "brand": "Unknown maker",
-      "model": "Gold cocktail watch (1950s–60s)",
-      "variant": "small gold bracelet watch",
+      "brand": "Longines",
+      "model": "Cocktail watch (1950s)",
+      "variant": "14k white gold, diamonds, cord strap",
       "audiences": [
         "women"
       ],
       "status": "wanted",
       "attributes": {
         "style": "jewellery",
-        "caseShape": "round",
-        "caseColour": "gold",
+        "caseShape": "square",
+        "caseColour": "silver",
         "dialColour": "white",
         "dialTexture": "plain",
-        "band": "chain",
+        "band": "fabric",
         "heft": "delicate",
         "busyness": "clean",
-        "markers": "sticks",
-        "bezel": "plain",
+        "markers": "arabic",
+        "bezel": "gems",
         "era": "classic",
-        "sparkle": "none",
+        "sparkle": "some",
         "features": []
       },
       "search": {
@@ -3394,7 +3458,7 @@
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
-        "markers": "gems",
+        "markers": "sticks",
         "bezel": "gems",
         "era": "modern",
         "sparkle": "lots",
@@ -3528,7 +3592,9 @@
         "bezel": "plain",
         "era": "modern",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -3659,7 +3725,9 @@
         "bezel": "decorative",
         "era": "modern",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -3673,7 +3741,7 @@
       "id": "cartier-santos-black",
       "brand": "Cartier",
       "model": "Santos de Cartier",
-      "variant": "black dial, steel bracelet",
+      "variant": "black case and dial, leather strap",
       "audiences": [
         "men",
         "women"
@@ -3682,17 +3750,19 @@
       "attributes": {
         "style": "dress",
         "caseShape": "square",
-        "caseColour": "silver",
+        "caseColour": "black",
         "dialColour": "black",
         "dialTexture": "plain",
-        "band": "rubber",
+        "band": "leather",
         "heft": "balanced",
         "busyness": "moderate",
         "markers": "roman",
         "bezel": "decorative",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "date"
+        ]
       },
       "search": {
         "queries": [
@@ -3838,7 +3908,7 @@
       "id": "kurono-calendrier",
       "brand": "Kurono Tokyo",
       "model": "Calendrier",
-      "variant": "calendar dial, leather strap",
+      "variant": "green calendar dial, leather strap",
       "audiences": [
         "men"
       ],
@@ -3847,13 +3917,13 @@
         "style": "dress",
         "caseShape": "round",
         "caseColour": "silver",
-        "dialColour": "white",
+        "dialColour": "green",
         "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "busy",
         "markers": "arabic",
-        "bezel": "plain",
+        "bezel": "decorative",
         "era": "classic",
         "sparkle": "none",
         "features": [

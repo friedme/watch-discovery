@@ -13,6 +13,15 @@ function testCatalogue(): Catalogue {
     brand: `Brandname${i}`,
     model: `Model${i}`,
     displayName: `Brandname${i} Model${i}`,
+    // Every other photo is a private product photo, whose credit names the brand.
+    image:
+      i % 2
+        ? {
+            ...w.image,
+            usage: 'personal-use-only' as const,
+            source: { ...w.image.source, provider: 'other' as const, author: `Brandname${i} (product photo)`, credit: `Product photo © Brandname${i}` },
+          }
+        : w.image,
   }))
   return {
     watches,

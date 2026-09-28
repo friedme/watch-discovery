@@ -16,13 +16,15 @@
  * Each page is first read with a plain request (fast; most sites expose the
  * main product image in their og:image / JSON-LD for link previews). Pages
  * that block that, or show no usable image, are opened in headless Chromium.
+ * Sites that block automated visits altogether can list direct image URLs from
+ * their own image server under "images"; those are tried first.
  */
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { EnvHttpProxyAgent, fetch as undiciFetch } from 'undici'
 import sharp from 'sharp'
 import { parseArgs, readCatalogue, sleep } from '../catalogue/lib'
-import { extractFromHtml } from './extract'
+import { extractFromHtml, largerVariant } from './extract'
 import type { Found } from './extract'
 import { contactSheet, PRIVATE_CANDIDATES_DIR, readPrivatePhotos, readProductPages } from './lib'
 import type { PageCandidate, ProductPages } from './lib'
@@ -58,7 +60,8 @@ let ok = 0
 for (const id of ids) {
   const entry = catalogue.watches.find((e) => e.id === id)
   const pages = pagesDoc.pages[id]?.pages ?? []
-  if (!entry || !pages.length) {
+  const images = pagesDoc.pages[id]?.images ?? []
+  if (!entry || (!pages.length && !images.length)) {
     console.log(`${id}: no product page listed — skipped`)
     continue
   }
@@ -66,23 +69,40 @@ for (const id of ids) {
   rmSync(dir, { recursive: true, force: true })
   mkdirSync(dir, { recursive: true })
   const saved: PageCandidate[] = []
-  for (const pageUrl of pages) {
-    if (saved.length >= limit) break
-    let found = await fromHtml(pageUrl)
-    if (!found.length || flags.browser === true) found = [...found, ...(await fromBrowser(pageUrl))]
+  const save = async (found: Found[], pageUrl: string, bodies = new Map<string, Buffer>()) => {
     for (const f of dedupe(found)) {
-      if (saved.length >= limit) break
-      const buf = await download(f.url, pageUrl)
+      // Ask the image server for a larger rendition first, if the URL names a small size.
+      const larger = largerVariant(f.url)
+      if (saved.length >= limit || saved.some((s) => s.imageUrl === f.url || s.imageUrl === larger)) continue
+      const big = larger ? await download(larger, pageUrl) : null
+      const imageUrl = big && larger ? larger : f.url
+      const buf = big ?? bodies.get(f.url) ?? (await download(f.url, pageUrl))
       if (!buf) continue
       try {
         const meta = await sharp(buf).metadata()
         if (!meta.width || !meta.height || Math.min(meta.width, meta.height) < MIN_SIDE) continue
         const n = saved.length + 1
         await sharp(buf).rotate().flatten({ background: '#ffffff' }).resize({ width: 1600, height: 1600, fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 88 }).toFile(join(dir, `${n}.jpg`))
-        saved.push({ n, pageUrl, imageUrl: f.url, via: f.via, width: meta.width, height: meta.height })
+        saved.push({ n, pageUrl, imageUrl, via: f.via, width: meta.width, height: meta.height })
       } catch {
         // Not a decodable image.
       }
+    }
+  }
+  // Direct image URLs first: they are listed because the pages themselves can't be read.
+  await save(
+    images.map((url) => ({ url, via: 'direct' })),
+    pages[0] ?? images[0],
+  )
+  for (const pageUrl of pages) {
+    if (saved.length >= limit) break
+    const before = saved.length
+    await save(await fromHtml(pageUrl), pageUrl)
+    // Pages that can't be read directly, or whose images can't be downloaded
+    // without the page's cookies, are opened in a real browser.
+    if (saved.length === before || flags.browser === true) {
+      const { found, bodies } = await fromBrowser(pageUrl)
+      await save(found, pageUrl, bodies)
     }
     await sleep(400)
   }
@@ -90,7 +110,7 @@ for (const id of ids) {
   if (saved.length) {
     await contactSheet(
       dir,
-      saved.map((c) => ({ n: c.n, file: join(dir, `${c.n}.jpg`), label: `${c.via} · ${new URL(c.pageUrl).hostname}` })),
+      saved.map((c) => ({ n: c.n, file: join(dir, `${c.n}.jpg`), label: `${c.via} · ${new URL(c.imageUrl).hostname}` })),
       `${id}: ${entry.brand} ${entry.model} (${pagesDoc.pages[id]?.reference ?? ''})`,
     )
     ok++
@@ -110,7 +130,13 @@ async function fromHtml(pageUrl: string): Promise<Found[]> {
   }
 }
 
-async function fromBrowser(pageUrl: string): Promise<Found[]> {
+/**
+ * Opens the page in headless Chromium and returns the images it names (link
+ * previews, JSON-LD) plus its largest images, with their bytes as the browser
+ * received them (some image servers refuse requests without the page's cookies).
+ */
+async function fromBrowser(pageUrl: string): Promise<{ found: Found[]; bodies: Map<string, Buffer> }> {
+  const bodies = new Map<string, Buffer>()
   try {
     if (!browser) {
       const { chromium } = await import('@playwright/test')
@@ -118,6 +144,16 @@ async function fromBrowser(pageUrl: string): Promise<Found[]> {
     }
     const context = await browser.newContext({ userAgent: BROWSER_UA, locale: 'en-US', viewport: { width: 1440, height: 1000 } })
     const page = await context.newPage()
+    const pending: Promise<void>[] = []
+    page.on('response', (res) => {
+      if (res.request().resourceType() !== 'image' || !res.ok()) return
+      pending.push(
+        res
+          .body()
+          .then((b) => void bodies.set(res.url(), b))
+          .catch(() => {}),
+      )
+    })
     try {
       await page.goto(pageUrl, { waitUntil: 'domcontentloaded', timeout: 45_000 })
       await page.waitForLoadState('networkidle', { timeout: 15_000 }).catch(() => {})
@@ -131,13 +167,24 @@ async function fromBrowser(pageUrl: string): Promise<Found[]> {
           .slice(0, 6)
           .map((img) => img.currentSrc || img.src),
       )
-      return [...extractFromHtml(html, page.url()), ...largest.map((url) => ({ url, via: 'largest-img' }))]
+      const found = dedupe([...extractFromHtml(html, page.url()), ...largest.map((url) => ({ url, via: 'largest-img' }))]).filter((f) =>
+        // Not inline placeholders (lazy-loading sites use data: SVGs of the final size).
+        /^https?:/.test(f.url),
+      )
+      await Promise.all(pending)
+      // Named images the page didn't load itself: fetch them with the page's cookies.
+      for (const f of found.slice(0, 16)) {
+        if (bodies.has(f.url)) continue
+        const res = await context.request.get(f.url, { headers: { Referer: pageUrl }, timeout: 20_000 }).catch(() => null)
+        if (res?.ok()) bodies.set(f.url, await res.body())
+      }
+      return { found, bodies }
     } finally {
       await context.close()
     }
   } catch (err) {
     console.warn(`  browser failed for ${pageUrl}: ${(err as Error).message.split('\n')[0]}`)
-    return []
+    return { found: [], bodies }
   }
 }
 

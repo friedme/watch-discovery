@@ -20,12 +20,14 @@ Built for three uses: a partner judging men's watches ("what would you like on m
 | Part | State |
 | --- | --- |
 | App (voting, undo, adaptive exploration, results, compare, sharing) | Done and tested |
-| Catalogue of 104 watch designs with visual attributes and curated opening rounds | Done |
+| Catalogue of 121 watch designs with visual attributes and curated opening rounds | Done |
 | Photo pipeline (find, check, accept, validate) | Done |
 | Product-page list for every watch + photo scraper for private use | Done |
-| **Photos** | **None yet.** The build environment could not reach any photo source, see [`catalogue/MISSING_ASSETS.md`](catalogue/MISSING_ASSETS.md) |
+| **Private product photos** (personal use, not in this repository) | 117 checked and accepted |
+| **Openly licensed photos** (committed) | 2 (Casio F-91W, Apple Watch). See [`catalogue/MISSING_ASSETS.md`](catalogue/MISSING_ASSETS.md) |
+| Together | 119 of 121, all 40 opening-round slots covered. Missing: Cluse La Bohème and Olivia Burton (both references appear discontinued) |
 
-Until photos are added, the app says so on the start screen and offers **demo mode**. Demo mode uses vector sketches drawn from the same design data, is clearly labelled and is stored separately. Real results never contain placeholders.
+The private photos live in the git-ignored `private/` folder, so a fresh clone has none. Either unzip the private photo pack at the repository root (it creates `private/photos.json` and `private/photos/`), or run the scraper yourself (see [Adding photos](#adding-photos)). Without photos, the app says so on the start screen and offers **demo mode**. Demo mode uses vector sketches drawn from the same design data, is clearly labelled and is stored separately. Real results never contain placeholders.
 
 ## Compare with a declared taste (e.g. your own notes)
 

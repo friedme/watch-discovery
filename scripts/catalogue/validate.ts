@@ -18,7 +18,8 @@ const doc = readCatalogue()
 // Committed photos live in public/, private ones are referenced from the repo root.
 const fileExists = (file: string) => existsSync(file.startsWith('private/') ? join(ROOT, file) : join(PUBLIC_DIR, file))
 const report = validateCatalogue(doc, readOpening(), fileExists, readPrivatePhotos())
-writeFileSync(MISSING_FILE, missingAssetsMarkdown(doc, report, MIN_PLAYABLE))
+// The committed report ignores this computer's private photos.
+writeFileSync(MISSING_FILE, missingAssetsMarkdown(doc, validateCatalogue(doc, readOpening(), fileExists), MIN_PLAYABLE))
 
 // Reference tastes (committed examples and personal ones in private/).
 const knownIds = new Set(doc.watches.map((e) => e.id))

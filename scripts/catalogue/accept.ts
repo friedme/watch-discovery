@@ -18,11 +18,11 @@
  */
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
-import sharp from 'sharp'
 import { validateAttributes } from '../../src/domain/taxonomy'
 import type { WatchAttributes } from '../../src/domain/taxonomy'
 import type { ImageVerification } from '../../src/domain/types'
 import type { Candidate } from './find-candidates'
+import { normalizePhoto } from '../photos/lib'
 import { CANDIDATES_DIR, classifyLicense, creditLine, parseArgs, PUBLIC_DIR, readCatalogue, today, writeCatalogue } from './lib'
 
 const { positional, flags } = parseArgs(process.argv.slice(2))
@@ -58,11 +58,8 @@ const problems = validateAttributes(attributes)
 if (problems.length) throw new Error(`Attribute problems: ${problems.join('; ')}`)
 
 const file = `watches/${id}.jpg`
-const out = await sharp(join(dir, `${c.n}.jpg`))
-  .rotate()
-  .resize({ width: 1200, height: 1200, fit: 'inside', withoutEnlargement: true })
-  .jpeg({ quality: 82, mozjpeg: true })
-  .toFile(join(PUBLIC_DIR, file))
+// Studio-style shots are cropped to the card's shape like private photos; the credit says so (CC licences ask for changes to be indicated).
+const out = await normalizePhoto(join(dir, `${c.n}.jpg`), join(PUBLIC_DIR, file))
 
 entry.attributes = attributes as WatchAttributes
 if (typeof flags.variant === 'string') entry.variant = flags.variant
@@ -85,7 +82,7 @@ entry.image = {
     license: c.license,
     ...(c.licenseUrl ? { licenseUrl: c.licenseUrl } : {}),
     attributionRequired: c.attributionRequired,
-    credit: creditLine(c.author, c.license, c.provider),
+    credit: `${creditLine(c.author, c.license, c.provider)}${out.reframed ? ' (cropped)' : ''}`,
     retrievedAt: today(),
   },
   verification: {

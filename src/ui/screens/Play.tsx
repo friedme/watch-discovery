@@ -9,6 +9,7 @@ import type { SessionAction } from '../../engine/session'
 import { computeStats } from '../../engine/stats'
 import { ThumbRow, TopBar, WatchPhoto } from '../components'
 import type { Route } from '../routing'
+import { votingCredit } from '../util'
 
 const SWIPE_THRESHOLD = 90
 
@@ -199,7 +200,7 @@ export function Play({ catalogue, session, onChange, navigate }: Props) {
         )}
       </div>
 
-      <p className="credit tiny">{catalogue.demo ? 'Demo sketch — not a real watch' : `Photo: ${watch.image.source.credit}`}</p>
+      <p className="credit tiny">{votingCredit(watch, catalogue.demo)}</p>
       <p className="question">Do you like how it looks?</p>
 
       <div className="vote-bar">

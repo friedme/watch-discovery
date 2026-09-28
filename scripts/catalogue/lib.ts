@@ -44,9 +44,18 @@ export const USER_AGENT = 'WatchDiscoveryCatalogue/0.1 (personal non-commercial 
 const dispatcher = process.env.HTTPS_PROXY || process.env.https_proxy ? new EnvHttpProxyAgent() : undefined
 
 export async function httpGet(url: string, accept = 'application/json'): Promise<Response> {
-  const res = await undiciFetch(url, { dispatcher, headers: { 'User-Agent': USER_AGENT, Accept: accept } })
-  if (!res.ok) throw new Error(`GET ${url} → ${res.status} ${res.statusText}`)
-  return res as unknown as Response
+  for (let attempt = 0; ; attempt++) {
+    const res = await undiciFetch(url, { dispatcher, headers: { 'User-Agent': USER_AGENT, Accept: accept } })
+    // Rate limited (common on shared cloud IPs): wait as asked, a few times.
+    if ((res.status === 429 || res.status === 503) && attempt < 5) {
+      const wait = Math.min(60, Number(res.headers.get('retry-after')) || 5 * 2 ** attempt)
+      await res.body?.cancel()
+      await sleep(wait * 1000)
+      continue
+    }
+    if (!res.ok) throw new Error(`GET ${url} → ${res.status} ${res.statusText}`)
+    return res as unknown as Response
+  }
 }
 
 export async function getJson<T>(url: string): Promise<T> {

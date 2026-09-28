@@ -20,14 +20,16 @@ Entries with `status: "wanted"` have no photo yet. They are never shown, never s
 
 ## Private product photos (personal use)
 
-`product-pages.json` maps every entry to official product pages (brand site first; reputable dealers for vintage and discontinued pieces), with the reference and any facts the page confirmed.
+`product-pages.json` maps every entry to product pages (the brand's own page, and authorised retailers or dealers where the brand site blocks automated visits or for vintage pieces), with the exact reference and any facts the page confirmed. An entry can also list `images`: direct URLs on the brand's own image server (Rolex, Tudor, Grand Seiko, Hermès, Fossil/Skagen, JLC, AP), for brands whose pages can't be read automatically. Those are credited to the first page in the list.
 
 ```bash
 npm run photos:fetch -- --id grand-seiko-shunbun   # → private/candidates/<id>/sheet.jpg
 npm run photos:accept -- grand-seiko-shunbun 1     # → private/photos/<id>.jpg + private/photos.json
 ```
 
-`photos:fetch` reads each page's og:image and structured product data; pages that hide them are opened in headless Chromium. `photos:accept` frames studio shots evenly for the card and records the source page. Photos are always marked `personal-use-only`. Corrections to the watch itself (`--set`, `--brand`, `--model`, `--variant`) go into `watches.json`, because they are facts about the reference, not about the photo. Everything under `private/` is git-ignored because the repository is public.
+`photos:fetch` tries the direct `images` first. Then, for each page, it reads link previews (og:image), structured product data, and preloaded images. Pages that hide these, or whose images need the page's cookies, are opened in headless Chromium (`--browser` forces this and adds the page's largest images). Image servers that name a size in the URL (Salesforce, Shopify, Cloudinary, Scene7) are asked for a 1600 px rendition. `photos:accept` crops studio shots (plain or softly graded light backdrops) to the card's 4:5 shape around the watch. It also records the source page. Photos are always marked `personal-use-only`. While voting, the card says only "Product photo · private use", because the credit would name the brand. Corrections to the watch itself (`--set`, `--brand`, `--model`, `--variant`) go into `watches.json`, because they are facts about the reference, not about the photo. Everything under `private/` is git-ignored because the repository is public.
+
+Retailer pages sometimes show other products (a missing product, a "related items" strip, modified watches). Check every candidate against the reference before accepting it.
 
 ## Openly licensed photos (Wikimedia Commons / Openverse)
 
@@ -53,7 +55,9 @@ npm run catalogue:add-own -- --id cartier-tank --file ~/Pictures/tank.jpg \
   --author "Your name" --license "Own photo" --source "own photo" --usage personal-use-only
 ```
 
-The sources must be reachable from wherever you run `catalogue:find`: `commons.wikimedia.org` and `upload.wikimedia.org`, plus `api.openverse.org` and `live.staticflickr.com` for `--openverse`.
+The sources must be reachable from wherever you run `catalogue:find`: `commons.wikimedia.org` and `upload.wikimedia.org`, plus `api.openverse.org` and `live.staticflickr.com` for `--openverse`. Wikimedia rate-limits shared cloud addresses heavily. The client waits and retries as asked, but a home connection is much faster. `catalogue:accept` crops studio shots like the private route, and adds "(cropped)" to the credit, as the CC licences ask.
+
+`MISSING_ASSETS.md` describes the repository itself: only committed photos count. The validator's console summary also counts this computer's private photos.
 
 ## Opening rounds
 
