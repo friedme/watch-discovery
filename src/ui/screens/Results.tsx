@@ -40,7 +40,7 @@ export function Results({ catalogue, session, sessions, onChange, navigate }: Pr
 
   const copy = async (what: 'text' | 'link') => {
     const ok = await copyText(what === 'text' ? resultsText(session, profile) : shareLink(session, window.location))
-    setCopied(ok ? (what === 'text' ? 'Summary copied' : 'Link copied') : 'Could not copy — try a different browser')
+    setCopied(ok ? (what === 'text' ? 'Summary copied' : 'Results copied') : 'Could not copy — try a different browser')
     window.setTimeout(() => setCopied(null), 2200)
   }
 
@@ -83,23 +83,25 @@ export function Results({ catalogue, session, sessions, onChange, navigate }: Pr
           <p className="muted small">
             Liked watches that look alike, grouped. Several directions at once is normal — nothing is averaged away.
           </p>
-          {profile.directions.map((d, i) => (
-            <div className="direction" key={i}>
-              <h3 className="direction-title">{d.title}</h3>
-              <p className="small">
-                {d.members.length} watches {session.name || 'you'} liked share:{' '}
-                {d.shared.slice(0, 5).map((s) => s.label.toLowerCase()).join(', ') || 'an overall resemblance'}.
-              </p>
-              <ThumbRow watches={d.members} onOpen={setDetail} max={8} />
-            </div>
-          ))}
-          {profile.oneOffs.length > 0 && (
-            <div className="direction">
-              <h3 className="direction-title">Also liked</h3>
-              <p className="small muted">Designs that don&rsquo;t (yet) sit in a group — each could be the start of another direction.</p>
-              <ThumbRow watches={profile.oneOffs} onOpen={setDetail} max={8} />
-            </div>
-          )}
+          <div className="directions">
+            {profile.directions.map((d, i) => (
+              <div className="direction" key={i}>
+                <h3 className="direction-title">{d.title}</h3>
+                <p className="small">
+                  {d.members.length} watches {session.name || 'you'} liked share:{' '}
+                  {d.shared.slice(0, 5).map((s) => s.label.toLowerCase()).join(', ') || 'an overall resemblance'}.
+                </p>
+                <ThumbRow watches={d.members} onOpen={setDetail} max={8} />
+              </div>
+            ))}
+            {profile.oneOffs.length > 0 && (
+              <div className="direction">
+                <h3 className="direction-title">Also liked</h3>
+                <p className="small muted">Designs that don&rsquo;t (yet) sit in a group — each could be the start of another direction.</p>
+                <ThumbRow watches={profile.oneOffs} onOpen={setDetail} max={8} />
+              </div>
+            )}
+          </div>
         </section>
       )}
 
@@ -183,7 +185,7 @@ export function Results({ catalogue, session, sessions, onChange, navigate }: Pr
           Copy summary
         </button>
         <button className="btn" onClick={() => copy('link')}>
-          Copy link for another device
+          Copy results for another device
         </button>
         {others.length > 0 && (
           <button className="btn" onClick={() => navigate({ name: 'compare', a: session.id, b: others[0].id })}>
@@ -196,7 +198,8 @@ export function Results({ catalogue, session, sessions, onChange, navigate }: Pr
           </button>
         ))}
         <p className="muted small">
-          The link contains these results; opening it on a phone that runs this app adds them there. Nothing is uploaded.
+          This copies a link that contains these results. Send it to the other device, open the app there and paste it under
+          &ldquo;Add results from another device&rdquo; on the start page. Nothing is uploaded.
         </p>
       </section>
 

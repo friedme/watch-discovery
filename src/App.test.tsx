@@ -3,6 +3,7 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import App from './App'
 import type { Catalogue } from './domain/catalogue'
 import type { Watch } from './domain/types'
+import { shareLink } from './storage/share'
 import { sampleWatches } from './test/fixtures'
 import { resetSessionRepos } from './ui/useSessions'
 
@@ -133,5 +134,25 @@ describe('home', () => {
     render(<App catalogue={catalogue} />)
     expect(screen.getByText('Robin')).toBeInTheDocument()
     expect(screen.getByText(/1 seen · 1 Yay/)).toBeInTheDocument()
+  })
+
+  it('adds results pasted from another device', async () => {
+    const catalogue = testCatalogue()
+    const shared = shareLink(
+      { id: 'x', name: 'Kim', collection: 'men', seed: 3, createdAt: 1, updatedAt: 1, votes: [{ watchId: catalogue.watches[0].id, choice: 'yay', at: 1 }], continuedAt: [] },
+      { origin: 'https://example.org', pathname: '/', search: '' },
+    )
+    render(<App catalogue={catalogue} />)
+    fireEvent.click(screen.getByText('Add results from another device'))
+    fireEvent.change(screen.getByLabelText(/Paste what you copied here/), { target: { value: 'nothing useful' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Add results' }))
+    expect(screen.getByRole('alert')).toHaveTextContent('No results found')
+
+    fireEvent.change(screen.getByLabelText(/Paste what you copied here/), { target: { value: `My results: ${shared}` } })
+    fireEvent.click(screen.getByRole('button', { name: 'Add results' }))
+    const dialog = screen.getByRole('dialog', { name: 'Add shared results' })
+    expect(dialog).toHaveTextContent("Kim's results")
+    await act(() => fireEvent.click(within(dialog).getByRole('button', { name: 'Add' })))
+    expect(screen.getByRole('heading', { name: "What caught Kim's eye" })).toBeInTheDocument()
   })
 })

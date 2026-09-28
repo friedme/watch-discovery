@@ -30,3 +30,6 @@ private/
 catalogue/candidates/
 test-results/
 playwright-report/
+
+# Build for a hosted page viewer (includes private photos when present)
+artifact-dist/

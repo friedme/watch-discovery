@@ -45,6 +45,18 @@ export function importCodeFromHash(hash: string): string | null {
   return hash.startsWith(PREFIX) ? hash.slice(PREFIX.length) : null
 }
 
+/**
+ * The code from pasted text: a whole shared link (possibly with surrounding
+ * message text) or just the code. Used where links can't be opened directly,
+ * e.g. when the app runs inside a page viewer that drops URL fragments.
+ */
+export function importCodeFromText(text: string): string | null {
+  const at = text.indexOf(PREFIX)
+  if (at >= 0) return /^[A-Za-z0-9_-]+/.exec(text.slice(at + PREFIX.length))?.[0] ?? null
+  const bare = text.trim()
+  return /^[A-Za-z0-9_-]{16,}$/.test(bare) ? bare : null
+}
+
 /** Decodes a shared session; returns null for anything malformed. */
 export function decodeSession(code: string, newId: string, now: number): SessionData | null {
   try {

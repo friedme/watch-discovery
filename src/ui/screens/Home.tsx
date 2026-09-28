@@ -1,12 +1,24 @@
 import { useState } from 'react'
 import { collectionLabel, MIN_PLAYABLE, poolFor } from '../../domain/catalogue'
 import type { Catalogue } from '../../domain/catalogue'
+import { EMBEDDED } from '../../domain/mode'
 import type { SessionData } from '../../domain/types'
 import { formatDate } from '../util'
 import type { Route } from '../routing'
 import type { SessionStore } from '../useSessions'
 
-export function Home({ catalogue, store, navigate }: { catalogue: Catalogue; store: SessionStore; navigate: (r: Route) => void }) {
+export function Home({
+  catalogue,
+  store,
+  navigate,
+  onImport,
+}: {
+  catalogue: Catalogue
+  store: SessionStore
+  navigate: (r: Route) => void
+  /** Offers pasted shared results for adding; false when the text holds none. */
+  onImport: (text: string) => boolean
+}) {
   const playable = Math.max(poolFor(catalogue, 'men').length, poolFor(catalogue, 'women').length)
   const ready = playable >= MIN_PLAYABLE
   const sessions = [...store.sessions].sort((a, b) => b.updatedAt - a.updatedAt)
@@ -18,7 +30,7 @@ export function Home({ catalogue, store, navigate }: { catalogue: Catalogue; sto
         <p className="eyebrow">Watch Discovery</p>
         <h1 className="title">Which watch designs do you like?</h1>
         <p className="lede">
-          One photo at a time. Tap <b>Yay</b> if you like how it looks, <b>Nay</b> if you don&rsquo;t, and <b>Pass</b> if
+          One photo at a time. Choose <b>Yay</b> if you like how it looks, <b>Nay</b> if you don&rsquo;t, and <b>Pass</b> if
           you&rsquo;re not sure. No watch knowledge needed, no prices, and no brand names until the end.
         </p>
         {ready ? (
@@ -64,12 +76,58 @@ export function Home({ catalogue, store, navigate }: { catalogue: Catalogue; sto
         </section>
       )}
 
+      {ready && <ImportBox onImport={onImport} />}
+
       <footer className="footer-links">
         <a href="#/about">How it works</a>
         <a href="#/credits">Photo credits</a>
-        {catalogue.demo ? <a href="./#/">Leave demo</a> : ready && <a href="?demo=1#/">Demo sketches</a>}
+        {catalogue.demo ? <a href="./#/">Leave demo</a> : ready && !EMBEDDED && <a href="?demo=1#/">Demo sketches</a>}
       </footer>
     </main>
+  )
+}
+
+/** Adds results copied on another device ("Copy results for another device"). */
+function ImportBox({ onImport }: { onImport: (text: string) => boolean }) {
+  const [text, setText] = useState('')
+  const [error, setError] = useState(false)
+  return (
+    <details className="section import-box">
+      <summary className="section-title">Add results from another device</summary>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault()
+          const ok = onImport(text)
+          setError(!ok)
+          if (ok) setText('')
+        }}
+      >
+        <label className="small muted" htmlFor="import-text">
+          On the other device, open the results and choose &ldquo;Copy results for another device&rdquo;. Paste what you
+          copied here.
+        </label>
+        <textarea
+          id="import-text"
+          className="input"
+          rows={3}
+          value={text}
+          onChange={(e) => {
+            setText(e.target.value)
+            setError(false)
+          }}
+          placeholder="Paste the copied results"
+        />
+        {error && (
+          <p className="small warning-text" role="alert">
+            No results found in that text. Copy them again with &ldquo;Copy results for another device&rdquo; and paste the
+            whole thing.
+          </p>
+        )}
+        <button className="btn" type="submit" disabled={!text.trim()}>
+          Add results
+        </button>
+      </form>
+    </details>
   )
 }
 

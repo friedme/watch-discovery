@@ -18,11 +18,13 @@
   --radius: 22px;
   --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
   --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color-scheme: light dark;
+  color-scheme: light;
 }
 
+/* Dark palette: follows the system setting unless a page theme is chosen
+   explicitly (data-theme on the root, e.g. when embedded in a viewer). */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --bg: #151412;
     --surface: #1f1e1b;
     --surface-2: #2a2825;
@@ -39,7 +41,28 @@
     --warn: #f0c060;
     --warn-soft: #3a2f16;
     --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px rgb(0 0 0 / 0.5);
+    color-scheme: dark;
   }
+}
+
+:root[data-theme='dark'] {
+  --bg: #151412;
+  --surface: #1f1e1b;
+  --surface-2: #2a2825;
+  --ink: #f1ede6;
+  --muted: #a59e93;
+  --line: #36332e;
+  --yay: #5cbf8f;
+  --yay-soft: #1d3329;
+  --nay: #e5775f;
+  --nay-soft: #3a221e;
+  --pass: #a59e93;
+  --accent: #f1ede6;
+  --on-accent: #151412;
+  --warn: #f0c060;
+  --warn-soft: #3a2f16;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px rgb(0 0 0 / 0.5);
+  color-scheme: dark;
 }
 
 * {
@@ -1142,4 +1165,154 @@ details[open].section > summary::before {
 .tag-nay {
   background: var(--nay-soft);
   color: var(--nay);
+}
+
+/* ---------- keyboard hints (computers only) ---------- */
+
+.play-side {
+  display: contents;
+}
+
+.key-hint {
+  display: none;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 3px 6px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  background: var(--surface);
+  color: var(--muted);
+}
+
+/* ---------- wide screens (desktop browsers) ---------- */
+
+@media (min-width: 960px) and (min-height: 560px) {
+  .play {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+    grid-template-rows: auto auto minmax(0, 1fr);
+    column-gap: clamp(32px, 4vw, 72px);
+    max-width: 1240px;
+    padding: 0 32px 24px;
+  }
+
+  .play > .topbar,
+  .play > .progress {
+    grid-column: 1 / -1;
+  }
+
+  .play > .stage {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 24px 0 8px;
+  }
+
+  .play-side {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding-bottom: 8vh;
+  }
+
+  .play-side .question {
+    order: -1;
+    margin: 0;
+    text-align: left;
+    font-size: 2rem;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+
+  .play-side .vote-bar {
+    justify-content: flex-start;
+    gap: 28px;
+  }
+
+  .play-side .vote svg {
+    width: 84px;
+    height: 84px;
+    padding: 24px;
+  }
+
+  .play-side .vote.pass {
+    margin-top: 10px;
+  }
+
+  .play-side .vote.pass svg {
+    width: 64px;
+    height: 64px;
+    padding: 18px;
+  }
+
+  .play-side .play-footer {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  .play-side .credit {
+    order: 10;
+    margin: 0;
+    text-align: left;
+  }
+
+  .screen.results {
+    max-width: 1160px;
+    padding-inline: 32px;
+  }
+
+  .results .fav-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .directions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+  }
+
+  .directions .direction {
+    margin: 0;
+  }
+
+  .observations {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .recs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+}
+
+@media (min-width: 960px) and (min-height: 560px) and (hover: hover) {
+  .key-hint {
+    display: inline-block;
+  }
+}
+
+/* ---------- adding results from another device ---------- */
+
+.import-box form {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.import-box textarea {
+  resize: vertical;
+  font-size: 0.85rem;
+}
+
+.import-box .section-title {
+  font-size: 1.05rem;
 }

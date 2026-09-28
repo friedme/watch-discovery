@@ -104,8 +104,8 @@ test('opening round, adaptive round, results, and sharing to another device', as
 
   // Share to "another phone": a fresh browser context with empty storage.
   await page.context().grantPermissions(['clipboard-read', 'clipboard-write'])
-  await page.getByRole('button', { name: 'Copy link for another device' }).click()
-  await expect(page.getByText('Link copied')).toBeVisible()
+  await page.getByRole('button', { name: 'Copy results for another device' }).click()
+  await expect(page.getByText('Results copied')).toBeVisible()
   const link = await page.evaluate(() => navigator.clipboard.readText())
   expect(link).toContain('#import=')
 

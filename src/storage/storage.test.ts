@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { SessionData } from '../domain/types'
 import { loadSessions, sanitizeSession, sanitizeVotes, saveSessions } from './persist'
-import { decodeSession, encodeSession, importCodeFromHash, shareLink } from './share'
+import { decodeSession, encodeSession, importCodeFromHash, importCodeFromText, shareLink } from './share'
 
 const session: SessionData = {
   id: 'abc',
@@ -105,5 +105,14 @@ describe('share links', () => {
     expect(decodeSession('!!!', 'x', 1)).toBeNull()
     expect(decodeSession(btoa('{"v":2}'), 'x', 1)).toBeNull()
     expect(importCodeFromHash('#/results/abc')).toBeNull()
+  })
+
+  it('finds the code in pasted text: a link inside a message, or the bare code', () => {
+    const code = encodeSession(session)
+    const link = shareLink(session, { origin: 'https://example.org', pathname: '/', search: '' })
+    expect(importCodeFromText(`Here are my results: ${link} — have a look`)).toBe(code)
+    expect(importCodeFromText(`  ${code}\n`)).toBe(code)
+    expect(importCodeFromText('hello there')).toBeNull()
+    expect(importCodeFromText('')).toBeNull()
   })
 })

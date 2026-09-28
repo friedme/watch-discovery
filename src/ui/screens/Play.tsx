@@ -200,38 +200,45 @@ export function Play({ catalogue, session, onChange, navigate }: Props) {
         )}
       </div>
 
-      <p className="credit tiny">{votingCredit(watch, catalogue.demo)}</p>
-      <p className="question">Do you like how it looks?</p>
+      {/* On phones this wrapper is invisible to layout; on wide screens it becomes the side panel. */}
+      <div className="play-side">
+        <p className="credit tiny">{votingCredit(watch, catalogue.demo)}</p>
+        <p className="question">Do you like how it looks?</p>
 
-      <div className="vote-bar">
-        <button className="vote nay" onClick={() => vote('nay')} aria-label="Nay — I don't like how it looks">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 6l12 12M18 6L6 18" />
-          </svg>
-          <span>Nay</span>
-        </button>
-        <button className="vote pass" onClick={() => vote('pass')} aria-label="Pass — no opinion">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 12h12" />
-          </svg>
-          <span>Pass</span>
-        </button>
-        <button className="vote yay" onClick={() => vote('yay')} aria-label="Yay — I like how it looks">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" />
-          </svg>
-          <span>Yay</span>
-        </button>
-      </div>
+        <div className="vote-bar">
+          <button className="vote nay" onClick={() => vote('nay')} aria-label="Nay — I don't like how it looks" aria-keyshortcuts="ArrowLeft N">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" />
+            </svg>
+            <span>Nay</span>
+            <kbd className="key-hint">←</kbd>
+          </button>
+          <button className="vote pass" onClick={() => vote('pass')} aria-label="Pass — no opinion" aria-keyshortcuts="ArrowDown P">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 12h12" />
+            </svg>
+            <span>Pass</span>
+            <kbd className="key-hint">↓</kbd>
+          </button>
+          <button className="vote yay" onClick={() => vote('yay')} aria-label="Yay — I like how it looks" aria-keyshortcuts="ArrowRight Y">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" />
+            </svg>
+            <span>Yay</span>
+            <kbd className="key-hint">→</kbd>
+          </button>
+        </div>
 
-      <div className="play-footer">
-        <button className="text-btn" onClick={undo} disabled={!session.votes.length}>
-          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-            <path d="M9 7L4 12l5 5M4 12h10a6 6 0 0 1 0 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" transform="translate(0,-3)" />
-          </svg>
-          Undo
-        </button>
-        <span className="muted small">Pass doesn&rsquo;t count either way</span>
+        <div className="play-footer">
+          <button className="text-btn" onClick={undo} disabled={!session.votes.length} aria-keyshortcuts="Backspace Z">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path d="M9 7L4 12l5 5M4 12h10a6 6 0 0 1 0 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" transform="translate(0,-3)" />
+            </svg>
+            Undo
+            <kbd className="key-hint">Backspace</kbd>
+          </button>
+          <span className="muted small">Pass doesn&rsquo;t count either way</span>
+        </div>
       </div>
       {toast && <div className="toast">{toast}</div>}
     </main>

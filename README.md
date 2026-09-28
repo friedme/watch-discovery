@@ -47,7 +47,15 @@ npm install
 npm run dev
 ```
 
-Open the address it prints (usually http://localhost:5173). Add `?demo=1` to try the flow with sketches: http://localhost:5173/?demo=1
+Open the address it prints (usually http://localhost:5173) in any browser. It is a normal website: on a computer the photo is shown large with the buttons beside it, and the keyboard works (→ Yay, ← Nay, ↓ Pass, Backspace undo). Add `?demo=1` to try the flow with sketches: http://localhost:5173/?demo=1
+
+### A private test page on claude.ai
+
+```bash
+npm run build:artifact
+```
+
+This builds `artifact-dist/`: a page (`page.html`) plus its script and photos (`files.json` lists them). Claude publishes it as a private claude.ai artifact, which opens with one click and keeps each viewer's sessions in their own browser. The build includes this computer's private photos, so keep that page private (share it only with the people who will use it).
 
 ### Use it on a phone (same Wi‑Fi)
 
@@ -61,7 +69,7 @@ A production build also works (`npm run build`, then `npm run preview`). The `di
 
 ### Where data lives
 
-Everything stays in the browser that was used, in `localStorage`, so progress survives closing the tab. There are no accounts, nothing is uploaded, and no AI service is called. **Copy link for another device** puts the results inside the link itself (after the `#`, which browsers never send to a server). Opening that link on another phone running the app adds the results there, for example so you can compare.
+Everything stays in the browser that was used, in `localStorage`, so progress survives closing the tab. There are no accounts, nothing is uploaded, and no AI service is called. **Copy results for another device** puts the results inside a link (after the `#`, which browsers never send to a server). On the other device, paste it under **Add results from another device** on the start page (or open the link, where the app runs locally), for example so you can compare.
 
 ## How it works
 

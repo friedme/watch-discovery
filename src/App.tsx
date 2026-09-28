@@ -4,7 +4,7 @@ import { demoCatalogue } from './demo/demoCatalogue'
 import { realCatalogue } from './domain/catalogue'
 import type { Catalogue } from './domain/catalogue'
 import type { SessionData } from './domain/types'
-import { decodeSession, importCodeFromHash } from './storage/share'
+import { decodeSession, importCodeFromHash, importCodeFromText } from './storage/share'
 import { useRoute } from './ui/routing'
 import { About } from './ui/screens/About'
 import { Compare } from './ui/screens/Compare'
@@ -82,7 +82,19 @@ export default function App({ catalogue: injected }: { catalogue?: Catalogue }) 
       screen = <About onBack={() => navigate({ name: 'home' })} />
       break
     default:
-      screen = <Home catalogue={catalogue} store={store} navigate={navigate} />
+      screen = (
+        <Home
+          catalogue={catalogue}
+          store={store}
+          navigate={navigate}
+          onImport={(text) => {
+            const code = importCodeFromText(text)
+            const shared = code ? decodeSession(code, newSessionId(), Date.now()) : null
+            if (shared) setPendingImport(shared)
+            return Boolean(shared)
+          }}
+        />
+      )
   }
 
   return (
