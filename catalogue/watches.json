@@ -1,0 +1,3298 @@
+{
+  "$comment": "Source of truth for the watch catalogue. Only entries with status \"verified\" and a documented image are ever shown. Manage with the npm run catalogue:* scripts - see catalogue/README.md.",
+  "version": 1,
+  "watches": [
+    {
+      "id": "rolex-submariner",
+      "brand": "Rolex",
+      "model": "Submariner",
+      "variant": "black face, black ring, steel bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex Submariner"
+        ],
+        "queries": [
+          "Rolex Submariner"
+        ]
+      }
+    },
+    {
+      "id": "rolex-gmt-master-pepsi",
+      "brand": "Rolex",
+      "model": "GMT-Master II",
+      "variant": "red-and-blue ring, black face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date",
+          "gmt"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex GMT-Master II",
+          "Rolex GMT-Master"
+        ],
+        "queries": [
+          "Rolex GMT-Master Pepsi"
+        ]
+      }
+    },
+    {
+      "id": "rolex-submariner-green",
+      "brand": "Rolex",
+      "model": "Submariner",
+      "variant": "green ring, steel bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "green",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex Submariner"
+        ],
+        "queries": [
+          "Rolex Submariner green",
+          "Rolex Hulk",
+          "Rolex Kermit"
+        ]
+      }
+    },
+    {
+      "id": "omega-seamaster-300m",
+      "brand": "Omega",
+      "model": "Seamaster Diver 300M",
+      "variant": "blue wave-pattern face, steel bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Omega Seamaster"
+        ],
+        "queries": [
+          "Omega Seamaster 300M",
+          "Omega Seamaster Professional"
+        ]
+      }
+    },
+    {
+      "id": "seiko-skx007",
+      "brand": "Seiko",
+      "model": "SKX007",
+      "variant": "black face, black ring",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "rubber",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Seiko SKX007"
+        ],
+        "queries": [
+          "Seiko SKX007",
+          "Seiko SKX"
+        ]
+      }
+    },
+    {
+      "id": "tudor-black-bay",
+      "brand": "Tudor",
+      "model": "Black Bay",
+      "variant": "burgundy ring, black face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Tudor Black Bay"
+        ],
+        "queries": [
+          "Tudor Black Bay"
+        ]
+      }
+    },
+    {
+      "id": "doxa-sub",
+      "brand": "Doxa",
+      "model": "SUB 300",
+      "variant": "orange face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "cushion",
+        "caseColour": "silver",
+        "dialColour": "warm",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Doxa SUB"
+        ],
+        "queries": [
+          "Doxa Sub 300",
+          "Doxa diving watch"
+        ]
+      }
+    },
+    {
+      "id": "seiko-turtle",
+      "brand": "Seiko",
+      "model": "Prospex \"Turtle\"",
+      "variant": "cushion case, black face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "cushion",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "rubber",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Seiko Turtle SRP777",
+          "Seiko Prospex Turtle"
+        ]
+      }
+    },
+    {
+      "id": "blancpain-fifty-fathoms",
+      "brand": "Blancpain",
+      "model": "Fifty Fathoms",
+      "variant": "black face, fabric strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "fabric",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Blancpain Fifty Fathoms"
+        ],
+        "queries": [
+          "Blancpain Fifty Fathoms"
+        ]
+      }
+    },
+    {
+      "id": "citizen-promaster-diver",
+      "brand": "Citizen",
+      "model": "Promaster Diver",
+      "variant": "black face, rubber strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "rubber",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Citizen Promaster diver",
+          "Citizen Eco-Drive diver"
+        ]
+      }
+    },
+    {
+      "id": "seiko-5-sports",
+      "brand": "Seiko",
+      "model": "5 Sports",
+      "variant": "blue face, steel bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Seiko 5 Sports SRPD",
+          "Seiko 5 Sports"
+        ]
+      }
+    },
+    {
+      "id": "casio-duro",
+      "brand": "Casio",
+      "model": "MDV-106 \"Duro\"",
+      "variant": "black face, rubber strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "rubber",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Casio MDV-106",
+          "Casio Duro"
+        ]
+      }
+    },
+    {
+      "id": "tag-heuer-aquaracer",
+      "brand": "TAG Heuer",
+      "model": "Aquaracer",
+      "variant": "blue face, steel bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "TAG Heuer Aquaracer"
+        ],
+        "queries": [
+          "TAG Heuer Aquaracer"
+        ]
+      }
+    },
+    {
+      "id": "omega-speedmaster-professional",
+      "brand": "Omega",
+      "model": "Speedmaster Professional",
+      "variant": "black face, steel bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Omega Speedmaster Professional",
+          "Omega Speedmaster"
+        ],
+        "queries": [
+          "Omega Speedmaster Professional Moonwatch"
+        ]
+      }
+    },
+    {
+      "id": "rolex-daytona",
+      "brand": "Rolex",
+      "model": "Cosmograph Daytona",
+      "variant": "white face, black sub-dials",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex Daytona",
+          "Rolex Cosmograph Daytona"
+        ],
+        "queries": [
+          "Rolex Daytona"
+        ]
+      }
+    },
+    {
+      "id": "tag-heuer-monaco",
+      "brand": "TAG Heuer",
+      "model": "Monaco",
+      "variant": "square case, blue face, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "square",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "leather",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "TAG Heuer Monaco",
+          "Heuer Monaco"
+        ],
+        "queries": [
+          "TAG Heuer Monaco"
+        ]
+      }
+    },
+    {
+      "id": "tag-heuer-carrera",
+      "brand": "TAG Heuer",
+      "model": "Carrera",
+      "variant": "black face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "TAG Heuer Carrera"
+        ],
+        "queries": [
+          "TAG Heuer Carrera chronograph"
+        ]
+      }
+    },
+    {
+      "id": "breitling-navitimer",
+      "brand": "Breitling",
+      "model": "Navitimer",
+      "variant": "black face, white sub-dials, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "leather",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Breitling Navitimer"
+        ],
+        "queries": [
+          "Breitling Navitimer"
+        ]
+      }
+    },
+    {
+      "id": "zenith-el-primero",
+      "brand": "Zenith",
+      "model": "El Primero Chronomaster",
+      "variant": "white face, three coloured sub-dials",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Zenith El Primero"
+        ],
+        "queries": [
+          "Zenith El Primero"
+        ]
+      }
+    },
+    {
+      "id": "seiko-speedtimer",
+      "brand": "Seiko",
+      "model": "Prospex Speedtimer",
+      "variant": "white face, black sub-dials",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Seiko Speedtimer",
+          "Seiko chronograph panda"
+        ]
+      }
+    },
+    {
+      "id": "iwc-big-pilot",
+      "brand": "IWC",
+      "model": "Big Pilot's Watch",
+      "variant": "black face, big numbers, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "pilot",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "leather",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "IWC Big Pilot"
+        ]
+      }
+    },
+    {
+      "id": "laco-flieger",
+      "brand": "Laco",
+      "model": "Flieger",
+      "variant": "black face, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "pilot",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "leather",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Laco Flieger",
+          "Stowa Flieger",
+          "Flieger watch"
+        ]
+      }
+    },
+    {
+      "id": "bell-ross-br03",
+      "brand": "Bell & Ross",
+      "model": "BR 03",
+      "variant": "square black case",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "pilot",
+        "caseShape": "square",
+        "caseColour": "black",
+        "dialColour": "black",
+        "band": "rubber",
+        "heft": "bold",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Bell & Ross BR 03",
+          "Bell Ross BR01"
+        ]
+      }
+    },
+    {
+      "id": "hamilton-khaki-aviation",
+      "brand": "Hamilton",
+      "model": "Khaki Aviation",
+      "variant": "black face, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "pilot",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "leather",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Hamilton Khaki Aviation",
+          "Hamilton Khaki Pilot"
+        ]
+      }
+    },
+    {
+      "id": "hamilton-khaki-field",
+      "brand": "Hamilton",
+      "model": "Khaki Field",
+      "variant": "black face, fabric strap",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "field",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "fabric",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Hamilton Khaki Field"
+        ]
+      }
+    },
+    {
+      "id": "seiko-5-military",
+      "brand": "Seiko",
+      "model": "5 \"military\" (SNK80x)",
+      "variant": "black face, canvas strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "field",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "fabric",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Seiko SNK809",
+          "Seiko SNK807",
+          "Seiko 5 military"
+        ]
+      }
+    },
+    {
+      "id": "timex-weekender",
+      "brand": "Timex",
+      "model": "Weekender",
+      "variant": "white face, fabric strap",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "field",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "fabric",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Timex Weekender"
+        ]
+      }
+    },
+    {
+      "id": "rolex-explorer",
+      "brand": "Rolex",
+      "model": "Explorer",
+      "variant": "black face with 3-6-9 numbers",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "field",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex Explorer"
+        ],
+        "queries": [
+          "Rolex Explorer"
+        ]
+      }
+    },
+    {
+      "id": "panerai-luminor",
+      "brand": "Panerai",
+      "model": "Luminor",
+      "variant": "cushion case, crown guard, black face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "field",
+        "caseShape": "cushion",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "leather",
+        "heft": "bold",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Panerai Luminor",
+          "Panerai"
+        ],
+        "queries": [
+          "Panerai Luminor"
+        ]
+      }
+    },
+    {
+      "id": "a11-field-watch",
+      "brand": "Bulova / Elgin / Waltham",
+      "model": "A-11 military watch (1940s)",
+      "variant": "black face, fabric strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "field",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "fabric",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "A-11 watch",
+          "Elgin A-11",
+          "Bulova A-11"
+        ]
+      }
+    },
+    {
+      "id": "ap-royal-oak",
+      "brand": "Audemars Piguet",
+      "model": "Royal Oak",
+      "variant": "blue waffle-textured face",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "octagon",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Audemars Piguet Royal Oak"
+        ],
+        "queries": [
+          "Audemars Piguet Royal Oak"
+        ]
+      }
+    },
+    {
+      "id": "patek-nautilus",
+      "brand": "Patek Philippe",
+      "model": "Nautilus",
+      "variant": "blue face",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "cushion",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Patek Philippe Nautilus"
+        ],
+        "queries": [
+          "Patek Philippe Nautilus"
+        ]
+      }
+    },
+    {
+      "id": "vacheron-overseas",
+      "brand": "Vacheron Constantin",
+      "model": "Overseas",
+      "variant": "blue face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Vacheron Constantin Overseas"
+        ]
+      }
+    },
+    {
+      "id": "tissot-prx",
+      "brand": "Tissot",
+      "model": "PRX",
+      "variant": "blue face, steel bracelet",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Tissot PRX"
+        ]
+      }
+    },
+    {
+      "id": "girard-perregaux-laureato",
+      "brand": "Girard-Perregaux",
+      "model": "Laureato",
+      "variant": "blue face, octagonal rim",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "octagon",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Girard-Perregaux Laureato"
+        ]
+      }
+    },
+    {
+      "id": "bulgari-octo-finissimo",
+      "brand": "Bulgari",
+      "model": "Octo Finissimo",
+      "variant": "all-grey titanium",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "octagon",
+        "caseColour": "silver",
+        "dialColour": "grey",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Bulgari Octo Finissimo",
+          "Bvlgari Octo"
+        ]
+      }
+    },
+    {
+      "id": "patek-calatrava",
+      "brand": "Patek Philippe",
+      "model": "Calatrava",
+      "variant": "gold case, white face, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Patek Philippe Calatrava"
+        ],
+        "queries": [
+          "Patek Philippe Calatrava"
+        ]
+      }
+    },
+    {
+      "id": "jlc-reverso",
+      "brand": "Jaeger-LeCoultre",
+      "model": "Reverso",
+      "variant": "rectangular, silver face, leather strap",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "rectangular",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Jaeger-LeCoultre Reverso"
+        ],
+        "queries": [
+          "Jaeger-LeCoultre Reverso"
+        ]
+      }
+    },
+    {
+      "id": "cartier-tank",
+      "brand": "Cartier",
+      "model": "Tank",
+      "variant": "rectangular, white face with Roman numerals, leather strap",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "rectangular",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Cartier Tank"
+        ],
+        "queries": [
+          "Cartier Tank Louis",
+          "Cartier Tank Must"
+        ]
+      }
+    },
+    {
+      "id": "cartier-santos",
+      "brand": "Cartier",
+      "model": "Santos",
+      "variant": "square case with screws, steel bracelet",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "square",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "decorative",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Cartier Santos"
+        ],
+        "queries": [
+          "Cartier Santos"
+        ]
+      }
+    },
+    {
+      "id": "breguet-classique",
+      "brand": "Breguet",
+      "model": "Classique",
+      "variant": "engraved silver face, gold case",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Breguet Classique"
+        ]
+      }
+    },
+    {
+      "id": "lange-1",
+      "brand": "A. Lange & Söhne",
+      "model": "Lange 1",
+      "variant": "off-centre face with big date",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "A. Lange & Söhne Lange 1",
+          "Lange 1"
+        ]
+      }
+    },
+    {
+      "id": "longines-master-moonphase",
+      "brand": "Longines",
+      "model": "Master Collection Moonphase",
+      "variant": "silver face, moon display",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "moon",
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Longines Master Collection moonphase"
+        ]
+      }
+    },
+    {
+      "id": "jlc-master-ultra-thin",
+      "brand": "Jaeger-LeCoultre",
+      "model": "Master Ultra Thin",
+      "variant": "silver face, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Jaeger-LeCoultre Master Ultra Thin"
+        ]
+      }
+    },
+    {
+      "id": "omega-de-ville",
+      "brand": "Omega",
+      "model": "De Ville Prestige",
+      "variant": "white face, Roman numerals",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Omega De Ville"
+        ],
+        "queries": [
+          "Omega De Ville"
+        ]
+      }
+    },
+    {
+      "id": "omega-seamaster-vintage",
+      "brand": "Omega",
+      "model": "Seamaster (1960s)",
+      "variant": "vintage dress watch, gold case",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "vintage Omega Seamaster 1960s",
+          "Omega Seamaster automatic vintage"
+        ]
+      }
+    },
+    {
+      "id": "orient-bambino",
+      "brand": "Orient",
+      "model": "Bambino",
+      "variant": "domed crystal, cream face, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Orient Bambino"
+        ]
+      }
+    },
+    {
+      "id": "seiko-presage-cocktail",
+      "brand": "Seiko",
+      "model": "Presage \"Cocktail Time\"",
+      "variant": "blue textured face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Seiko Presage Cocktail Time",
+          "Seiko SARB065"
+        ]
+      }
+    },
+    {
+      "id": "hamilton-jazzmaster-skeleton",
+      "brand": "Hamilton",
+      "model": "Jazzmaster Skeleton",
+      "variant": "see-through face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "skeleton",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "open"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Hamilton Jazzmaster skeleton",
+          "skeleton wristwatch"
+        ]
+      }
+    },
+    {
+      "id": "hermes-arceau",
+      "brand": "Hermès",
+      "model": "Arceau",
+      "variant": "slanted numbers, stirrup-shaped lugs",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Hermès Arceau"
+        ]
+      }
+    },
+    {
+      "id": "rolex-datejust",
+      "brand": "Rolex",
+      "model": "Datejust",
+      "variant": "silver-and-gold, ridged rim, jubilee bracelet",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "two-tone",
+        "dialColour": "champagne",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "fluted",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex Datejust"
+        ],
+        "queries": [
+          "Rolex Datejust two-tone"
+        ]
+      }
+    },
+    {
+      "id": "rolex-day-date",
+      "brand": "Rolex",
+      "model": "Day-Date",
+      "variant": "yellow gold, champagne face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "champagne",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "fluted",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex Day-Date"
+        ],
+        "queries": [
+          "Rolex Day-Date President"
+        ]
+      }
+    },
+    {
+      "id": "rolex-oyster-perpetual",
+      "brand": "Rolex",
+      "model": "Oyster Perpetual",
+      "variant": "bright turquoise face",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex Oyster Perpetual"
+        ],
+        "queries": [
+          "Rolex Oyster Perpetual turquoise",
+          "Rolex Oyster Perpetual 36"
+        ]
+      }
+    },
+    {
+      "id": "grand-seiko-snowflake",
+      "brand": "Grand Seiko",
+      "model": "\"Snowflake\"",
+      "variant": "textured white face, titanium bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Grand Seiko Snowflake",
+          "Grand Seiko SBGA211"
+        ]
+      }
+    },
+    {
+      "id": "timex-marlin",
+      "brand": "Timex",
+      "model": "Marlin",
+      "variant": "silver face, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Timex Marlin"
+        ]
+      }
+    },
+    {
+      "id": "nomos-tangente",
+      "brand": "NOMOS Glashütte",
+      "model": "Tangente",
+      "variant": "white face, slim case, leather strap",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "minimalist",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "NOMOS Glashütte"
+        ],
+        "queries": [
+          "Nomos Tangente"
+        ]
+      }
+    },
+    {
+      "id": "junghans-max-bill",
+      "brand": "Junghans",
+      "model": "max bill",
+      "variant": "white face, leather strap",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "minimalist",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Junghans max bill"
+        ]
+      }
+    },
+    {
+      "id": "movado-museum",
+      "brand": "Movado",
+      "model": "Museum",
+      "variant": "black face with a single dot",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "minimalist",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "black",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Movado Museum watch"
+        ]
+      }
+    },
+    {
+      "id": "mondaine-railway",
+      "brand": "Mondaine",
+      "model": "Swiss Railway watch",
+      "variant": "white face, red seconds hand",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "minimalist",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Mondaine watch",
+          "Mondaine Stop2Go"
+        ]
+      }
+    },
+    {
+      "id": "braun-watch",
+      "brand": "Braun",
+      "model": "BN0021",
+      "variant": "black face, clean numbers",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "minimalist",
+        "caseShape": "round",
+        "caseColour": "black",
+        "dialColour": "black",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Braun BN0021",
+          "Braun wristwatch"
+        ]
+      }
+    },
+    {
+      "id": "skagen-minimal",
+      "brand": "Skagen",
+      "model": "Signatur",
+      "variant": "slim case, mesh bracelet",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "minimalist",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "mesh",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Skagen watch"
+        ]
+      }
+    },
+    {
+      "id": "swatch-originals",
+      "brand": "Swatch",
+      "model": "Originals",
+      "variant": "colourful plastic",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "playful",
+        "caseShape": "round",
+        "caseColour": "colour",
+        "dialColour": "warm",
+        "band": "resin",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Swatch watches",
+          "Swatch"
+        ],
+        "queries": [
+          "Swatch watch"
+        ]
+      }
+    },
+    {
+      "id": "casio-f91w",
+      "brand": "Casio",
+      "model": "F-91W",
+      "variant": "classic black digital",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "digital",
+        "caseShape": "rectangular",
+        "caseColour": "black",
+        "dialColour": "screen",
+        "band": "resin",
+        "heft": "delicate",
+        "busyness": "busy",
+        "markers": "digital",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Casio F-91W"
+        ],
+        "queries": [
+          "Casio F-91W"
+        ]
+      }
+    },
+    {
+      "id": "casio-g-shock",
+      "brand": "Casio",
+      "model": "G-Shock DW-5600",
+      "variant": "chunky black digital",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "digital",
+        "caseShape": "square",
+        "caseColour": "black",
+        "dialColour": "screen",
+        "band": "resin",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "digital",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Casio G-Shock",
+          "Casio DW-5600"
+        ],
+        "queries": [
+          "Casio G-Shock DW-5600"
+        ]
+      }
+    },
+    {
+      "id": "casio-a168-gold",
+      "brand": "Casio",
+      "model": "A168 / A158 (gold-tone)",
+      "variant": "retro gold-tone digital",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "digital",
+        "caseShape": "rectangular",
+        "caseColour": "gold",
+        "dialColour": "screen",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "busy",
+        "markers": "digital",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Casio A168",
+          "Casio A158",
+          "Casio A159W gold"
+        ]
+      }
+    },
+    {
+      "id": "casio-databank",
+      "brand": "Casio",
+      "model": "Databank calculator watch",
+      "variant": "calculator keypad",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "digital",
+        "caseShape": "rectangular",
+        "caseColour": "silver",
+        "dialColour": "screen",
+        "band": "resin",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "digital",
+        "bezel": "decorative",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Casio Databank",
+          "Casio calculator watch"
+        ]
+      }
+    },
+    {
+      "id": "apple-watch",
+      "brand": "Apple",
+      "model": "Watch",
+      "variant": "smartwatch with sport band",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "smart",
+        "caseShape": "rectangular",
+        "caseColour": "silver",
+        "dialColour": "screen",
+        "band": "rubber",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "digital",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Apple Watch"
+        ],
+        "queries": [
+          "Apple Watch"
+        ]
+      }
+    },
+    {
+      "id": "casio-baby-g",
+      "brand": "Casio",
+      "model": "Baby-G",
+      "variant": "colourful digital",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "digital",
+        "caseShape": "round",
+        "caseColour": "colour",
+        "dialColour": "screen",
+        "band": "resin",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "digital",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Casio Baby-G"
+        ]
+      }
+    },
+    {
+      "id": "hamilton-ventura",
+      "brand": "Hamilton",
+      "model": "Ventura",
+      "variant": "triangular shield-shaped case",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sculptural",
+        "caseShape": "unusual",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Hamilton Ventura"
+        ]
+      }
+    },
+    {
+      "id": "hublot-big-bang",
+      "brand": "Hublot",
+      "model": "Big Bang",
+      "variant": "black, rubber strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sculptural",
+        "caseShape": "round",
+        "caseColour": "black",
+        "dialColour": "black",
+        "band": "rubber",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Hublot Big Bang"
+        ]
+      }
+    },
+    {
+      "id": "richard-mille",
+      "brand": "Richard Mille",
+      "model": "RM series",
+      "variant": "barrel-shaped, see-through face",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sculptural",
+        "caseShape": "cushion",
+        "caseColour": "black",
+        "dialColour": "skeleton",
+        "band": "rubber",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "arabic",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "open"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Richard Mille watch"
+        ]
+      }
+    },
+    {
+      "id": "bulova-accutron-spaceview",
+      "brand": "Bulova",
+      "model": "Accutron Spaceview",
+      "variant": "see-through face showing the tuning fork",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sculptural",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "skeleton",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "open"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Accutron Spaceview",
+          "Bulova Accutron"
+        ]
+      }
+    },
+    {
+      "id": "rado-ceramic",
+      "brand": "Rado",
+      "model": "Ceramica",
+      "variant": "square black ceramic",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sculptural",
+        "caseShape": "square",
+        "caseColour": "black",
+        "dialColour": "black",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Rado Ceramica",
+          "Rado watch"
+        ]
+      }
+    },
+    {
+      "id": "cartier-crash",
+      "brand": "Cartier",
+      "model": "Crash",
+      "variant": "melted-looking case",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sculptural",
+        "caseShape": "unusual",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Cartier Crash"
+        ]
+      }
+    },
+    {
+      "id": "cartier-tank-francaise",
+      "brand": "Cartier",
+      "model": "Tank Française",
+      "variant": "steel bracelet, Roman numerals",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "rectangular",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Cartier Tank Française",
+          "Cartier Tank Francaise"
+        ]
+      }
+    },
+    {
+      "id": "cartier-panthere",
+      "brand": "Cartier",
+      "model": "Panthère",
+      "variant": "gold, soft link bracelet",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "square",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Panthère de Cartier watch",
+          "Cartier Panthere"
+        ]
+      }
+    },
+    {
+      "id": "cartier-ballon-bleu",
+      "brand": "Cartier",
+      "model": "Ballon Bleu",
+      "variant": "round, blue crown, steel bracelet",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Cartier Ballon Bleu"
+        ],
+        "queries": [
+          "Cartier Ballon Bleu"
+        ]
+      }
+    },
+    {
+      "id": "cartier-baignoire",
+      "brand": "Cartier",
+      "model": "Baignoire",
+      "variant": "oval gold case, leather strap",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "oval",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Cartier Baignoire"
+        ]
+      }
+    },
+    {
+      "id": "rolex-lady-datejust",
+      "brand": "Rolex",
+      "model": "Lady-Datejust",
+      "variant": "silver-and-gold, diamond markers",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "two-tone",
+        "dialColour": "champagne",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "gems",
+        "bezel": "fluted",
+        "era": "classic",
+        "sparkle": "some",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Rolex Lady-Datejust",
+          "Rolex Lady Datejust"
+        ]
+      }
+    },
+    {
+      "id": "rolex-oyster-perpetual-pink",
+      "brand": "Rolex",
+      "model": "Oyster Perpetual 31",
+      "variant": "pink face",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "pink",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "commonsCategories": [
+          "Rolex Oyster Perpetual"
+        ],
+        "queries": [
+          "Rolex Oyster Perpetual pink"
+        ]
+      }
+    },
+    {
+      "id": "omega-constellation",
+      "brand": "Omega",
+      "model": "Constellation",
+      "variant": "mother-of-pearl face, diamond markers",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "two-tone",
+        "dialColour": "pearl",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "gems",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "some",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "commonsCategories": [
+          "Omega Constellation"
+        ],
+        "queries": [
+          "Omega Constellation ladies"
+        ]
+      }
+    },
+    {
+      "id": "chanel-j12",
+      "brand": "Chanel",
+      "model": "J12",
+      "variant": "white ceramic",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "white",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "numbered",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Chanel J12"
+        ]
+      }
+    },
+    {
+      "id": "chanel-premiere",
+      "brand": "Chanel",
+      "model": "Première",
+      "variant": "octagonal case, chain bracelet",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "octagon",
+        "caseColour": "gold",
+        "dialColour": "black",
+        "band": "chain",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Chanel Première watch",
+          "Chanel Premiere"
+        ]
+      }
+    },
+    {
+      "id": "hermes-cape-cod",
+      "brand": "Hermès",
+      "model": "Cape Cod",
+      "variant": "rectangular, double-wrap leather strap",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "rectangular",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Hermès Cape Cod"
+        ]
+      }
+    },
+    {
+      "id": "hermes-heure-h",
+      "brand": "Hermès",
+      "model": "Heure H",
+      "variant": "H-shaped case",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sculptural",
+        "caseShape": "unusual",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Hermès Heure H"
+        ]
+      }
+    },
+    {
+      "id": "chopard-happy-diamonds",
+      "brand": "Chopard",
+      "model": "Happy Diamonds",
+      "variant": "floating diamonds",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "gems",
+        "era": "classic",
+        "sparkle": "lots",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Chopard Happy Diamonds"
+        ]
+      }
+    },
+    {
+      "id": "bulgari-serpenti",
+      "brand": "Bulgari",
+      "model": "Serpenti",
+      "variant": "snake-coil bracelet",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "unusual",
+        "caseColour": "gold",
+        "dialColour": "black",
+        "band": "chain",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "some",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Bulgari Serpenti watch",
+          "Bvlgari Serpenti"
+        ]
+      }
+    },
+    {
+      "id": "van-cleef-alhambra",
+      "brand": "Van Cleef & Arpels",
+      "model": "Alhambra",
+      "variant": "four-leaf-clover shape, mother-of-pearl",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "unusual",
+        "caseColour": "gold",
+        "dialColour": "pearl",
+        "band": "chain",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "decorative",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Van Cleef Arpels Alhambra watch"
+        ]
+      }
+    },
+    {
+      "id": "piaget-possession",
+      "brand": "Piaget",
+      "model": "Possession",
+      "variant": "diamond rim, rose gold",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "round",
+        "caseColour": "rose",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "gems",
+        "era": "classic",
+        "sparkle": "lots",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Piaget Possession watch",
+          "Piaget watch diamonds"
+        ]
+      }
+    },
+    {
+      "id": "jlc-rendez-vous",
+      "brand": "Jaeger-LeCoultre",
+      "model": "Rendez-Vous",
+      "variant": "rose gold, diamond rim",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "rose",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "gems",
+        "era": "classic",
+        "sparkle": "some",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Jaeger-LeCoultre Rendez-Vous"
+        ]
+      }
+    },
+    {
+      "id": "longines-dolcevita",
+      "brand": "Longines",
+      "model": "DolceVita",
+      "variant": "rectangular, steel bracelet",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "rectangular",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Longines DolceVita"
+        ]
+      }
+    },
+    {
+      "id": "longines-primaluna",
+      "brand": "Longines",
+      "model": "PrimaLuna",
+      "variant": "mother-of-pearl face, diamond markers",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "pearl",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "gems",
+        "era": "classic",
+        "sparkle": "some",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Longines PrimaLuna"
+        ]
+      }
+    },
+    {
+      "id": "michael-kors-glam",
+      "brand": "Michael Kors",
+      "model": "crystal chronograph",
+      "variant": "gold-tone, crystal rim",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "champagne",
+        "band": "bracelet",
+        "heft": "bold",
+        "busyness": "busy",
+        "markers": "gems",
+        "bezel": "gems",
+        "era": "modern",
+        "sparkle": "lots",
+        "features": [
+          "subdials"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Michael Kors watch"
+        ]
+      }
+    },
+    {
+      "id": "daniel-wellington-petite",
+      "brand": "Daniel Wellington",
+      "model": "Petite",
+      "variant": "rose-gold, mesh bracelet",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "minimalist",
+        "caseShape": "round",
+        "caseColour": "rose",
+        "dialColour": "white",
+        "band": "mesh",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Daniel Wellington watch"
+        ]
+      }
+    },
+    {
+      "id": "cluse-la-boheme",
+      "brand": "Cluse",
+      "model": "La Bohème",
+      "variant": "rose-gold, leather strap",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "minimalist",
+        "caseShape": "round",
+        "caseColour": "rose",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Cluse watch"
+        ]
+      }
+    },
+    {
+      "id": "olivia-burton-floral",
+      "brand": "Olivia Burton",
+      "model": "floral face",
+      "variant": "flower-printed face",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "playful",
+        "caseShape": "round",
+        "caseColour": "rose",
+        "dialColour": "pink",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Olivia Burton watch"
+        ]
+      }
+    },
+    {
+      "id": "fossil-classic-rose",
+      "brand": "Fossil",
+      "model": "Jacqueline",
+      "variant": "rose-gold, leather strap",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "rose",
+        "dialColour": "white",
+        "band": "leather",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "roman",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Fossil Jacqueline",
+          "Fossil watch women"
+        ]
+      }
+    },
+    {
+      "id": "tag-heuer-aquaracer-lady",
+      "brand": "TAG Heuer",
+      "model": "Aquaracer (ladies)",
+      "variant": "mother-of-pearl face, diamond markers",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "sport-ring",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "pearl",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "gems",
+        "bezel": "numbered",
+        "era": "modern",
+        "sparkle": "some",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "TAG Heuer Aquaracer lady"
+        ]
+      }
+    },
+    {
+      "id": "tiffany-atlas",
+      "brand": "Tiffany & Co.",
+      "model": "Atlas",
+      "variant": "Roman numerals on the rim",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Tiffany Atlas watch"
+        ]
+      }
+    },
+    {
+      "id": "patek-twenty-4",
+      "brand": "Patek Philippe",
+      "model": "Twenty~4",
+      "variant": "diamond-set rectangular case",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "rectangular",
+        "caseColour": "silver",
+        "dialColour": "grey",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "gems",
+        "era": "modern",
+        "sparkle": "lots",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Patek Philippe Twenty-4",
+          "Patek Twenty 4"
+        ]
+      }
+    },
+    {
+      "id": "gucci-horsebit",
+      "brand": "Gucci",
+      "model": "Horsebit",
+      "variant": "bangle-style bracelet",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "black",
+        "band": "chain",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "minimal",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Gucci Horsebit watch",
+          "Gucci watch"
+        ]
+      }
+    },
+    {
+      "id": "art-deco-cocktail",
+      "brand": "(maker per photo)",
+      "model": "Art Deco cocktail watch (1920s–30s)",
+      "variant": "platinum and diamonds",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "rectangular",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "chain",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "arabic",
+        "bezel": "gems",
+        "era": "classic",
+        "sparkle": "lots",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Art Deco wristwatch diamonds",
+          "platinum diamond wristwatch"
+        ]
+      }
+    },
+    {
+      "id": "vintage-gold-cocktail",
+      "brand": "(maker per photo)",
+      "model": "Gold cocktail watch (1950s–60s)",
+      "variant": "small gold bracelet watch",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "round",
+        "caseColour": "gold",
+        "dialColour": "white",
+        "band": "chain",
+        "heft": "delicate",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "cocktail watch gold",
+          "ladies wristwatch 1950s"
+        ]
+      }
+    },
+    {
+      "id": "swarovski-crystal",
+      "brand": "Swarovski",
+      "model": "crystal watch",
+      "variant": "crystal-set rim and bracelet",
+      "audiences": [
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "jewellery",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "band": "bracelet",
+        "heft": "delicate",
+        "busyness": "moderate",
+        "markers": "gems",
+        "bezel": "gems",
+        "era": "modern",
+        "sparkle": "lots",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Swarovski watch"
+        ]
+      }
+    }
+  ]
+}
