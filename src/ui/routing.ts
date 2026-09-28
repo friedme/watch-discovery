@@ -52,8 +52,13 @@ export function useRoute(): [Route, (route: Route, replace?: boolean) => void] {
   const [route, setRoute] = useState<Route>(() => parseHash(window.location.hash))
   useEffect(() => {
     const onChange = () => setRoute(parseHash(window.location.hash))
+    // Back/forward between pushState entries fires popstate; typed/linked hashes fire hashchange.
     window.addEventListener('hashchange', onChange)
-    return () => window.removeEventListener('hashchange', onChange)
+    window.addEventListener('popstate', onChange)
+    return () => {
+      window.removeEventListener('hashchange', onChange)
+      window.removeEventListener('popstate', onChange)
+    }
   }, [])
   const navigate = useCallback((next: Route, replace = false) => {
     const hash = routeToHash(next)
