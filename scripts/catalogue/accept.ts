@@ -13,6 +13,7 @@
  *   --set key=value,...      correct attributes to match THIS photo, e.g. --set dialColour=blue,band=leather
  *   --features a,b           replace the visible extras list (use "none" for an empty list)
  *   --variant "..."          describe the variant shown
+ *   --brand "..." --model "..."   correct the name to what the photo documents (e.g. the maker of a vintage piece)
  *   --fit cover --position "50% 40%"   crop to fill the card instead of showing the whole photo
  */
 import { readFileSync } from 'node:fs'
@@ -65,6 +66,8 @@ const out = await sharp(join(dir, `${c.n}.jpg`))
 
 entry.attributes = attributes as WatchAttributes
 if (typeof flags.variant === 'string') entry.variant = flags.variant
+if (typeof flags.brand === 'string') entry.brand = flags.brand
+if (typeof flags.model === 'string') entry.model = flags.model
 entry.status = 'verified'
 entry.image = {
   file,

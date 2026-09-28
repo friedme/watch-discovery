@@ -161,6 +161,6 @@ Any one watch per slot is enough.
 | `tiffany-atlas` | Tiffany & Co. Atlas | Roman numerals on the rim | women | Tiffany Atlas watch |
 | `patek-twenty-4` | Patek Philippe Twenty~4 | diamond-set rectangular case | women | Patek Philippe Twenty-4; Patek Twenty 4 |
 | `gucci-horsebit` | Gucci Horsebit | bangle-style bracelet | women | Gucci Horsebit watch; Gucci watch |
-| `art-deco-cocktail` | (maker per photo) Art Deco cocktail watch (1920s–30s) | platinum and diamonds | women | Art Deco wristwatch diamonds; platinum diamond wristwatch |
-| `vintage-gold-cocktail` | (maker per photo) Gold cocktail watch (1950s–60s) | small gold bracelet watch | women | cocktail watch gold; ladies wristwatch 1950s |
+| `art-deco-cocktail` | Unknown maker Art Deco cocktail watch (1920s–30s) | platinum and diamonds | women | Art Deco wristwatch diamonds; platinum diamond wristwatch |
+| `vintage-gold-cocktail` | Unknown maker Gold cocktail watch (1950s–60s) | small gold bracelet watch | women | cocktail watch gold; ladies wristwatch 1950s |
 | `swarovski-crystal` | Swarovski crystal watch | crystal-set rim and bracelet | women | Swarovski watch |

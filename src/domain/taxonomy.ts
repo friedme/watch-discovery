@@ -249,7 +249,7 @@ export const TAXONOMY = {
     weight: 0.5,
     multi: true,
     values: {
-      date: { label: 'Date window', phrase: 'with a date window' },
+      date: { label: 'Date window', phrase: 'with a date window', observable: false },
       moon: { label: 'Moon display', phrase: 'with a moon display' },
       subdials: { label: 'Small sub-dials', phrase: 'with small sub-dials on the face' },
       open: { label: 'Visible mechanics', phrase: 'where you can see the mechanics' },

@@ -29,9 +29,13 @@ export function collectionLabel(id: CollectionId): string {
 
 /** Display name that never claims more than the photo check supports. */
 export function displayNameOf(entry: CatalogueEntry): string {
+  if (entry.brand === UNKNOWN_MAKER) return `${entry.model} (maker unknown)`
   if (entry.image?.verification.identity === 'brand-only') return `${entry.brand} (model not identified)`
   return `${entry.brand} ${entry.model}`
 }
+
+/** Brand value for photos of real watches whose maker cannot be established (e.g. unsigned vintage pieces). */
+export const UNKNOWN_MAKER = 'Unknown maker'
 
 /**
  * Only verified entries with a documented photo become playable watches.

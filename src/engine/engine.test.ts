@@ -7,7 +7,7 @@ import { MIN_DECISIVE_FOR_OBSERVATIONS } from './observations'
 import { buildProfile } from './profile'
 import { recommend } from './recommendations'
 import { mulberry32 } from './rng'
-import { ADAPTIVE_SCHEDULE, nextPick, turnsBefore } from './selection'
+import { ADAPTIVE_SCHEDULE, nextPick, rotatingGroups, turnsBefore } from './selection'
 import { applyAction, createSession, deriveScreen, ROUND_SIZE } from './session'
 import { computeStats } from './stats'
 
@@ -200,6 +200,20 @@ describe('adaptive exploration', () => {
     expect(new Set(deepened)).toEqual(new Set([0, 1]))
   })
 
+  it('retires a one-off like after two similar designs got a Nay', () => {
+    const engine = engineWith(8)
+    const session = play(engine, openingIds.length, likeDressAndDivers)
+    let votes = session.votes
+    const stats0 = computeStats(engine, votes)
+    const groups0 = groupLikes(stats0.yays, engine.sim)
+    expect(rotatingGroups(engine, stats0, groups0)).toHaveLength(2)
+    // Reject two dress watches (closest to the liked dress-1).
+    votes = [...votes, vote('dress-2', 'nay'), vote('dress-3', 'nay')]
+    const stats1 = computeStats(engine, votes)
+    const rotating = rotatingGroups(engine, stats1, groupLikes(stats1.yays, engine.sim))
+    expect(rotating.map((g) => g.members[0].id)).toEqual(['diver-1'])
+  })
+
   it('counts deepen turns correctly', () => {
     expect(turnsBefore('deepen', 0)).toBe(0)
     expect(turnsBefore('deepen', 1)).toBe(1)
@@ -301,8 +315,26 @@ describe('results', () => {
     const blue = p.observations.find((o) => o.key === 'dialColour' && o.value === 'blue')
     const rubber = p.observations.find((o) => o.key === 'band' && o.value === 'rubber')
     // One of the two is reported, and it says the other always came with it.
+    // (Small details such as a date window are never offered as the explanation.)
     const reported = blue ?? rubber
     expect(reported?.confoundText).toMatch(/All 3 you liked were also watches (on a rubber strap|with a blue face), so it could be either\./)
     expect(blue && rubber).toBeFalsy()
+  })
+
+  it('never blames a small detail like the date window', () => {
+    const e = createEngine(
+      [
+        ...['a', 'b', 'c'].map((id) => makeWatch(id, { dialColour: 'blue', features: ['date'] })),
+        ...['d', 'e', 'f', 'g', 'h'].map((id) => makeWatch(id, { dialColour: 'black' })),
+        makeWatch('i', { dialColour: 'white' }),
+        makeWatch('j', { dialColour: 'white' }),
+      ],
+      [],
+      1,
+    )
+    const votes = [...['a', 'b', 'c'].map((id) => vote(id, 'yay')), ...['d', 'e', 'f', 'g', 'h'].map((id) => vote(id, 'nay'))]
+    const blue = buildProfile(e, votes).observations.find((o) => o.key === 'dialColour' && o.value === 'blue')
+    expect(blue?.text).toBe('You said Yay to all 3 watches with a blue face.')
+    expect(blue?.confoundText).toBeUndefined()
   })
 })

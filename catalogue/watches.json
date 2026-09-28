@@ -3207,7 +3207,7 @@
     },
     {
       "id": "art-deco-cocktail",
-      "brand": "(maker per photo)",
+      "brand": "Unknown maker",
       "model": "Art Deco cocktail watch (1920s–30s)",
       "variant": "platinum and diamonds",
       "audiences": [
@@ -3233,11 +3233,12 @@
           "Art Deco wristwatch diamonds",
           "platinum diamond wristwatch"
         ]
-      }
+      },
+      "notes": "Vintage piece: set brand to the actual maker when the photo documents it (npm run catalogue:accept -- <id> <n> --brand \"...\"); otherwise it is shown as \"maker unknown\"."
     },
     {
       "id": "vintage-gold-cocktail",
-      "brand": "(maker per photo)",
+      "brand": "Unknown maker",
       "model": "Gold cocktail watch (1950s–60s)",
       "variant": "small gold bracelet watch",
       "audiences": [
@@ -3263,7 +3264,8 @@
           "cocktail watch gold",
           "ladies wristwatch 1950s"
         ]
-      }
+      },
+      "notes": "Vintage piece: set brand to the actual maker when the photo documents it (npm run catalogue:accept -- <id> <n> --brand \"...\"); otherwise it is shown as \"maker unknown\"."
     },
     {
       "id": "swarovski-crystal",

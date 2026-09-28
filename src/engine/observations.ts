@@ -147,6 +147,8 @@ function confound(share: Map<string, number>, obs: Observation): string | undefi
     if (key === obs.key) continue
     const def = valueDef(key, value)
     if (!def || def.observable === false) continue
+    // Small details (e.g. a date window) barely register in a photo.
+    if (attributeDef(key).weight < 1) continue
     // A trait most watches in the collection have explains nothing.
     if ((share.get(vk) ?? 0) >= COMMON_TRAIT_SHARE) continue
     const weight = attributeDef(key).weight

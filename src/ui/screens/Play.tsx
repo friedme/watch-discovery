@@ -32,6 +32,8 @@ export function Play({ catalogue, session, onChange, navigate }: Props) {
   const [ghost, setGhost] = useState<Ghost | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const toastTimer = useRef<number | undefined>(undefined)
+  // The card most recently voted on — ignores a second tap before the next card renders.
+  const lastVoted = useRef<string | null>(null)
 
   const act = useCallback((action: SessionAction) => onChange(session.id, (s) => applyAction(engine, s, action)), [engine, onChange, session.id])
 
@@ -45,6 +47,8 @@ export function Play({ catalogue, session, onChange, navigate }: Props) {
     (choice: Choice, dx = 0) => {
       if (screen.kind !== 'vote') return
       const watch = screen.pick.watch
+      if (lastVoted.current === watch.id) return
+      lastVoted.current = watch.id
       setGhost({ watch, choice, dx, key: Date.now() })
       act({ type: 'vote', watchId: watch.id, choice, at: Date.now() })
     },
@@ -53,6 +57,7 @@ export function Play({ catalogue, session, onChange, navigate }: Props) {
 
   const undo = useCallback(() => {
     if (!session.votes.length) return
+    lastVoted.current = null
     setGhost(null)
     act({ type: 'undo', at: Date.now() })
     flash('Undone')
