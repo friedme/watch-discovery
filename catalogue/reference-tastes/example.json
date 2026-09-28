@@ -1,0 +1,23 @@
+{
+  "$comment": "A made-up example taste, shown in demo mode only (?demo=1). Real reference tastes live in the git-ignored private/reference-tastes/ folder.",
+  "id": "example",
+  "owner": "Alex",
+  "title": "example notes",
+  "demoOnly": true,
+  "directions": {
+    "sporty": "Sporty steel on a bracelet",
+    "dressy": "Slim and dressy on leather"
+  },
+  "watches": [
+    { "id": "rolex-submariner", "stance": "owned", "direction": "sporty", "note": "Example: owned." },
+    { "id": "omega-speedmaster-professional", "stance": "likes", "direction": "sporty" },
+    { "id": "ap-royal-oak", "stance": "likes", "direction": "sporty" },
+    { "id": "tudor-black-bay", "stance": "likes", "direction": "sporty" },
+    { "id": "cartier-tank", "stance": "likes", "direction": "dressy" },
+    { "id": "jlc-reverso", "stance": "likes", "direction": "dressy" },
+    { "id": "patek-calatrava", "stance": "likes", "direction": "dressy" },
+    { "id": "apple-watch", "stance": "unsure" },
+    { "id": "casio-g-shock", "stance": "dislikes" },
+    { "id": "hublot-big-bang", "stance": "dislikes", "note": "Example: too loud." }
+  ]
+}

@@ -59,6 +59,7 @@ describe('collections', () => {
     watches: [men, women, both],
     opening: { men: [['m1'], ['u1']], women: [['w1'], ['u1']] },
     entries: [],
+    references: [],
     demo: false,
   }
 

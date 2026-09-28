@@ -14,6 +14,7 @@ import { ImportPrompt } from './ui/screens/ImportPrompt'
 import { Play } from './ui/screens/Play'
 import { Results } from './ui/screens/Results'
 import { Setup } from './ui/screens/Setup'
+import { TasteCompare } from './ui/screens/TasteCompare'
 import { newSessionId, useSessions } from './ui/useSessions'
 
 export default function App({ catalogue: injected }: { catalogue?: Catalogue }) {
@@ -64,6 +65,16 @@ export default function App({ catalogue: injected }: { catalogue?: Catalogue }) 
     case 'compare':
       screen = <Compare catalogue={catalogue} sessions={store.sessions} a={route.a} b={route.b} navigate={navigate} />
       break
+    case 'taste': {
+      const profile = catalogue.references.find((r) => r.id === route.profile)
+      screen =
+        session && profile ? (
+          <TasteCompare catalogue={catalogue} session={session} profile={profile} navigate={navigate} />
+        ) : (
+          <Missing onHome={() => navigate({ name: 'home' })} />
+        )
+      break
+    }
     case 'credits':
       screen = <Credits catalogue={catalogue} onBack={() => navigate({ name: 'home' })} />
       break

@@ -27,6 +27,15 @@ Built for three uses: a partner judging men's watches ("what would you like on m
 
 Until photos are added, the app says so on the start screen and offers **demo mode**. Demo mode uses vector sketches drawn from the same design data, is clearly labelled and is stored separately. Real results never contain placeholders.
 
+## Compare with a declared taste (e.g. your own notes)
+
+A *reference taste* is a list of watches someone has already made up their mind about: owned, liked, maybe, or ruled out. Each can be tagged with a direction in their own words. It lives in `private/reference-tastes/*.json` (git-ignored) and is used in two ways:
+
+- **Optional second round.** In setup, choose "Include the watches from … notes". After the opening round, those watches are shown with no names or labels, mixed with lookalikes that are not on the list, so reactions stay about the design.
+- **Comparison screen** (from the results): which listed watches the other person liked or rejected, including the ruled-out ones they liked. Also covered: how they reacted to each declared direction, and to the traits the favourites share. Finally, *where the taste could evolve*: watches they liked that are close to a favourite on the list, and whole directions they like that the list doesn't cover.
+
+The reference taste never influences the opening round or free exploration. A made-up example (`catalogue/reference-tastes/example.json`) is available in demo mode.
+
 ## Run it on your computer
 
 You need [Node.js](https://nodejs.org) 22.12 or newer (the LTS installer is fine).

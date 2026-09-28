@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { COLLECTIONS, MIN_PLAYABLE, poolFor } from '../../domain/catalogue'
+import { COLLECTIONS, MIN_PLAYABLE, poolFor, referencesFor } from '../../domain/catalogue'
+import { listName } from '../../domain/reference'
 import type { Catalogue } from '../../domain/catalogue'
 import type { CollectionId, SessionData } from '../../domain/types'
 import { createSession } from '../../engine/session'
@@ -12,6 +13,9 @@ export function Setup({ catalogue, onStart, onBack }: { catalogue: Catalogue; on
   const available = COLLECTIONS.map((c) => ({ ...c, count: poolFor(catalogue, c.id).length }))
   const firstReady = available.find((c) => c.count >= MIN_PLAYABLE)?.id
   const [collection, setCollection] = useState<CollectionId | undefined>(firstReady)
+  const [reference, setReference] = useState<string>('')
+  const references = collection ? referencesFor(catalogue, collection) : []
+  const chosenReference = references.some((r) => r.id === reference) ? reference : ''
 
   const start = () => {
     if (!collection) return
@@ -22,6 +26,7 @@ export function Setup({ catalogue, onStart, onBack }: { catalogue: Catalogue; on
         collection,
         seed: randomSeed(),
         now: Date.now(),
+        reference: chosenReference || undefined,
         demo: catalogue.demo,
       }),
     )
@@ -67,6 +72,26 @@ export function Setup({ catalogue, onStart, onBack }: { catalogue: Catalogue; on
           })}
         </div>
       </fieldset>
+
+      {references.length > 0 && (
+        <fieldset className="field">
+          <legend className="field-label">Second round (optional)</legend>
+          <div className="choice-cards">
+            <label className={`choice-card ${!chosenReference ? 'selected' : ''}`}>
+              <input type="radio" name="reference" checked={!chosenReference} onChange={() => setReference('')} />
+              <span className="choice-card-title">No second round</span>
+              <span className="muted small">Just the opening round, then free exploring</span>
+            </label>
+            {references.map((r) => (
+              <label key={r.id} className={`choice-card ${chosenReference === r.id ? 'selected' : ''}`}>
+                <input type="radio" name="reference" checked={chosenReference === r.id} onChange={() => setReference(r.id)} />
+                <span className="choice-card-title">Include the watches from {listName(r)}</span>
+                <span className="muted small">Shown after the opening round, without names and mixed with similar designs</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      )}
 
       <div className="how">
         <p>

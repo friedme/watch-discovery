@@ -6,6 +6,7 @@ export type Route =
   | { name: 'play'; id: string }
   | { name: 'results'; id: string }
   | { name: 'compare'; a?: string; b?: string }
+  | { name: 'taste'; id: string; profile: string }
   | { name: 'credits' }
   | { name: 'about' }
 
@@ -20,6 +21,8 @@ export function parseHash(hash: string): Route {
       return parts[1] ? { name: 'results', id: parts[1] } : { name: 'home' }
     case 'compare':
       return { name: 'compare', a: parts[1], b: parts[2] }
+    case 'taste':
+      return parts[1] && parts[2] ? { name: 'taste', id: parts[1], profile: parts[2] } : { name: 'home' }
     case 'credits':
       return { name: 'credits' }
     case 'about':
@@ -41,6 +44,8 @@ export function routeToHash(route: Route): string {
       return `#/results/${encodeURIComponent(route.id)}`
     case 'compare':
       return ['#/compare', route.a, route.b].filter(Boolean).map((p, i) => (i ? encodeURIComponent(p!) : p)).join('/')
+    case 'taste':
+      return `#/taste/${encodeURIComponent(route.id)}/${encodeURIComponent(route.profile)}`
     case 'credits':
       return '#/credits'
     case 'about':

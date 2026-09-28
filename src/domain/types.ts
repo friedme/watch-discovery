@@ -92,6 +92,8 @@ export interface SessionData {
   votes: Vote[]
   /** Vote counts at which the person chose "keep exploring" at a checkpoint. */
   continuedAt: number[]
+  /** Reference taste whose watches get an unlabelled second round. */
+  reference?: string
   demo?: boolean
   importedAt?: number
 }

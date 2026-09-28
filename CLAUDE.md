@@ -12,6 +12,7 @@ Mobile-first React + TypeScript + Vite app (no backend, no accounts, no external
 - Pass has zero preference weight: it only marks a watch as seen.
 - Results text: counts only. No percentages, match scores or personality labels. No prices or shop links. Names stay hidden while voting.
 - Only `status: "verified"` catalogue entries with a documented, checked photo are ever shown. Never add placeholders to the real catalogue. Demo mode (`?demo=1`) is separate and labelled.
+- Reference tastes (`private/reference-tastes/*.json`) are only used for the unlabelled second round and the comparison screen. They never label cards or steer the opening round or exploration. They are personal: never commit them while the repository is public.
 
 ## Private product photos (the usual route for home use; needs normal internet access)
 

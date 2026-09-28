@@ -19,6 +19,8 @@ interface Portable {
   /** "watchId:y,watchId:n,…" */
   r: string
   k: number[]
+  /** Reference taste of the second round, if any. */
+  f?: string
 }
 
 export function encodeSession(session: SessionData): string {
@@ -30,6 +32,7 @@ export function encodeSession(session: SessionData): string {
     t: session.createdAt,
     r: session.votes.map((v) => `${v.watchId}:${CODE[v.choice]}`).join(','),
     k: session.continuedAt,
+    ...(session.reference ? { f: session.reference } : {}),
   }
   return toBase64Url(JSON.stringify(portable))
 }
@@ -62,6 +65,7 @@ export function decodeSession(code: string, newId: string, now: number): Session
       updatedAt: now,
       votes,
       continuedAt: p.k,
+      reference: p.f,
       importedAt: now,
     })
   } catch {

@@ -21,6 +21,7 @@ function testCatalogue(): Catalogue {
       women: watches.slice(8, 16).map((w) => [w.id]),
     },
     entries: [],
+    references: [],
     demo: false,
   }
 }
@@ -107,7 +108,7 @@ describe('voting', () => {
 
 describe('home', () => {
   it('explains that no photos are available instead of showing placeholders', () => {
-    render(<App catalogue={{ watches: [], opening: { men: [], women: [] }, entries: [], demo: false }} />)
+    render(<App catalogue={{ watches: [], opening: { men: [], women: [] }, entries: [], references: [], demo: false }} />)
     expect(screen.getByText(/No verified watch photos yet/)).toBeInTheDocument()
     expect(screen.queryByRole('button', { name: 'Start' })).toBeNull()
   })

@@ -24,7 +24,7 @@ const NAY_PENALTY = 0.35
 
 export interface Pick {
   watch: Watch
-  phase: 'opening' | 'adaptive'
+  phase: 'opening' | 'second' | 'adaptive'
   strategy: Strategy
   /** 0-based position within the adaptive phase. */
   adaptiveIndex?: number
@@ -51,14 +51,14 @@ export function turnsBefore(strategy: Strategy, adaptiveIndex: number): number {
  */
 export function nextPick(engine: Engine, votes: readonly Vote[]): Pick | null {
   const stats = computeStats(engine, votes)
-  for (const w of engine.opening) {
-    if (!stats.seen.has(w.id)) return { watch: w, phase: 'opening', strategy: 'curated' }
+  for (const w of engine.fixed) {
+    if (!stats.seen.has(w.id)) return { watch: w, phase: engine.openingIds.has(w.id) ? 'opening' : 'second', strategy: 'curated' }
   }
   const candidates = engine.pool.filter((w) => !stats.seen.has(w.id))
   if (candidates.length === 0) return null
 
   let adaptiveIndex = 0
-  for (const id of stats.seen) if (!engine.openingIds.has(id)) adaptiveIndex++
+  for (const id of stats.seen) if (!engine.fixedIds.has(id)) adaptiveIndex++
   const strategy = strategyFor(adaptiveIndex)
   const previous = stats.reactions.at(-1)?.watch
   const pool = withoutNearDuplicates(engine, candidates, previous)
@@ -126,8 +126,8 @@ export function groupAffinity(engine: Engine, stats: Stats, w: Watch, group: Tas
  * Liked groups that take turns being deepened. Every group of two or more
  * stays in; a single liked watch is retired once two later exploration cards
  * that closely resemble it got a Nay — one-off likes get a fair test without
- * hogging turns. (Curated opening cards don't count: they were not attempts
- * to follow up on that like.)
+ * hogging turns. (Opening and second-round cards don't count: they were not
+ * attempts to follow up on that like.)
  */
 export function rotatingGroups(engine: Engine, stats: Stats, groups: TasteGroup[]): TasteGroup[] {
   return groups.filter((g) => g.members.length >= 2 || !exhaustedOneOff(engine, stats, g.members[0])).slice(0, MAX_ROTATING_DIRECTIONS)
@@ -139,7 +139,7 @@ function exhaustedOneOff(engine: Engine, stats: Stats, liked: Watch): boolean {
   const start = stats.reactions.findIndex((r) => r.watch.id === liked.id)
   let misses = 0
   for (const r of stats.reactions.slice(start + 1)) {
-    if (r.choice !== 'nay' || engine.openingIds.has(r.watch.id)) continue
+    if (r.choice !== 'nay' || engine.fixedIds.has(r.watch.id)) continue
     if (engine.sim.get(r.watch.id, liked.id) >= ONE_OFF_RESEMBLANCE) misses++
   }
   return misses >= 2

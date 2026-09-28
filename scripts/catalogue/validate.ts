@@ -5,8 +5,9 @@
  * regenerates catalogue/MISSING_ASSETS.md. Exits non-zero on errors (not on
  * missing photos — those are expected until the catalogue is complete).
  */
-import { existsSync, writeFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { validateProfile } from '../../src/domain/reference'
 import { readPrivatePhotos } from '../photos/lib'
 import { MISSING_FILE, PUBLIC_DIR, readCatalogue, readOpening, ROOT } from './lib'
 import { missingAssetsMarkdown, validateCatalogue } from './validation'
@@ -18,6 +19,22 @@ const doc = readCatalogue()
 const fileExists = (file: string) => existsSync(file.startsWith('private/') ? join(ROOT, file) : join(PUBLIC_DIR, file))
 const report = validateCatalogue(doc, readOpening(), fileExists, readPrivatePhotos())
 writeFileSync(MISSING_FILE, missingAssetsMarkdown(doc, report, MIN_PLAYABLE))
+
+// Reference tastes (committed examples and personal ones in private/).
+const knownIds = new Set(doc.watches.map((e) => e.id))
+for (const dir of ['catalogue/reference-tastes', 'private/reference-tastes']) {
+  const abs = join(ROOT, dir)
+  if (!existsSync(abs)) continue
+  for (const f of readdirSync(abs).filter((n) => n.endsWith('.json'))) {
+    let problems: string[]
+    try {
+      problems = validateProfile(JSON.parse(readFileSync(join(abs, f), 'utf8')), knownIds)
+    } catch (err) {
+      problems = [`invalid JSON: ${(err as Error).message}`]
+    }
+    for (const p of problems) report.errors.push(`[${dir}/${f}] ${p}`)
+  }
+}
 
 for (const w of report.warnings) console.warn(`warning: ${w}`)
 for (const e of report.errors) console.error(`error:   ${e}`)

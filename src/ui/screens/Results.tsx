@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { collectionLabel, engineFor } from '../../domain/catalogue'
+import { listName } from '../../domain/reference'
 import type { Catalogue } from '../../domain/catalogue'
 import type { SessionData, Watch } from '../../domain/types'
 import { buildProfile } from '../../engine/profile'
@@ -19,7 +20,10 @@ interface Props {
 }
 
 export function Results({ catalogue, session, sessions, onChange, navigate }: Props) {
-  const engine = useMemo(() => engineFor(catalogue, session.collection, session.seed), [catalogue, session.collection, session.seed])
+  const engine = useMemo(
+    () => engineFor(catalogue, session.collection, session.seed, session.reference),
+    [catalogue, session.collection, session.seed, session.reference],
+  )
   const profile = useMemo(() => buildProfile(engine, session.votes), [engine, session.votes])
   const [detail, setDetail] = useState<Watch | null>(null)
   const [copied, setCopied] = useState<string | null>(null)
@@ -186,6 +190,11 @@ export function Results({ catalogue, session, sessions, onChange, navigate }: Pr
             Compare with {others[0].name || 'another session'}
           </button>
         )}
+        {catalogue.references.map((r) => (
+          <button key={r.id} className="btn" onClick={() => navigate({ name: 'taste', id: session.id, profile: r.id })}>
+            Compare with {listName(r)}
+          </button>
+        ))}
         <p className="muted small">
           The link contains these results; opening it on a phone that runs this app adds them there. Nothing is uploaded.
         </p>

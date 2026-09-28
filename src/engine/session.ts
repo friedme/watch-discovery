@@ -14,7 +14,7 @@ export type SessionAction =
   | { type: 'rename'; name: string; at: number }
 
 export interface Progress {
-  phase: 'opening' | 'adaptive'
+  phase: 'opening' | 'second' | 'adaptive'
   /** 1-based position in the current round. */
   index: number
   total: number
@@ -24,7 +24,7 @@ export interface Progress {
 
 export type Screen =
   | { kind: 'vote'; pick: Pick; progress: Progress }
-  | { kind: 'checkpoint'; after: 'opening' | 'round'; seen: number }
+  | { kind: 'checkpoint'; after: 'opening' | 'second' | 'round'; seen: number }
   | { kind: 'finished' }
 
 export function createSession(init: {
@@ -33,6 +33,7 @@ export function createSession(init: {
   collection: CollectionId
   seed: number
   now: number
+  reference?: string
   demo?: boolean
 }): SessionData {
   return {
@@ -44,6 +45,7 @@ export function createSession(init: {
     updatedAt: init.now,
     votes: [],
     continuedAt: [],
+    ...(init.reference ? { reference: init.reference } : {}),
     ...(init.demo ? { demo: true } : {}),
   }
 }
@@ -83,12 +85,20 @@ export function deriveScreen(engine: Engine, session: SessionData): Screen {
   const pick = nextPick(engine, session.votes)
   if (!pick) return { kind: 'finished' }
   const seen = computeStats(engine, session.votes).seen.size
-  const openingLength = engine.opening.length
-  const atBoundary = seen > 0 && seen >= openingLength && (seen - openingLength) % ROUND_SIZE === 0
-  if (atBoundary && !session.continuedAt.includes(seen)) {
-    return { kind: 'checkpoint', after: seen === openingLength && openingLength > 0 ? 'opening' : 'round', seen }
-  }
+  const after = checkpointAt(engine, seen)
+  if (after && !session.continuedAt.includes(seen)) return { kind: 'checkpoint', after, seen }
   return { kind: 'vote', pick, progress: progressFor(engine, pick, seen) }
+}
+
+/** Pauses after the opening round, after the second round (if any), then every ROUND_SIZE cards. */
+export function checkpointAt(engine: Engine, seen: number): 'opening' | 'second' | 'round' | null {
+  const openingLength = engine.opening.length
+  const fixedLength = engine.fixed.length
+  if (seen === 0) return null
+  if (seen === openingLength && openingLength > 0) return 'opening'
+  if (seen === fixedLength && fixedLength > openingLength) return 'second'
+  if (seen > fixedLength && (seen - fixedLength) % ROUND_SIZE === 0) return 'round'
+  return null
 }
 
 function progressFor(engine: Engine, pick: Pick, seen: number): Progress {
@@ -96,7 +106,11 @@ function progressFor(engine: Engine, pick: Pick, seen: number): Progress {
   if (pick.phase === 'opening') {
     return { phase: 'opening', index: Math.min(seen + 1, openingLength), total: openingLength, round: 0 }
   }
-  const adaptiveSeen = Math.max(0, seen - openingLength)
+  if (pick.phase === 'second') {
+    const total = engine.fixed.length - openingLength
+    return { phase: 'second', index: Math.min(seen - openingLength + 1, total), total, round: 0 }
+  }
+  const adaptiveSeen = Math.max(0, seen - engine.fixed.length)
   const inRound = adaptiveSeen % ROUND_SIZE
   const remaining = engine.pool.length - seen
   return {

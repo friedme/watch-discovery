@@ -1,8 +1,10 @@
 import catalogueData from '../../catalogue/watches.json'
 import openingData from '../../catalogue/opening-rounds.json'
-import { createEngine, interleaveOpenings, resolveOpening } from '../engine/context'
+import { buildSecondRound, createEngine, interleaveOpenings, resolveOpening } from '../engine/context'
 import type { Engine } from '../engine/context'
 import { SimilarityIndex } from '../engine/similarity'
+import { prioritized, sanitizeProfile } from './reference'
+import type { ReferenceProfile } from './reference'
 import { validateAttributes } from './taxonomy'
 import type { Audience, CatalogueEntry, CollectionId, Watch, WatchImage } from './types'
 
@@ -80,6 +82,8 @@ export interface Catalogue {
   opening: OpeningRounds
   /** All entries including wanted ones (for credits / missing-asset views). */
   entries: CatalogueEntry[]
+  /** Declared tastes to compare against (never used to label or steer cards). */
+  references: ReferenceProfile[]
   demo: boolean
 }
 
@@ -101,13 +105,38 @@ export function openingFor(catalogue: Catalogue, collection: CollectionId, pool:
 
 const simCache = new WeakMap<Catalogue, Map<CollectionId, SimilarityIndex>>()
 
-export function engineFor(catalogue: Catalogue, collection: CollectionId, seed: number): Engine {
+export function engineFor(catalogue: Catalogue, collection: CollectionId, seed: number, referenceId?: string): Engine {
   const pool = poolFor(catalogue, collection)
   let byCollection = simCache.get(catalogue)
   if (!byCollection) simCache.set(catalogue, (byCollection = new Map()))
   let sim = byCollection.get(collection)
   if (!sim) byCollection.set(collection, (sim = new SimilarityIndex(pool)))
-  return createEngine(pool, openingFor(catalogue, collection, pool), seed, sim)
+  const opening = openingFor(catalogue, collection, pool)
+  const profile = referenceId ? catalogue.references.find((r) => r.id === referenceId) : undefined
+  const second = profile ? buildSecondRound(pool, opening, prioritized(profile).map((w) => w.id), seed, sim) : []
+  return createEngine(pool, opening, seed, sim, second)
+}
+
+/** A second round is only worth offering with a handful of listed watches available. */
+export const MIN_REFERENCE_WATCHES = 4
+
+export function referencesFor(catalogue: Catalogue, collection: CollectionId): ReferenceProfile[] {
+  const ids = new Set(poolFor(catalogue, collection).map((w) => w.id))
+  return catalogue.references.filter((r) => r.watches.filter((w) => ids.has(w.id)).length >= MIN_REFERENCE_WATCHES)
+}
+
+// Reference tastes: committed ones (catalogue/) and personal ones (git-ignored private/).
+const committedReferences = import.meta.glob('/catalogue/reference-tastes/*.json', { eager: true, import: 'default' })
+const privateReferences = import.meta.glob('/private/reference-tastes/*.json', { eager: true, import: 'default' })
+
+export function loadReferences(entries: CatalogueEntry[], includeDemoOnly: boolean): ReferenceProfile[] {
+  const known = new Set(entries.map((e) => e.id))
+  const byId = new Map<string, ReferenceProfile>()
+  for (const raw of [...Object.values(privateReferences), ...Object.values(committedReferences)]) {
+    const p = sanitizeProfile(raw, known)
+    if (p && (includeDemoOnly || !p.demoOnly) && !byId.has(p.id)) byId.set(p.id, p)
+  }
+  return [...byId.values()]
 }
 
 // Optional, git-ignored private data (empty objects when the folder is absent).
@@ -123,6 +152,7 @@ export function realCatalogue(): Catalogue {
     watches: toPlayable(entries, resolveUrl),
     opening: openingData as OpeningRounds,
     entries,
+    references: loadReferences(entries, false),
     demo: false,
   }
 }

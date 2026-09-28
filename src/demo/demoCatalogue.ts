@@ -1,5 +1,6 @@
 import catalogueData from '../../catalogue/watches.json'
 import openingData from '../../catalogue/opening-rounds.json'
+import { loadReferences } from '../domain/catalogue'
 import type { Catalogue, OpeningRounds } from '../domain/catalogue'
 import { validateAttributes } from '../domain/taxonomy'
 import type { CatalogueEntry, Watch } from '../domain/types'
@@ -38,5 +39,5 @@ export function demoCatalogue(): Catalogue {
         verification: { identity: 'brand-only' as const, checkedBy: 'n/a (demo)', checkedAt: '' },
       },
     }))
-  return { watches, opening: openingData as OpeningRounds, entries, demo: true }
+  return { watches, opening: openingData as OpeningRounds, entries, references: loadReferences(entries, true), demo: true }
 }

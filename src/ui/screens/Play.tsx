@@ -27,7 +27,10 @@ interface Ghost {
 }
 
 export function Play({ catalogue, session, onChange, navigate }: Props) {
-  const engine = useMemo(() => engineFor(catalogue, session.collection, session.seed), [catalogue, session.collection, session.seed])
+  const engine = useMemo(
+    () => engineFor(catalogue, session.collection, session.seed, session.reference),
+    [catalogue, session.collection, session.seed, session.reference],
+  )
   const screen = useMemo(() => deriveScreen(engine, session), [engine, session])
   const [ghost, setGhost] = useState<Ghost | null>(null)
   const [toast, setToast] = useState<string | null>(null)
@@ -98,11 +101,14 @@ export function Play({ catalogue, session, onChange, navigate }: Props) {
 
   if (screen.kind === 'checkpoint' || screen.kind === 'finished') {
     const finished = screen.kind === 'finished'
+    const secondNext = screen.kind === 'checkpoint' && screen.after === 'opening' && engine.second.length > 0
     const heading = finished
       ? 'You have seen every watch'
       : screen.after === 'opening'
         ? 'Opening round done'
-        : 'Another round done'
+        : screen.after === 'second'
+          ? 'Second round done'
+          : 'Another round done'
     return (
       <main className="screen narrow">
         <TopBar onBack={toHome} />
@@ -117,7 +123,18 @@ export function Play({ catalogue, session, onChange, navigate }: Props) {
           <button className="btn primary big" onClick={toResults}>
             See results
           </button>
-          {!finished && (
+          {!finished && secondNext && (
+            <>
+              <button className="btn big" onClick={() => act({ type: 'continue', at: Date.now() })}>
+                Continue — second round ({engine.second.length})
+              </button>
+              <p className="muted small">
+                Watches picked for a comparison, mixed with similar designs. Names stay hidden, so just react to the look as
+                before.
+              </p>
+            </>
+          )}
+          {!finished && !secondNext && (
             <>
               <button className="btn big" onClick={() => act({ type: 'continue', at: Date.now() })}>
                 Keep exploring — {ROUND_SIZE} more
@@ -139,7 +156,12 @@ export function Play({ catalogue, session, onChange, navigate }: Props) {
 
   const { pick, progress } = screen
   const watch = pick.watch
-  const label = progress.phase === 'opening' ? `Opening round · ${progress.index} of ${progress.total}` : `Exploring · ${progress.index} of ${progress.total}`
+  const label =
+    progress.phase === 'opening'
+      ? `Opening round · ${progress.index} of ${progress.total}`
+      : progress.phase === 'second'
+        ? `Second round · ${progress.index} of ${progress.total}`
+        : `Exploring · ${progress.index} of ${progress.total}`
   const pct = (100 * (progress.index - 1)) / Math.max(progress.total, 1)
 
   return (

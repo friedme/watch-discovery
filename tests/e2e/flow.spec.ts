@@ -120,3 +120,29 @@ test('progress survives a reload', async ({ page }) => {
   await page.reload()
   await expect(page.getByText(/Opening round · 3 of 20/)).toBeVisible()
 })
+
+test('optional second round and comparison with a declared taste (demo example profile)', async ({ page }) => {
+  await page.goto('./?demo=1#/')
+  await page.getByRole('button', { name: 'Start' }).click()
+  await page.getByPlaceholder('Your first name (optional)').fill('Sarah')
+  await page.getByText("Include the watches from Alex's example notes").click()
+  await page.getByRole('button', { name: 'Show me the first watch' }).click()
+  for (let i = 0; i < 20; i++) await page.getByRole('button', { name: i % 2 ? /^Nay/ : /^Yay/ }).click()
+  await expect(page.getByRole('heading', { name: 'Opening round done' })).toBeVisible()
+  await page.getByRole('button', { name: /Continue — second round/ }).click()
+  await expect(page.getByText(/Second round · 1 of \d+/)).toBeVisible()
+  // Still blind: no names or list labels while voting.
+  await expect(page.locator('body')).not.toContainText('Alex')
+  let n = 0
+  while ((await page.getByText(/Second round ·/).count()) > 0 && n < 40) {
+    await page.getByRole('button', { name: n % 3 ? /^Yay/ : /^Nay/ }).click()
+    n++
+  }
+  await expect(page.getByRole('heading', { name: 'Second round done' })).toBeVisible()
+  await page.getByRole('button', { name: 'See results' }).click()
+  await page.getByRole('button', { name: "Compare with Alex's example notes" }).click()
+  await expect(page.getByRole('heading', { name: "Sarah and Alex's example notes" })).toBeVisible()
+  await expect(page.locator('.lede')).toContainText('without seeing any names')
+  await expect(page.getByRole('heading', { name: /The directions in Alex's notes/ })).toBeVisible()
+  await expect(page.locator('body')).not.toContainText('%')
+})

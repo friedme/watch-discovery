@@ -74,6 +74,7 @@ export function sanitizeSession(input: unknown): SessionData | null {
     updatedAt: Number(s.updatedAt) || createdAt,
     votes,
     continuedAt,
+    ...(typeof s.reference === 'string' && s.reference ? { reference: s.reference.slice(0, 60) } : {}),
     ...(s.demo === true ? { demo: true } : {}),
     ...(Number(s.importedAt) ? { importedAt: Number(s.importedAt) } : {}),
   }

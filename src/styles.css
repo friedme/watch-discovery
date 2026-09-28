@@ -1133,3 +1133,13 @@ details[open].section > summary::before {
     transition-duration: 0.01ms !important;
   }
 }
+
+.tag-yay {
+  background: var(--yay-soft);
+  color: var(--yay);
+}
+
+.tag-nay {
+  background: var(--nay-soft);
+  color: var(--nay);
+}
