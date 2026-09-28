@@ -4,7 +4,7 @@ import { createEngine, interleaveOpenings, resolveOpening } from '../engine/cont
 import type { Engine } from '../engine/context'
 import { SimilarityIndex } from '../engine/similarity'
 import { validateAttributes } from './taxonomy'
-import type { Audience, CatalogueEntry, CollectionId, Watch } from './types'
+import type { Audience, CatalogueEntry, CollectionId, Watch, WatchImage } from './types'
 
 export interface OpeningRounds {
   /** Each slot lists preferred watch ids in order of preference. */
@@ -49,15 +49,30 @@ export function toPlayable(entries: CatalogueEntry[], resolveUrl: (file: string)
     if (validateAttributes(entry.attributes).length) continue
     const { source, verification } = entry.image
     if (!source?.license || !source.author || !source.pageUrl || !verification?.checkedBy) continue
+    const imageUrl = resolveUrl(entry.image.file)
+    if (!imageUrl) continue
     out.push({
       ...entry,
       status: 'verified',
       image: entry.image,
-      imageUrl: resolveUrl(entry.image.file),
+      imageUrl,
       displayName: displayNameOf(entry),
     })
   }
   return out
+}
+
+/**
+ * Photos kept only on this computer (git-ignored private/ folder): product
+ * photos for personal use. A private photo turns a wanted entry into a
+ * playable one; it never leaves the machine through git.
+ */
+export function withPrivatePhotos(entries: CatalogueEntry[], photos: Record<string, WatchImage>): CatalogueEntry[] {
+  return entries.map((e) => {
+    const photo = photos[e.id]
+    if (!photo || e.status === 'rejected') return e
+    return { ...e, status: 'verified', image: { ...photo, usage: 'personal-use-only' } }
+  })
 }
 
 export interface Catalogue {
@@ -95,11 +110,17 @@ export function engineFor(catalogue: Catalogue, collection: CollectionId, seed: 
   return createEngine(pool, openingFor(catalogue, collection, pool), seed, sim)
 }
 
+// Optional, git-ignored private data (empty objects when the folder is absent).
+const privatePhotoFiles = import.meta.glob('/private/photos.json', { eager: true, import: 'default' }) as Record<string, Record<string, WatchImage>>
+const privateImageUrls = import.meta.glob('/private/photos/*.jpg', { eager: true, query: '?url', import: 'default' }) as Record<string, string>
+
 export function realCatalogue(): Catalogue {
-  const entries = catalogueData.watches as CatalogueEntry[]
+  const privatePhotos = Object.values(privatePhotoFiles)[0] ?? {}
+  const entries = withPrivatePhotos(catalogueData.watches as CatalogueEntry[], privatePhotos)
   const base = import.meta.env.BASE_URL
+  const resolveUrl = (file: string) => (file.startsWith('private/') ? (privateImageUrls[`/${file}`] ?? '') : `${base}${file}`)
   return {
-    watches: toPlayable(entries, (file) => `${base}${file}`),
+    watches: toPlayable(entries, resolveUrl),
     opening: openingData as OpeningRounds,
     entries,
     demo: false,

@@ -18,7 +18,18 @@ Entries with `status: "wanted"` have no photo yet. They are never shown, never s
 - **Documented rights.** Accepted automatically: CC0, public domain, CC BY, CC BY-SA. Refused: NC, ND, GFDL-only and anything unclear. `personal-use-only` exists for private local use (your own photos, or images you may use privately). It is allowed, but the validator warns about each one, and each must be replaced before any public release.
 - **One watch, clearly visible.** Prefer a front view with the whole watch in frame and a calm background. Avoid group shots, heavy watermarks, and photos where hands or clothing dominate.
 
-## Workflow
+## Private product photos (personal use)
+
+`product-pages.json` maps every entry to official product pages (brand site first; reputable dealers for vintage and discontinued pieces), with the reference and any facts the page confirmed.
+
+```bash
+npm run photos:fetch -- --id grand-seiko-shunbun   # → private/candidates/<id>/sheet.jpg
+npm run photos:accept -- grand-seiko-shunbun 1     # → private/photos/<id>.jpg + private/photos.json
+```
+
+`photos:fetch` reads each page's og:image and structured product data; pages that hide them are opened in headless Chromium. `photos:accept` frames studio shots evenly for the card and records the source page. Photos are always marked `personal-use-only`. Corrections to the watch itself (`--set`, `--brand`, `--model`, `--variant`) go into `watches.json`, because they are facts about the reference, not about the photo. Everything under `private/` is git-ignored because the repository is public.
+
+## Openly licensed photos (Wikimedia Commons / Openverse)
 
 ```bash
 # 1. Find candidates (Wikimedia Commons; add --openverse for Flickr CC images)

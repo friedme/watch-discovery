@@ -24,6 +24,9 @@ dist-ssr
 *.sw?
 
 # Watch Discovery
+# Personal-use product photos and personal notes: this repository is public.
+# (If the repository is made private, these lines can be removed to keep them in git.)
+private/
 catalogue/candidates/
 test-results/
 playwright-report/

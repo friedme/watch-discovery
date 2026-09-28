@@ -16,6 +16,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -50,6 +51,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -86,6 +88,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "green",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -122,6 +125,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -157,6 +161,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "rubber",
         "heft": "bold",
         "busyness": "moderate",
@@ -192,6 +197,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -224,6 +230,7 @@
         "caseShape": "cushion",
         "caseColour": "silver",
         "dialColour": "warm",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -257,6 +264,7 @@
         "caseShape": "cushion",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "rubber",
         "heft": "bold",
         "busyness": "moderate",
@@ -289,6 +297,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "fabric",
         "heft": "bold",
         "busyness": "moderate",
@@ -323,6 +332,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "rubber",
         "heft": "bold",
         "busyness": "moderate",
@@ -355,6 +365,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -387,6 +398,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "rubber",
         "heft": "bold",
         "busyness": "moderate",
@@ -419,6 +431,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -453,6 +466,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "busy",
@@ -488,6 +502,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "busy",
@@ -523,6 +538,7 @@
         "caseShape": "square",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "bold",
         "busyness": "busy",
@@ -559,6 +575,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "busy",
@@ -594,6 +611,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "bold",
         "busyness": "busy",
@@ -629,6 +647,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "busy",
@@ -664,6 +683,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "busy",
@@ -697,6 +717,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "bold",
         "busyness": "moderate",
@@ -726,6 +747,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "bold",
         "busyness": "moderate",
@@ -757,6 +779,7 @@
         "caseShape": "square",
         "caseColour": "black",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "rubber",
         "heft": "bold",
         "busyness": "clean",
@@ -787,6 +810,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "bold",
         "busyness": "moderate",
@@ -820,6 +844,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "fabric",
         "heft": "balanced",
         "busyness": "moderate",
@@ -849,6 +874,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "fabric",
         "heft": "balanced",
         "busyness": "moderate",
@@ -883,6 +909,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "fabric",
         "heft": "balanced",
         "busyness": "moderate",
@@ -912,6 +939,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
@@ -944,6 +972,7 @@
         "caseShape": "cushion",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "bold",
         "busyness": "clean",
@@ -977,6 +1006,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "fabric",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1009,6 +1039,7 @@
         "caseShape": "octagon",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1044,6 +1075,7 @@
         "caseShape": "cushion",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
@@ -1078,6 +1110,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "moderate",
@@ -1110,6 +1143,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
@@ -1141,6 +1175,7 @@
         "caseShape": "octagon",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1172,6 +1207,7 @@
         "caseShape": "octagon",
         "caseColour": "silver",
         "dialColour": "grey",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
@@ -1200,16 +1236,19 @@
       "attributes": {
         "style": "dress",
         "caseShape": "round",
-        "caseColour": "gold",
+        "caseColour": "rose",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
         "markers": "sticks",
-        "bezel": "plain",
+        "bezel": "decorative",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "subdials"
+        ]
       },
       "search": {
         "commonsCategories": [
@@ -1235,6 +1274,7 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1242,7 +1282,9 @@
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "subdials"
+        ]
       },
       "search": {
         "commonsCategories": [
@@ -1268,6 +1310,7 @@
         "caseShape": "rectangular",
         "caseColour": "gold",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
@@ -1302,6 +1345,7 @@
         "caseShape": "square",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1334,6 +1378,7 @@
         "caseShape": "round",
         "caseColour": "gold",
         "dialColour": "white",
+        "dialTexture": "textured",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
@@ -1363,6 +1408,7 @@
         "caseShape": "round",
         "caseColour": "gold",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "busy",
@@ -1396,6 +1442,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "busy",
@@ -1429,6 +1476,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
@@ -1436,7 +1484,9 @@
         "bezel": "plain",
         "era": "classic",
         "sparkle": "none",
-        "features": []
+        "features": [
+          "subdials"
+        ]
       },
       "search": {
         "queries": [
@@ -1458,6 +1508,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1492,6 +1543,7 @@
         "caseShape": "round",
         "caseColour": "gold",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "clean",
@@ -1524,6 +1576,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1553,6 +1606,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "textured",
         "band": "leather",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1585,6 +1639,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "skeleton",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "busy",
@@ -1618,6 +1673,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "clean",
@@ -1648,6 +1704,7 @@
         "caseShape": "round",
         "caseColour": "two-tone",
         "dialColour": "champagne",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1682,6 +1739,7 @@
         "caseShape": "round",
         "caseColour": "gold",
         "dialColour": "champagne",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1717,6 +1775,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "blue",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
@@ -1750,6 +1809,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
@@ -1782,6 +1842,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "moderate",
@@ -1812,6 +1873,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
@@ -1847,6 +1909,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
@@ -1877,7 +1940,8 @@
         "caseShape": "round",
         "caseColour": "gold",
         "dialColour": "black",
-        "band": "leather",
+        "dialTexture": "plain",
+        "band": "mesh",
         "heft": "delicate",
         "busyness": "clean",
         "markers": "minimal",
@@ -1907,6 +1971,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "clean",
@@ -1938,6 +2003,7 @@
         "caseShape": "round",
         "caseColour": "black",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "clean",
@@ -1969,6 +2035,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "mesh",
         "heft": "delicate",
         "busyness": "clean",
@@ -1999,6 +2066,7 @@
         "caseShape": "round",
         "caseColour": "colour",
         "dialColour": "warm",
+        "dialTexture": "plain",
         "band": "resin",
         "heft": "balanced",
         "busyness": "moderate",
@@ -2033,6 +2101,7 @@
         "caseShape": "rectangular",
         "caseColour": "black",
         "dialColour": "screen",
+        "dialTexture": "plain",
         "band": "resin",
         "heft": "delicate",
         "busyness": "busy",
@@ -2065,6 +2134,7 @@
         "caseShape": "square",
         "caseColour": "black",
         "dialColour": "screen",
+        "dialTexture": "plain",
         "band": "resin",
         "heft": "bold",
         "busyness": "busy",
@@ -2099,6 +2169,7 @@
         "caseShape": "rectangular",
         "caseColour": "gold",
         "dialColour": "screen",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "busy",
@@ -2130,6 +2201,7 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "screen",
+        "dialTexture": "plain",
         "band": "resin",
         "heft": "balanced",
         "busyness": "busy",
@@ -2161,6 +2233,7 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "screen",
+        "dialTexture": "plain",
         "band": "rubber",
         "heft": "balanced",
         "busyness": "busy",
@@ -2193,6 +2266,7 @@
         "caseShape": "round",
         "caseColour": "colour",
         "dialColour": "screen",
+        "dialTexture": "plain",
         "band": "resin",
         "heft": "bold",
         "busyness": "busy",
@@ -2222,6 +2296,7 @@
         "caseShape": "unusual",
         "caseColour": "silver",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "balanced",
         "busyness": "clean",
@@ -2251,6 +2326,7 @@
         "caseShape": "round",
         "caseColour": "black",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "rubber",
         "heft": "bold",
         "busyness": "busy",
@@ -2283,6 +2359,7 @@
         "caseShape": "cushion",
         "caseColour": "black",
         "dialColour": "skeleton",
+        "dialTexture": "plain",
         "band": "rubber",
         "heft": "bold",
         "busyness": "busy",
@@ -2314,6 +2391,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "skeleton",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "busy",
@@ -2347,6 +2425,7 @@
         "caseShape": "square",
         "caseColour": "black",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "clean",
@@ -2378,6 +2457,7 @@
         "caseShape": "unusual",
         "caseColour": "gold",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2407,6 +2487,7 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2437,6 +2518,7 @@
         "caseShape": "square",
         "caseColour": "gold",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2468,6 +2550,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "textured",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "moderate",
@@ -2500,6 +2583,7 @@
         "caseShape": "oval",
         "caseColour": "gold",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2529,6 +2613,7 @@
         "caseShape": "round",
         "caseColour": "two-tone",
         "dialColour": "champagne",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2561,6 +2646,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "pink",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "clean",
@@ -2593,6 +2679,7 @@
         "caseShape": "round",
         "caseColour": "two-tone",
         "dialColour": "pearl",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2627,6 +2714,7 @@
         "caseShape": "round",
         "caseColour": "white",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "balanced",
         "busyness": "moderate",
@@ -2658,6 +2746,7 @@
         "caseShape": "octagon",
         "caseColour": "gold",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "chain",
         "heft": "delicate",
         "busyness": "clean",
@@ -2688,6 +2777,7 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2717,6 +2807,7 @@
         "caseShape": "unusual",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
@@ -2746,6 +2837,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2775,6 +2867,7 @@
         "caseShape": "unusual",
         "caseColour": "gold",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "chain",
         "heft": "delicate",
         "busyness": "clean",
@@ -2805,6 +2898,7 @@
         "caseShape": "unusual",
         "caseColour": "gold",
         "dialColour": "pearl",
+        "dialTexture": "plain",
         "band": "chain",
         "heft": "delicate",
         "busyness": "clean",
@@ -2834,6 +2928,7 @@
         "caseShape": "round",
         "caseColour": "rose",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "clean",
@@ -2864,6 +2959,7 @@
         "caseShape": "round",
         "caseColour": "rose",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2893,6 +2989,7 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2922,6 +3019,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "pearl",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
@@ -2951,6 +3049,7 @@
         "caseShape": "round",
         "caseColour": "gold",
         "dialColour": "champagne",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "bold",
         "busyness": "busy",
@@ -2982,6 +3081,7 @@
         "caseShape": "round",
         "caseColour": "rose",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "mesh",
         "heft": "delicate",
         "busyness": "clean",
@@ -3011,6 +3111,7 @@
         "caseShape": "round",
         "caseColour": "rose",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
@@ -3040,6 +3141,7 @@
         "caseShape": "round",
         "caseColour": "rose",
         "dialColour": "pink",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "moderate",
@@ -3068,7 +3170,8 @@
         "style": "everyday",
         "caseShape": "round",
         "caseColour": "rose",
-        "dialColour": "white",
+        "dialColour": "pearl",
+        "dialTexture": "plain",
         "band": "leather",
         "heft": "delicate",
         "busyness": "clean",
@@ -3099,6 +3202,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "pearl",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
@@ -3130,6 +3234,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "clean",
@@ -3159,6 +3264,7 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "grey",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "clean",
@@ -3189,6 +3295,7 @@
         "caseShape": "round",
         "caseColour": "gold",
         "dialColour": "black",
+        "dialTexture": "plain",
         "band": "chain",
         "heft": "delicate",
         "busyness": "clean",
@@ -3219,6 +3326,7 @@
         "caseShape": "rectangular",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "chain",
         "heft": "delicate",
         "busyness": "clean",
@@ -3250,6 +3358,7 @@
         "caseShape": "round",
         "caseColour": "gold",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "chain",
         "heft": "delicate",
         "busyness": "clean",
@@ -3281,6 +3390,7 @@
         "caseShape": "round",
         "caseColour": "silver",
         "dialColour": "white",
+        "dialTexture": "plain",
         "band": "bracelet",
         "heft": "delicate",
         "busyness": "moderate",
@@ -3295,6 +3405,566 @@
           "Swarovski watch"
         ]
       }
+    },
+    {
+      "id": "grand-seiko-shunbun",
+      "brand": "Grand Seiko",
+      "model": "Heritage \"Shunbun\" (SBGA413)",
+      "variant": "pink textured dial, titanium bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "pink",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Grand Seiko SBGA413",
+          "Grand Seiko Shunbun"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "grand-seiko-white-birch",
+      "brand": "Grand Seiko",
+      "model": "Evolution 9 \"White Birch\" (SLGH005)",
+      "variant": "white birch-bark textured dial, steel bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Grand Seiko SLGH005",
+          "Grand Seiko White Birch"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "grand-seiko-moonlit-birch",
+      "brand": "Grand Seiko",
+      "model": "\"Moonlit Birch\" (SLGW007)",
+      "variant": "birch-textured dial, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "dialTexture": "textured",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Grand Seiko SLGW007",
+          "Grand Seiko Moonlit Birch"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "grand-seiko-ufa-lake-suwa",
+      "brand": "Grand Seiko",
+      "model": "Evolution 9 Spring Drive U.F.A. (SLGB015)",
+      "variant": "compact, textured dial (\"Lake Suwa\")",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Grand Seiko SLGB015",
+          "Grand Seiko UFA Lake Suwa"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "grand-seiko-ufa-violet",
+      "brand": "Grand Seiko",
+      "model": "Evolution 9 Spring Drive U.F.A. (SLGB005)",
+      "variant": "compact, violet textured dial",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "pink",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Grand Seiko SLGB005"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "grand-seiko-sbga375",
+      "brand": "Grand Seiko",
+      "model": "Spring Drive (SBGA375)",
+      "variant": "as photographed",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "dialTexture": "plain",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Grand Seiko SBGA375"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "grand-seiko-elegance-gmt",
+      "brand": "Grand Seiko",
+      "model": "Elegance GMT (e.g. SBGJ249 / SBGJ251)",
+      "variant": "textured dial, GMT hand",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "gmt",
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Grand Seiko SBGJ249",
+          "Grand Seiko SBGJ251"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "iwc-ingenieur-40",
+      "brand": "IWC",
+      "model": "Ingenieur Automatic 40 (e.g. IW328901)",
+      "variant": "grid-textured dial, integrated bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "IWC Ingenieur Automatic 40 IW328901",
+          "IWC Ingenieur 40"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "cartier-santos-black",
+      "brand": "Cartier",
+      "model": "Santos de Cartier",
+      "variant": "black dial, steel bracelet",
+      "audiences": [
+        "men",
+        "women"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "square",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "dialTexture": "plain",
+        "band": "rubber",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "decorative",
+        "era": "classic",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Santos de Cartier black dial"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "parmigiani-tonda-pf",
+      "brand": "Parmigiani Fleurier",
+      "model": "Tonda PF Micro-Rotor",
+      "variant": "guilloché dial, knurled bezel, integrated bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "grey",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Parmigiani Tonda PF Micro-Rotor"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "omega-speedmaster-first-in-space",
+      "brand": "Omega",
+      "model": "Speedmaster \"First Omega in Space\"",
+      "variant": "black dial, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "dialTexture": "plain",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Omega Speedmaster First Omega in Space"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "omega-speedmaster-57",
+      "brand": "Omega",
+      "model": "Speedmaster ’57",
+      "variant": "broad-arrow hands",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "chronograph",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "black",
+        "dialTexture": "plain",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "sticks",
+        "bezel": "numbered",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Omega Speedmaster '57"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "omega-aqua-terra",
+      "brand": "Omega",
+      "model": "Seamaster Aqua Terra 150M",
+      "variant": "white teak-pattern dial, steel bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "everyday",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Omega Aqua Terra 150M white dial"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "kurono-calendrier",
+      "brand": "Kurono Tokyo",
+      "model": "Calendrier",
+      "variant": "calendar dial, leather strap",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "dress",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "white",
+        "dialTexture": "plain",
+        "band": "leather",
+        "heft": "balanced",
+        "busyness": "busy",
+        "markers": "arabic",
+        "bezel": "plain",
+        "era": "classic",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Kurono Tokyo Calendrier"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "zenith-defy-skyline",
+      "brand": "Zenith",
+      "model": "Defy Skyline",
+      "variant": "star-pattern dial, integrated bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "octagon",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "sticks",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "subdials",
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Zenith Defy Skyline"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "chopard-alpine-eagle",
+      "brand": "Chopard",
+      "model": "Alpine Eagle",
+      "variant": "iris-textured dial, integrated bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "round",
+        "caseColour": "silver",
+        "dialColour": "blue",
+        "dialTexture": "textured",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "moderate",
+        "markers": "roman",
+        "bezel": "decorative",
+        "era": "modern",
+        "sparkle": "none",
+        "features": [
+          "date"
+        ]
+      },
+      "search": {
+        "queries": [
+          "Chopard Alpine Eagle 41"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
+    },
+    {
+      "id": "moser-streamliner",
+      "brand": "H. Moser & Cie.",
+      "model": "Streamliner",
+      "variant": "fumé dial, integrated bracelet",
+      "audiences": [
+        "men"
+      ],
+      "status": "wanted",
+      "attributes": {
+        "style": "integrated",
+        "caseShape": "cushion",
+        "caseColour": "silver",
+        "dialColour": "green",
+        "dialTexture": "plain",
+        "band": "bracelet",
+        "heft": "balanced",
+        "busyness": "clean",
+        "markers": "sticks",
+        "bezel": "plain",
+        "era": "modern",
+        "sparkle": "none",
+        "features": []
+      },
+      "search": {
+        "queries": [
+          "Moser Streamliner"
+        ]
+      },
+      "notes": "Attributes are provisional: confirm or correct them against the accepted photo."
     }
   ]
 }

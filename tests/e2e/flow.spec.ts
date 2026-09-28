@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs'
 import { expect, test } from '@playwright/test'
 import type { Page } from '@playwright/test'
 
@@ -23,6 +24,7 @@ async function swipe(page: Page, dx: number) {
 }
 
 test('real mode without verified photos explains what is missing and shows no placeholders', async ({ page }) => {
+  test.skip(existsSync('private/photos.json'), 'this machine has private photos, so the real catalogue is not empty')
   await page.goto('./#/')
   await expect(page.getByText('No verified watch photos yet.')).toBeVisible()
   await expect(page.getByRole('button', { name: 'Start' })).toHaveCount(0)

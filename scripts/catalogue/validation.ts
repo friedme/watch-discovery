@@ -1,11 +1,13 @@
 import { validateAttributes } from '../../src/domain/taxonomy'
-import type { CatalogueEntry } from '../../src/domain/types'
+import type { CatalogueEntry, WatchImage } from '../../src/domain/types'
 import type { CatalogueDoc, OpeningDoc } from './lib'
 
 export interface ValidationReport {
   errors: string[]
   warnings: string[]
   verified: CatalogueEntry[]
+  /** Entries whose only photo is a private (personal-use, git-ignored) one. */
+  privatelyCovered: CatalogueEntry[]
   wanted: CatalogueEntry[]
   /** Opening slots (by audience) for which no alternative has a verified photo. */
   emptyOpeningSlots: Array<{ audience: 'men' | 'women'; index: number; ids: string[] }>
@@ -17,7 +19,12 @@ const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
  * Checks the catalogue for structural problems and for anything that would
  * let an undocumented or unchecked photo reach the app.
  */
-export function validateCatalogue(doc: CatalogueDoc, opening: OpeningDoc, fileExists: (file: string) => boolean): ValidationReport {
+export function validateCatalogue(
+  doc: CatalogueDoc,
+  opening: OpeningDoc,
+  fileExists: (file: string) => boolean,
+  privatePhotos: Record<string, WatchImage> = {},
+): ValidationReport {
   const errors: string[] = []
   const warnings: string[] = []
   const ids = new Set<string>()
@@ -57,6 +64,14 @@ export function validateCatalogue(doc: CatalogueDoc, opening: OpeningDoc, fileEx
   }
 
   const byId = new Map(doc.watches.map((e) => [e.id, e]))
+  for (const [id, photo] of Object.entries(privatePhotos)) {
+    const where = `[private ${id}]`
+    if (!byId.has(id)) errors.push(`${where} no catalogue entry with this id`)
+    if (!photo.file || !fileExists(photo.file)) errors.push(`${where} photo file missing: ${photo.file}`)
+    if (!photo.source?.pageUrl || !photo.source.author || !photo.source.license) errors.push(`${where} source, author and licence must be recorded`)
+    if (!photo.verification?.checkedBy || !photo.verification.checkedAt) errors.push(`${where} photo has not been checked`)
+  }
+  const hasPhoto = (id: string) => byId.get(id)?.status === 'verified' || Boolean(privatePhotos[id])
   const emptyOpeningSlots: ValidationReport['emptyOpeningSlots'] = []
   for (const audience of ['men', 'women'] as const) {
     const slots = opening[audience]
@@ -70,7 +85,7 @@ export function validateCatalogue(doc: CatalogueDoc, opening: OpeningDoc, fileEx
         if (!e) errors.push(`opening-rounds.json: ${audience} slot ${index + 1} names unknown watch "${id}"`)
         else if (!e.audiences.includes(audience)) errors.push(`opening-rounds.json: "${id}" is not in the ${audience} collection`)
       }
-      if (!slot.some((id) => byId.get(id)?.status === 'verified')) emptyOpeningSlots.push({ audience, index, ids: slot })
+      if (!slot.some(hasPhoto)) emptyOpeningSlots.push({ audience, index, ids: slot })
     })
   }
 
@@ -78,13 +93,15 @@ export function validateCatalogue(doc: CatalogueDoc, opening: OpeningDoc, fileEx
     errors,
     warnings,
     verified: doc.watches.filter((e) => e.status === 'verified'),
-    wanted: doc.watches.filter((e) => e.status === 'wanted'),
+    privatelyCovered: doc.watches.filter((e) => e.status !== 'verified' && privatePhotos[e.id]),
+    wanted: doc.watches.filter((e) => e.status === 'wanted' && !privatePhotos[e.id]),
     emptyOpeningSlots,
   }
 }
 
 export function missingAssetsMarkdown(doc: CatalogueDoc, report: ValidationReport, minPlayable: number): string {
   const count = (a: 'men' | 'women') => report.verified.filter((e) => e.audiences.includes(a)).length
+  const countPrivate = (a: 'men' | 'women') => report.privatelyCovered.filter((e) => e.audiences.includes(a)).length
   const lines: string[] = []
   lines.push('# Missing photos')
   lines.push('')
@@ -93,11 +110,11 @@ export function missingAssetsMarkdown(doc: CatalogueDoc, report: ValidationRepor
   lines.push('Watches listed here have no verified photograph yet. They are **never shown** in the app — not as placeholders,')
   lines.push('not in suggestions, not in results. See `catalogue/README.md` for how to add a photo.')
   lines.push('')
-  lines.push('| Collection | Verified photos | Needed to offer the collection |')
-  lines.push('| --- | ---: | ---: |')
-  lines.push(`| Men's watches | ${count('men')} | ${minPlayable} |`)
-  lines.push(`| Women's watches | ${count('women')} | ${minPlayable} |`)
-  lines.push(`| All entries | ${report.verified.length} of ${doc.watches.length} | |`)
+  lines.push('| Collection | Open-licence photos | Private photos (this computer only) | Needed to offer the collection |')
+  lines.push('| --- | ---: | ---: | ---: |')
+  lines.push(`| Men's watches | ${count('men')} | ${countPrivate('men')} | ${minPlayable} |`)
+  lines.push(`| Women's watches | ${count('women')} | ${countPrivate('women')} | ${minPlayable} |`)
+  lines.push(`| All entries | ${report.verified.length} of ${doc.watches.length} | ${report.privatelyCovered.length} | |`)
   lines.push('')
   if (report.emptyOpeningSlots.length) {
     lines.push('## Opening-round slots without a photo (highest priority)')

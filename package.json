@@ -18,7 +18,9 @@
     "catalogue:validate": "tsx scripts/catalogue/validate.ts",
     "catalogue:find": "tsx scripts/catalogue/find-candidates.ts",
     "catalogue:accept": "tsx scripts/catalogue/accept.ts",
-    "catalogue:add-own": "tsx scripts/catalogue/add-own-photo.ts"
+    "catalogue:add-own": "tsx scripts/catalogue/add-own-photo.ts",
+    "photos:fetch": "tsx scripts/photos/fetch.ts",
+    "photos:accept": "tsx scripts/photos/accept.ts"
   },
   "dependencies": {
     "react": "^19.3.0",

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { makeWatch } from '../test/fixtures'
 import { demoCatalogue } from '../demo/demoCatalogue'
-import { displayNameOf, engineFor, openingFor, poolFor, realCatalogue, toPlayable } from './catalogue'
+import { displayNameOf, engineFor, openingFor, poolFor, realCatalogue, toPlayable, withPrivatePhotos } from './catalogue'
 import type { Catalogue } from './catalogue'
 import type { CatalogueEntry } from './types'
 
@@ -21,6 +21,18 @@ describe('playable watches', () => {
     const playable = toPlayable([good, wanted, noImage, noLicence, unchecked, badAttrs], (f) => `/${f}`)
     expect(playable.map((w) => w.id)).toEqual(['good'])
     expect(playable[0].imageUrl).toBe('/watches/good.jpg')
+  })
+
+  it('turns a wanted entry playable only through a documented private photo', () => {
+    const good = entry('good')
+    const wanted = entry('wanted', { status: 'wanted', image: undefined })
+    const rejected = entry('rejected', { status: 'rejected', image: undefined })
+    const merged = withPrivatePhotos([wanted, rejected], { wanted: good.image!, rejected: good.image! })
+    const playable = toPlayable(merged, (f) => (f.startsWith('watches/') ? `/${f}` : ''))
+    expect(playable.map((w) => w.id)).toEqual(['wanted'])
+    expect(playable[0].image.usage).toBe('personal-use-only')
+    // A private record whose file can't be resolved is dropped, not shown as a placeholder.
+    expect(toPlayable(merged, () => '')).toEqual([])
   })
 
   it('never names more than the photo check supports', () => {

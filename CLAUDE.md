@@ -13,7 +13,14 @@ Mobile-first React + TypeScript + Vite app (no backend, no accounts, no external
 - Results text: counts only. No percentages, match scores or personality labels. No prices or shop links. Names stay hidden while voting.
 - Only `status: "verified"` catalogue entries with a documented, checked photo are ever shown. Never add placeholders to the real catalogue. Demo mode (`?demo=1`) is separate and labelled.
 
-## Curating photos (needs network access to commons.wikimedia.org + upload.wikimedia.org)
+## Private product photos (the usual route for home use; needs normal internet access)
+
+1. `npm run photos:fetch` (or `-- --id a,b`) downloads candidates from the pages in `catalogue/product-pages.json` into the git-ignored `private/candidates/<id>/`.
+2. Look at `sheet.jpg` and the chosen `<n>.jpg`. Accept only a clear product shot of **that** reference, and prefer a front view on a plain background.
+3. `npm run photos:accept -- <id> <n> [--set …]` saves `private/photos/<id>.jpg` and records it in `private/photos.json` (personal use only).
+4. Never commit anything under `private/`: the repository is public.
+
+## Openly licensed photos (needs commons.wikimedia.org + upload.wikimedia.org)
 
 1. `npm run catalogue:find -- --id <id>[,<id>…]` (add `--openverse` for Flickr CC; needs api.openverse.org + live.staticflickr.com).
 2. Look at `catalogue/candidates/<id>/sheet.jpg`, then at the chosen `<n>.jpg` itself. Accept only if the photo clearly shows **that** model (check case shape, bezel, dial layout, hands, logo). Prefer a single watch, front view, whole watch visible, calm background. Refuse generic or ambiguous photos.

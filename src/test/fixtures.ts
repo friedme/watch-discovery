@@ -6,6 +6,7 @@ const BASE: WatchAttributes = {
   caseShape: 'round',
   caseColour: 'silver',
   dialColour: 'white',
+  dialTexture: 'plain',
   band: 'bracelet',
   heft: 'balanced',
   busyness: 'moderate',

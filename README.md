@@ -22,7 +22,8 @@ Built for three uses: a partner judging men's watches ("what would you like on m
 | App (voting, undo, adaptive exploration, results, compare, sharing) | Done and tested |
 | Catalogue of 104 watch designs with visual attributes and curated opening rounds | Done |
 | Photo pipeline (find, check, accept, validate) | Done |
-| **Verified photos** | **None yet.** The build environment could not reach any photo source, see [`catalogue/MISSING_ASSETS.md`](catalogue/MISSING_ASSETS.md) |
+| Product-page list for every watch + photo scraper for private use | Done |
+| **Photos** | **None yet.** The build environment could not reach any photo source, see [`catalogue/MISSING_ASSETS.md`](catalogue/MISSING_ASSETS.md) |
 
 Until photos are added, the app says so on the start screen and offers **demo mode**. Demo mode uses vector sketches drawn from the same design data, is clearly labelled and is stored separately. Real results never contain placeholders.
 
@@ -63,16 +64,29 @@ The design vocabulary (style, case shape and colour, face colour, strap, look, d
 
 ## Adding photos
 
-See [`catalogue/README.md`](catalogue/README.md). In short:
+Two routes, both of which check every photo before it's shown:
+
+**1. Product photos for private use (recommended for home use).** `catalogue/product-pages.json` lists the official product page for every watch (or a reputable dealer page for vintage and discontinued pieces). The scraper downloads the main product photo from each page into the git-ignored `private/` folder:
 
 ```bash
-npm run catalogue:find -- --id cartier-tank     # download openly licensed candidates + contact sheet
-npm run catalogue:accept -- cartier-tank 3      # after looking at it: accept candidate 3
-npm run catalogue:add-own -- --id cartier-tank --file ~/tank.jpg --author "Me" --license "Own photo" --source "own photo"
-npm run catalogue:validate                      # check everything, regenerate MISSING_ASSETS.md
+npm run photos:fetch                        # all watches without a photo (or --id a,b)
+# look at private/candidates/<id>/sheet.jpg, then:
+npm run photos:accept -- rolex-submariner 1 # frames the photo for the card, records its source
+npm run catalogue:validate
 ```
 
-A collection appears in the app once it has 12 verified photos. The opening round automatically uses whichever watches in each slot have photos.
+Private photos are marked *personal use only*. They stay on the computer that downloaded them, because this GitHub repository is public. The scraper needs normal internet access, so run it on your own computer, or in a cloud environment with **Network access: Full**.
+
+**2. Openly licensed photos** (Wikimedia Commons, optionally Flickr via Openverse). These can be committed and published:
+
+```bash
+npm run catalogue:find -- --id cartier-tank     # candidates + contact sheet
+npm run catalogue:accept -- cartier-tank 3      # after checking it
+```
+
+Your own photo (e.g. of a watch you own): `npm run catalogue:add-own -- --id <id> --file photo.jpg --author "Me" --license "Own photo" --source "own photo"`.
+
+A collection appears in the app once it has 12 photos. The opening round automatically uses whichever watches in each slot have photos.
 
 ## Development
 
@@ -93,4 +107,4 @@ scripts/catalogue/  photo pipeline
 tests/e2e/      Playwright tests
 ```
 
-Nothing is deployed. Publishing the app publicly is a separate decision, and it needs photos that are all `open-licence` or `public-domain`: the validator flags any `personal-use-only` photo.
+Nothing is deployed. Publishing the app publicly is a separate decision, and it needs photos that are all `open-licence` or `public-domain`: the validator flags any `personal-use-only` photo, and private photos are never committed.

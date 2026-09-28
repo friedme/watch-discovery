@@ -139,6 +139,15 @@ export const TAXONOMY = {
       ['pink', 'pearl', 0.3],
     ],
   },
+  dialTexture: {
+    label: 'Face texture',
+    weight: 1,
+    multi: false,
+    values: {
+      plain: { label: 'Smooth face', phrase: 'with a smooth face' },
+      textured: { label: 'Textured face', phrase: 'with a textured or patterned face' },
+    },
+  },
   band: {
     label: 'Strap or bracelet',
     weight: 1.5,
